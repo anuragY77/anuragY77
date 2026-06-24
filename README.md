@@ -29,11 +29,8 @@
 class Anurag:
     def __init__(self):
         self.name        = "Anurag Yadav"
-        self.role        = "CSE Student — Data Science"
-        self.college     = "ABES Engineering College"
         self.focus       = ["Machine Learning", "Python", "Django"]
         self.learning    = "Hadoop & large-scale data systems"
-        self.goal        = "Data Science Internship"
         self.belief      = "Small daily progress = massive results"
 
     def talk_to_me(self):
