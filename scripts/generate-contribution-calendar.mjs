@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
- * Generates assets/contribution-calendar.svg (cyberpunk heatmap) from GitHub GraphQL.
- * Env: GITHUB_TOKEN (required), GITHUB_REPOSITORY_OWNER or GITHUB_REPOSITORY (username).
+ * Generates assets/contribution-calendar.svg — GitHub-style FULL YEAR view (Jan–Dec)
+ * in cyberpunk theme, from live GraphQL contribution data.
+ * Env: GITHUB_TOKEN (required), CONTRIB_USERNAME or GITHUB_REPOSITORY (owner).
  */
 import { writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -12,6 +13,7 @@ const OWNER =
   (process.env.GITHUB_REPOSITORY || "").split("/")[0] ||
   "anuragY77";
 const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+const YEAR = Number(process.env.CONTRIB_YEAR) || new Date().getFullYear();
 
 if (!TOKEN) {
   console.error("GITHUB_TOKEN is required");
@@ -23,8 +25,6 @@ query($login: String!) {
   user(login: $login) {
     contributionsCollection {
       totalCommitContributions
-      totalPullRequestContributions
-      totalIssueContributions
       contributionCalendar {
         weeks {
           contributionDays {
@@ -58,15 +58,16 @@ if (payload.errors) {
 }
 
 const cal = payload.data.user.contributionsCollection.contributionCalendar;
-const weeks = cal.weeks;
-const year = new Date().getFullYear();
 
+// date -> { count, level }
+const byDate = new Map();
 let yearTotal = 0;
 let allTotal = 0;
-for (const w of weeks) {
+for (const w of cal.weeks) {
   for (const d of w.contributionDays) {
     allTotal += d.contributionCount;
-    if (d.date.startsWith(String(year))) yearTotal += d.contributionCount;
+    byDate.set(d.date, d);
+    if (d.date.startsWith(String(YEAR))) yearTotal += d.contributionCount;
   }
 }
 
@@ -77,58 +78,85 @@ const COLORS = {
   THIRD_QUARTILE: "#22d3ee",
   FOURTH_QUARTILE: "#7df9ff",
 };
-
 const MONTHS = [
   "Jan", "Feb", "Mar", "Apr", "May", "Jun",
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
 ];
 
-// layout
-const CW = 11; // cell
-const GAP = 2;
-const PITCH = CW + GAP;
-const ROWS = 7;
-const CAL_X = 76;
-const CAL_Y = 92;
-const panelW = 800;
-const calW = weeks.length * PITCH;
-const FOOT_Y = CAL_Y + ROWS * PITCH + 34;
-const panelH = FOOT_Y + 28;
-const dayLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const iso = (d) => d.toISOString().slice(0, 10);
 
-// month labels: place when week's Sunday crosses into a new month
+// Full-year grid: Sunday on/before Jan 1 → Saturday on/after Dec 31 (GitHub layout)
+const yearStart = new Date(Date.UTC(YEAR, 0, 1));
+const yearEnd = new Date(Date.UTC(YEAR, 11, 31));
+const gridStart = new Date(yearStart);
+gridStart.setUTCDate(gridStart.getUTCDate() - gridStart.getUTCDay()); // back to Sunday
+const gridEnd = new Date(yearEnd);
+gridEnd.setUTCDate(gridEnd.getUTCDate() + (6 - gridEnd.getUTCDay())); // forward to Saturday
+
+const days = [];
+for (let t = gridStart.getTime(); t <= gridEnd.getTime(); t += 86400000) {
+  days.push(new Date(t));
+}
+// chunk into week columns (Sun..Sat)
+const weekCols = [];
+for (let i = 0; i < days.length; i += 7) weekCols.push(days.slice(i, i + 7));
+
+// ---- layout: fit 53 weeks into 800px ----
+const CW = 10;
+const GAP = 3;
+const PITCH = CW + GAP; // 13
+const ROWS = 7;
+const panelW = 800;
+const CAL_X = 70;
+const CAL_Y = 96;
+const calW = weekCols.length * PITCH;
+const FOOT_Y = CAL_Y + ROWS * PITCH + 36;
+const panelH = FOOT_Y + 30;
+
+// month labels: first week column containing that month's day 1 (or first col of month)
 const monthLabels = [];
-let prevMonth = -1;
-weeks.forEach((w, wi) => {
-  const first = w.contributionDays[0];
-  const dt = new Date(first.date + "T00:00:00Z");
-  const m = dt.getUTCMonth();
-  if (m !== prevMonth) {
-    monthLabels.push({ x: CAL_X + wi * PITCH, label: MONTHS[m] });
-    prevMonth = m;
+const seenMonth = new Set();
+weekCols.forEach((week, wi) => {
+  for (const d of week) {
+    if (d.getUTCFullYear() !== YEAR) continue;
+    const m = d.getUTCMonth();
+    if (!seenMonth.has(m)) {
+      seenMonth.add(m);
+      monthLabels.push({ m, x: CAL_X + wi * PITCH, label: MONTHS[m] });
+      break;
+    }
   }
 });
+// ensure all 12 months present (even fallback spacing)
+for (let m = 0; m < 12; m++) {
+  if (!monthLabels.find((l) => l.m === m)) {
+    const approxWeek = Math.floor(((m / 12) * calW) / PITCH);
+    monthLabels.push({ m, x: CAL_X + approxWeek * PITCH, label: MONTHS[m] });
+  }
+}
+monthLabels.sort((a, b) => a.m - b.m);
 
-// week columns (for staggered animation)
-const columns = weeks
-  .map((w, wi) => {
-    const rects = w.contributionDays
-      .map((d) => {
-        const dow = new Date(d.date + "T00:00:00Z").getUTCDay(); // 0 Sun
-        const row = (dow + 6) % 7; // Mon=0 … Sun=6
-        const y = CAL_Y + row * PITCH;
+// week columns
+const columns = weekCols
+  .map((week, wi) => {
+    const rects = week
+      .map((date, row) => {
+        const key = iso(date);
+        const rec = byDate.get(key);
+        const level = rec ? rec.contributionLevel : "NONE";
+        const count = rec ? rec.contributionCount : 0;
+        const fill = COLORS[level] || COLORS.NONE;
+        const hot = level !== "NONE" && level !== "FIRST_QUARTILE";
+        const score = count > 0 ? ` data-score="${count}"` : "";
         const x = CAL_X + wi * PITCH;
-        const fill = COLORS[d.contributionLevel] || COLORS.NONE;
-        const isHot =
-          d.contributionLevel !== "NONE" && d.contributionLevel !== "FIRST_QUARTILE";
-        const score = d.contributionCount > 0 ? ` data-score="${d.contributionCount}"` : "";
+        const y = CAL_Y + row * PITCH;
+        // dim cells outside the target year (spill weeks)
+        const outside = date.getUTCFullYear() !== YEAR ? ' opacity="0.35"' : "";
         return `<rect x="${x}" y="${y}" width="${CW}" height="${CW}" rx="2" fill="${fill}" stroke="#22d3ee" stroke-opacity="${
-          d.contributionLevel === "NONE" ? 0.12 : 0.45
-        }" stroke-width="0.8"${score} data-date="${d.date}">${
-          isHot
-            ? `<animate attributeName="opacity" values="0.4;1;0.75;1" dur="3s" begin="${(
-                wi * 0.08
-              ).toFixed(2)}s" repeatCount="indefinite"/>`
+          level === "NONE" ? 0.12 : 0.45
+        }" stroke-width="0.8"${score} data-date="${key}"${outside}>${
+          hot
+            ? `<animate attributeName="opacity" values="0.45;1;0.75;1" dur="3s" begin="${(wi * 0.07).toFixed(2)}s" repeatCount="indefinite"/>`
             : ""
         }</rect>`;
       })
@@ -137,14 +165,11 @@ const columns = weeks
   })
   .join("\n    ");
 
+// GitHub row order: Sun top → Sat bottom; labels on Mon/Wed/Fri
+// Our weeks are already Sun..Sat (index 0=Sun)
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${panelW} ${panelH}" width="${panelW}" height="${panelH}" role="img" aria-label="Contribution calendar: ${yearTotal} contributions in ${year}">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${panelW} ${panelH}" width="${panelW}" height="${panelH}" role="img" aria-label="${yearTotal} contributions in ${YEAR}">
   <defs>
-    <linearGradient id="cHead" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#56d4dd"/>
-      <stop offset="55%" stop-color="#22d3ee"/>
-      <stop offset="100%" stop-color="#c084fc"/>
-    </linearGradient>
     <linearGradient id="cLine" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#22d3ee"/>
       <stop offset="50%" stop-color="#c084fc"/>
@@ -171,60 +196,56 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     .cDot { animation: cPulse 1.6s ease-in-out infinite; }
     .cCur { animation: cBlink 1s step-end infinite; }
     .cNum { animation: cPulse 2.8s ease-in-out infinite; }
-    .col { animation: colIn .6s ease-out both; }
     @keyframes colIn { from { opacity: 0; } to { opacity: 1; } }
+    .col { animation: colIn .5s ease-out both; }
   </style>
 
   <rect width="${panelW}" height="${panelH}" fill="#0d1117"/>
   <rect x="0.5" y="0.5" width="${panelW - 1}" height="${panelH - 1}" fill="none" stroke="#22d3ee" stroke-opacity="0.4"/>
 
-  <!-- header -->
-  <circle cx="30" cy="30" r="5" fill="#3fb950" class="cDot" filter="url(#cGlowS)"/>
-  <text class="mono" x="48" y="35" fill="#56d4dd" font-size="16" font-weight="700" letter-spacing="2" filter="url(#cGlow)">// CONTRIBUTION_GRID</text>
-  <text class="mono" x="${panelW - 24}" y="35" text-anchor="end" fill="#c084fc" font-size="15" letter-spacing="1">
-    <tspan class="cNum" fill="#7df9ff" font-size="22" font-weight="700" filter="url(#cGlow)">${yearTotal}</tspan>
-    <tspan fill="#e6edf3"> contributions in ${year}</tspan>
+  <!-- header: GitHub-style title -->
+  <circle cx="30" cy="32" r="5" fill="#3fb950" class="cDot" filter="url(#cGlowS)"/>
+  <text class="mono" x="46" y="38" fill="#e6edf3" font-size="20" font-weight="700" letter-spacing="1">
+    <tspan class="cNum" fill="#7df9ff" filter="url(#cGlow)">${yearTotal}</tspan><tspan> contributions in ${YEAR}</tspan>
   </text>
-  <rect x="24" y="48" width="${panelW - 48}" height="2" fill="url(#cLine)" opacity="0.85"/>
-  <text class="mono" x="24" y="68" fill="#8b949e" font-size="11">${allTotal} all-time &#183; live GraphQL<tspan class="cCur" fill="#56d4dd">_</tspan></text>
-  <text class="mono" x="${panelW - 24}" y="68" text-anchor="end" fill="#56d4dd" font-size="11">@${OWNER}</text>
+  <text class="mono" x="${panelW - 24}" y="36" text-anchor="end" fill="#c084fc" font-size="12" letter-spacing="2">// CONTRIBUTION_GRID</text>
+  <text class="mono" x="${panelW - 24}" y="54" text-anchor="end" fill="#56d4dd" font-size="11">@${OWNER} &#183; live GraphQL<tspan class="cCur">_</tspan></text>
+  <rect x="24" y="64" width="${panelW - 48}" height="2" fill="url(#cLine)" opacity="0.85"/>
 
-  <!-- month labels -->
+  <!-- month labels: Jan..Dec -->
   <g class="mono" fill="#8b949e" font-size="11">
-    ${monthLabels.map((m) => `<text x="${m.x}" y="${CAL_Y - 10}">${m.label}</text>`).join("\n    ")}
+    ${monthLabels.map((l) => `<text x="${l.x}" y="${CAL_Y - 10}">${l.label}</text>`).join("\n    ")}
   </g>
 
-  <!-- day labels -->
+  <!-- day labels (GitHub: Mon / Wed / Fri) — rows are Sun=0 … Sat=6 -->
   <g class="mono" fill="#8b949e" font-size="10" text-anchor="end">
-    <text x="${CAL_X - 10}" y="${CAL_Y + 10}">Mon</text>
-    <text x="${CAL_X - 10}" y="${CAL_Y + PITCH * 2 + 10}">Wed</text>
-    <text x="${CAL_X - 10}" y="${CAL_Y + PITCH * 4 + 10}">Fri</text>
-    <text x="${CAL_X - 10}" y="${CAL_Y + PITCH * 6 + 10}">Sun</text>
+    <text x="${CAL_X - 8}" y="${CAL_Y + PITCH * 1 + 9}">Mon</text>
+    <text x="${CAL_X - 8}" y="${CAL_Y + PITCH * 3 + 9}">Wed</text>
+    <text x="${CAL_X - 8}" y="${CAL_Y + PITCH * 5 + 9}">Fri</text>
   </g>
 
-  <!-- heatmap columns -->
+  <!-- heatmap -->
   <g>
     ${columns}
   </g>
 
-  <!-- scanning beam over calendar -->
-  <rect x="${CAL_X - 4}" y="${CAL_Y - 4}" width="3" height="${ROWS * PITCH + 4}" fill="url(#cBeam)" opacity="0.55">
-    <animate attributeName="x" values="${CAL_X - 4};${CAL_X + calW};${CAL_X - 4}" dur="8s" repeatCount="indefinite"/>
+  <!-- scanning beam -->
+  <rect x="${CAL_X - 3}" y="${CAL_Y - 3}" width="3" height="${ROWS * PITCH + 3}" fill="url(#cBeam)" opacity="0.55">
+    <animate attributeName="x" values="${CAL_X - 3};${CAL_X + calW};${CAL_X - 3}" dur="9s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- legend + footer -->
+  <!-- footer: legend -->
   <g class="mono" font-size="10" fill="#8b949e">
-    <text x="${panelW - 150}" y="${FOOT_Y + 4}">Less</text>
+    <text x="${panelW - 148}" y="${FOOT_Y + 4}">Less</text>
     ${["NONE", "FIRST_QUARTILE", "SECOND_QUARTILE", "THIRD_QUARTILE", "FOURTH_QUARTILE"]
       .map(
         (lv, i) =>
-          `<rect x="${panelW - 118 + i * 15}" y="${FOOT_Y - 7}" width="11" height="11" rx="2" fill="${COLORS[lv]}" stroke="#22d3ee" stroke-opacity="0.35"/>`
+          `<rect x="${panelW - 116 + i * 15}" y="${FOOT_Y - 7}" width="11" height="11" rx="2" fill="${COLORS[lv]}" stroke="#22d3ee" stroke-opacity="0.35"/>`
       )
       .join("\n    ")}
-    <text x="${panelW - 38}" y="${FOOT_Y + 4}">More</text>
+    <text x="${panelW - 36}" y="${FOOT_Y + 4}">More</text>
   </g>
-
-  <text class="mono" x="24" y="${FOOT_Y + 4}" fill="#56d4dd" font-size="11">SYS:// contributionsCollection :: auto-refresh</text>
+  <text class="mono" x="24" y="${FOOT_Y + 4}" fill="#56d4dd" font-size="11">SYS:// ${YEAR} grid &#183; ${allTotal} all-time &#183; auto-refresh</text>
 </svg>
 `;
 
@@ -233,5 +254,5 @@ const out = join(__dirname, "..", "assets", "contribution-calendar.svg");
 mkdirSync(dirname(out), { recursive: true });
 writeFileSync(out, svg, "utf8");
 console.log(
-  `OK ${out} | year=${year} yearTotal=${yearTotal} allTime=${allTotal} weeks=${weeks.length} bytes=${svg.length}`
+  `OK ${out} | year=${YEAR} yearTotal=${yearTotal} allTime=${allTotal} cols=${weekCols.length} months=${monthLabels.length} bytes=${svg.length}`
 );
