@@ -35,13 +35,11 @@
   <rect width="800" height="140" fill="url(#fBg)"/>
   <rect width="800" height="140" fill="url(#fSpeed)"/>
 
-  <!-- top rule -->
   <rect x="0" y="0" width="800" height="4" fill="url(#fLine)"/>
   <rect x="-70" y="0" width="70" height="4" fill="#fff" opacity="0.5">
     <animate attributeName="x" values="-70;800" dur="3s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- corner -->
   <g stroke="#ffd166" stroke-width="2" fill="none" opacity="0.85" filter="url(#fG)">
     <path d="M14,40 L14,14 L46,14"/>
     <path d="M754,14 L786,14 L786,40"/>
@@ -49,7 +47,6 @@
     <path d="M754,126 L786,126 L786,100"/>
   </g>
 
-  <!-- center block -->
   <text class="p" x="400" y="42" text-anchor="middle" fill="#ff3b5c" font-family="Consolas,monospace" font-size="11" letter-spacing="5" filter="url(#fG)">END OF TRANSMISSION</text>
 
   <g class="arr">
@@ -57,9 +54,8 @@
     <text x="400" y="84" text-anchor="middle" fill="url(#fTitle)" stroke="#ffd166" stroke-width="1" font-family="'Segoe UI','Arial Black',Arial,sans-serif" font-size="34" font-weight="900" letter-spacing="3" filter="url(#fG)">TO BE CONTINUED &#10132;</text>
   </g>
 
-  <text class="p" x="400" y="110" text-anchor="middle" fill="#2ec4b6" font-family="'Yu Gothic','Segoe UI',sans-serif" font-size="12" letter-spacing="4">つづく &#183; THANKS FOR WATCHING &#183; 次回もお楽しみに</text>
+  <text class="p" x="400" y="110" text-anchor="middle" fill="#2ec4b6" font-family="Consolas,monospace" font-size="12" letter-spacing="3">THANKS FOR WATCHING &#183; SEE YOU NEXT SEASON</text>
   <text x="400" y="128" text-anchor="middle" fill="#8b8b9a" font-family="Consolas,monospace" font-size="10" letter-spacing="2">SEASON 2026 // EP.2026 FINALE // STAY TUNED</text>
 
-  <!-- bottom rule -->
   <rect x="0" y="136" width="800" height="4" fill="url(#fLine)"/>
 </svg>

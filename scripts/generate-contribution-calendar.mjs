@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Generates assets/contribution-calendar.svg — GitHub-style FULL YEAR view (Jan–Dec)
- * in cyberpunk theme, from live GraphQL contribution data.
+ * in anime-showcase theme, from live GraphQL contribution data.
  * Env: GITHUB_TOKEN (required), CONTRIB_USERNAME or GITHUB_REPOSITORY (owner).
  */
 import { writeFileSync, mkdirSync } from "node:fs";
@@ -209,7 +209,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   <text class="mono" x="46" y="38" fill="#f0f0f5" font-size="20" font-weight="700" letter-spacing="1">
     <tspan class="cNum" fill="#ffd166" filter="url(#cGlow)">${yearTotal}</tspan><tspan> contributions in ${YEAR}</tspan>
   </text>
-  <text class="mono" x="${panelW - 24}" y="36" text-anchor="end" fill="#ff7a1a" font-size="12" letter-spacing="2">// BOUNTY_GRID</text>
+  <text class="mono" x="${panelW - 24}" y="36" text-anchor="end" fill="#ff7a1a" font-size="12" letter-spacing="2">// CONTRIBUTION_GRID</text>
   <text class="mono" x="${panelW - 24}" y="54" text-anchor="end" fill="#2ec4b6" font-size="11">@${OWNER} &#183; live GraphQL<tspan class="cCur">_</tspan></text>
   <rect x="24" y="64" width="${panelW - 48}" height="2" fill="url(#cLine)" opacity="0.85"/>
 
@@ -246,7 +246,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
       .join("\n    ")}
     <text x="${panelW - 36}" y="${FOOT_Y + 4}">More</text>
   </g>
-  <text class="mono" x="24" y="${FOOT_Y + 4}" fill="#2ec4b6" font-size="11">MISSION LOG // ${YEAR} &#183; ${allTotal} all-time &#183; auto-refresh</text>
+  <text class="mono" x="24" y="${FOOT_Y + 4}" fill="#2ec4b6" font-size="11">BATTLE LOG // ${YEAR} &#183; ${allTotal} all-time &#183; auto-refresh</text>
 </svg>
 `;
 

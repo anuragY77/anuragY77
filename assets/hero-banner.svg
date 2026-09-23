@@ -1,183 +1,222 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="800" height="250" role="img" aria-label="Anime hero banner for Anurag Yadav">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="800" height="280" role="img" aria-label="Anime hero: Madara fireball with Anurag Yadav name and Yami katana slash">
   <defs>
-    <linearGradient id="aBg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="hBg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0a0a0f"/>
-      <stop offset="55%" stop-color="#12101a"/>
-      <stop offset="100%" stop-color="#1a0e08"/>
+      <stop offset="50%" stop-color="#140c08"/>
+      <stop offset="100%" stop-color="#1a0804"/>
     </linearGradient>
-    <linearGradient id="aTitle" x1="0" y1="0" x2="1" y2="0">
+    <radialGradient id="fireCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff6c8"/>
+      <stop offset="25%" stop-color="#ffd166"/>
+      <stop offset="55%" stop-color="#ff7a1a"/>
+      <stop offset="80%" stop-color="#ff3b5c"/>
+      <stop offset="100%" stop-color="#ff3b5c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fireOuter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff7a1a" stop-opacity="0.75"/>
+      <stop offset="55%" stop-color="#ff3b5c" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff3b5c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fireAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff7a1a" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ff3b5c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="nameFill" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#fff6e8"/>
-      <stop offset="45%" stop-color="#ffd166"/>
+      <stop offset="40%" stop-color="#ffd166"/>
       <stop offset="100%" stop-color="#ff7a1a"/>
     </linearGradient>
-    <linearGradient id="aSlash" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="slashGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2ec4b6" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#e8fbff"/>
+      <stop offset="55%" stop-color="#fff"/>
+      <stop offset="100%" stop-color="#2ec4b6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cutGlow" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#2ec4b6" stop-opacity="0"/>
       <stop offset="50%" stop-color="#e8fbff"/>
       <stop offset="100%" stop-color="#2ec4b6" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="aRule" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#ff7a1a"/>
-      <stop offset="50%" stop-color="#ffd166"/>
+      <stop offset="60%" stop-color="#ffd166"/>
       <stop offset="100%" stop-color="#ff3b5c" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="aGlowO" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ff7a1a" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#ff7a1a" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="aGlowG" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#7ae582" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#7ae582" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="aGlowT" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#2ec4b6" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#2ec4b6" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="aSpeed" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
-      <rect width="60" height="60" fill="none"/>
-      <line x1="0" y1="0" x2="0" y2="60" stroke="#f0f0f5" stroke-opacity="0.04" stroke-width="10"/>
-      <line x1="28" y1="0" x2="28" y2="60" stroke="#ff7a1a" stroke-opacity="0.05" stroke-width="3"/>
-    </pattern>
-    <filter id="aGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2.6" result="b"/>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="aGlowS" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="1.6" result="b"/>
+    <filter id="glowS" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <clipPath id="aAvatar">
-      <circle cx="655" cy="125" r="56"/>
-    </clipPath>
-    <path id="aRingPath" d="M565,125 a90,90 0 1,1 180,0 a90,90 0 1,1 -180,0"/>
+    <filter id="fireBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <clipPath id="avClip"><circle cx="668" cy="140" r="54"/></clipPath>
+    <path id="ringPath" d="M580,140 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/>
   </defs>
-
   <style>
-    .mono { font-family: "Cascadia Code", "Fira Code", Consolas, "Courier New", monospace; }
-    .disp { font-family: "Segoe UI", "Arial Black", Arial, sans-serif; }
-    .jp { font-family: "Yu Gothic", "Hiragino Sans", "Segoe UI", sans-serif; }
-    @keyframes airPulse { 0%,100% { opacity: 1; } 50% { opacity: .45; } }
-    @keyframes ringSpin { to { transform: rotate(360deg); } }
-    @keyframes ringSpinR { to { transform: rotate(-360deg); } }
-    @keyframes blink { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
-    @keyframes emberFloat { 0% { opacity: 0; transform: translateY(0); } 15% { opacity: .9; } 100% { opacity: 0; transform: translateY(-90px); } }
-    .air { animation: airPulse 1.2s ease-in-out infinite; }
+    .mono { font-family: "Cascadia Code","Fira Code",Consolas,monospace; }
+    .disp { font-family: "Segoe UI","Arial Black",Arial,sans-serif; }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.45; } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes spinR { to { transform: rotate(-360deg); } }
+    @keyframes blink { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
+    .air { animation: pulse 1.2s ease-in-out infinite; }
     .cur { animation: blink 1s step-end infinite; }
-    .mcw { transform-origin: 655px 125px; animation: ringSpin 28s linear infinite; }
-    .mcw2 { transform-origin: 655px 125px; animation: ringSpinR 18s linear infinite; }
+    .ringW { transform-origin: 668px 140px; animation: spin 30s linear infinite; }
+    .ringW2 { transform-origin: 668px 140px; animation: spinR 20s linear infinite; }
   </style>
 
-  <!-- bg -->
-  <rect width="800" height="250" fill="url(#aBg)"/>
-  <rect width="800" height="250" fill="url(#aSpeed)"/>
-  <ellipse cx="160" cy="200" rx="220" ry="120" fill="url(#aGlowO)"/>
-  <ellipse cx="655" cy="125" rx="140" ry="140" fill="url(#aGlowG)"/>
-  <ellipse cx="400" cy="40" rx="200" ry="80" fill="url(#aGlowT)" opacity="0.7"/>
+  <!-- BG -->
+  <rect width="800" height="280" fill="url(#hBg)"/>
 
-  <!-- diagonal manga slash bars -->
-  <g opacity="0.12">
-    <polygon points="0,250 120,0 160,0 40,250" fill="#ff7a1a"/>
-    <polygon points="700,0 800,0 800,80 740,250 690,250" fill="#ff3b5c"/>
+  <!-- Madara fireball (bottom-left corner, clear of name) -->
+  <g filter="url(#fireBlur)" opacity="0.7">
+    <circle cx="40" cy="255" r="70" fill="url(#fireOuter)">
+      <animate attributeName="r" values="66;82;66" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".7;1;.7" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="40" cy="255" r="48" fill="url(#fireCore)">
+      <animate attributeName="r" values="45;58;45" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="40" cy="255" r="100" fill="url(#fireAura)">
+      <animate attributeName="r" values="92;115;92" dur="3s" repeatCount="indefinite"/>
+    </circle>
   </g>
-
-  <!-- floating embers / petals / magic sparks -->
-  <g>
-    <circle cx="120" cy="230" r="2.2" fill="#ff7a1a" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="5s" repeatCount="indefinite"/><animate attributeName="cy" values="230;40" dur="5s" repeatCount="indefinite"/></circle>
-    <circle cx="220" cy="240" r="1.6" fill="#ffd166" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="6s" begin="1s" repeatCount="indefinite"/><animate attributeName="cy" values="240;30" dur="6s" begin="1s" repeatCount="indefinite"/></circle>
-    <circle cx="340" cy="245" r="2" fill="#ff3b5c" opacity="0"><animate attributeName="opacity" values="0;.85;0" dur="5.5s" begin="2s" repeatCount="indefinite"/><animate attributeName="cy" values="245;20" dur="5.5s" begin="2s" repeatCount="indefinite"/></circle>
-    <circle cx="470" cy="235" r="1.8" fill="#7ae582" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="6.5s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="cy" values="235;25" dur="6.5s" begin="0.5s" repeatCount="indefinite"/></circle>
-    <circle cx="540" cy="240" r="1.5" fill="#2ec4b6" opacity="0"><animate attributeName="opacity" values="0;.75;0" dur="7s" begin="2.8s" repeatCount="indefinite"/><animate attributeName="cy" values="240;35" dur="7s" begin="2.8s" repeatCount="indefinite"/></circle>
-    <rect x="180" y="220" width="5" height="5" fill="#ff3b5c" opacity="0" transform="rotate(45 182 222)"><animate attributeName="opacity" values="0;.7;0" dur="5.8s" begin="1.4s" repeatCount="indefinite"/><animate attributeName="y" values="220;40" dur="5.8s" begin="1.4s" repeatCount="indefinite"/></rect>
-    <rect x="420" y="225" width="4" height="4" fill="#ffd166" opacity="0" transform="rotate(30 422 227)"><animate attributeName="opacity" values="0;.75;0" dur="6.2s" begin="3s" repeatCount="indefinite"/><animate attributeName="y" values="225;30" dur="6.2s" begin="3s" repeatCount="indefinite"/></rect>
+  <!-- fireball flames (orbiting embers) -->
+  <g fill="#ffd166">
+    <circle cx="40" cy="170" r="3" opacity=".85"><animate attributeName="cy" values="170;150;170" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".85;.3;.85" dur="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="110" cy="230" r="2.5" fill="#ff3b5c" opacity=".8"><animate attributeName="cx" values="110;125;110" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="15" cy="210" r="2.5" fill="#ff7a1a" opacity=".85"><animate attributeName="cy" values="210;190;210" dur="2s" repeatCount="indefinite"/></circle>
+    <circle cx="30" cy="275" r="2" fill="#fff6c8" opacity=".7"><animate attributeName="cy" values="275;255;275" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="100" cy="270" r="2.2" fill="#ff7a1a" opacity=".8"><animate attributeName="cy" values="270;250;270" dur="2.1s" repeatCount="indefinite"/></circle>
   </g>
+  <!-- fire light cast -->
+  <ellipse cx="40" cy="255" rx="150" ry="100" fill="url(#fireAura)" opacity=".35"/>
+  <!-- solid name plate for readability -->
+  <rect x="36" y="78" width="510" height="64" rx="4" fill="#0a0a0f" opacity=".88"/>
 
   <!-- corner frame -->
-  <g stroke="#ffd166" stroke-width="2" fill="none" opacity="0.85" filter="url(#aGlowS)">
-    <path d="M14,42 L14,14 L50,14"/>
-    <path d="M750,14 L786,14 L786,42"/>
-    <path d="M14,208 L14,236 L50,236"/>
-    <path d="M750,236 L786,236 L786,208"/>
+  <g stroke="#ffd166" stroke-width="2" fill="none" opacity=".9" filter="url(#glowS)">
+    <path d="M14,44 L14,14 L52,14"/>
+    <path d="M748,14 L786,14 L786,44"/>
+    <path d="M14,236 L14,266 L52,266"/>
+    <path d="M748,266 L786,266 L786,236"/>
   </g>
 
-  <!-- NOW AIRING badge (One Piece live + Naruto energy) -->
-  <g filter="url(#aGlowS)">
-    <rect x="44" y="28" width="118" height="26" rx="3" fill="#ff3b5c"/>
-    <rect x="44" y="28" width="118" height="26" rx="3" fill="none" stroke="#fff" stroke-opacity="0.5"/>
-    <text class="disp" x="103" y="46" text-anchor="middle" fill="#fff" font-size="13" font-weight="800" letter-spacing="3">NOW AIRING</text>
-    <circle cx="174" cy="41" r="5" fill="#ff3b5c" class="air" filter="url(#aGlowS)"/>
+  <!-- NOW AIRING -->
+  <g filter="url(#glowS)">
+    <rect x="44" y="26" width="118" height="26" rx="3" fill="#ff3b5c"/>
+    <text class="disp" x="103" y="44" text-anchor="middle" fill="#fff" font-size="13" font-weight="800" letter-spacing="3">NOW AIRING</text>
+    <circle cx="174" cy="39" r="5" fill="#ff3b5c" class="air" filter="url(#glowS)"/>
   </g>
-  <text class="mono" x="190" y="46" fill="#ffd166" font-size="12" letter-spacing="2">EP.2026 // SEASON FINALE</text>
+  <text class="mono" x="190" y="44" fill="#ffd166" font-size="12" letter-spacing="2">EP.2026 // SEASON FINALE</text>
 
-  <!-- anime logo title (multi-layer outline) -->
-  <g class="disp" font-weight="900">
-    <text x="47" y="112" fill="#ff7a1a" opacity="0.85" font-size="46" letter-spacing="1">ANURAG YADAV</text>
-    <text x="44" y="110" fill="none" stroke="#0a0a0f" stroke-width="9" stroke-linejoin="round" font-size="46" letter-spacing="1">ANURAG YADAV</text>
-    <text x="44" y="110" fill="url(#aTitle)" stroke="#ffd166" stroke-width="1.2" font-size="46" letter-spacing="1" filter="url(#aGlow)">ANURAG YADAV</text>
+  <!-- Name (animates in with fireball) -->
+  <g class="disp" font-weight="900" style="paint-order:stroke fill">
+    <text x="44" y="118" fill="#ff3b5c" font-size="48" letter-spacing="1" stroke="#0a0a0f" stroke-width="8" stroke-linejoin="round">
+      ANURAG YADAV
+      <animate attributeName="opacity" values="0;1;1" dur="1.4s" begin="0s" fill="freeze"/>
+      <animate attributeName="x" values="20;44" dur="1.4s" begin="0s" fill="freeze"/>
+    </text>
+    <text x="44" y="116" fill="#ffd166" stroke="#0a0a0f" stroke-width="6" stroke-linejoin="round" font-size="48" letter-spacing="1" opacity="0" style="paint-order:stroke fill">
+      ANURAG YADAV
+      <animate attributeName="opacity" values="0;1;1" dur="1.2s" begin="0.15s" fill="freeze"/>
+      <animate attributeName="x" values="30;44" dur="1.2s" begin="0.15s" fill="freeze"/>
+    </text>
+    <text x="44" y="116" fill="#fff6e8" stroke="#ff7a1a" stroke-width="1.5" font-size="48" letter-spacing="1" filter="url(#glow)" opacity="0" style="paint-order:stroke fill">
+      ANURAG YADAV
+      <animate attributeName="opacity" values="0;1" dur="1s" begin="0.3s" fill="freeze"/>
+      <animate attributeName="x" values="30;44" dur="1.2s" begin="0.15s" fill="freeze"/>
+    </text>
   </g>
 
-  <rect x="46" y="122" width="340" height="3" fill="url(#aRule)" filter="url(#aGlowS)"/>
+  <rect x="46" y="130" width="360" height="3" fill="url(#rule)" filter="url(#glowS)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur=".8s" begin=".6s" fill="freeze"/>
+  </rect>
 
-  <!-- Japanese subtitle + roles -->
-  <text class="jp" x="46" y="148" fill="#2ec4b6" font-size="14" letter-spacing="4" filter="url(#aGlowS)">超高校級エンジニア // フルスタック</text>
-  <text class="mono" x="46" y="172" fill="#f5e6c8" font-size="12" letter-spacing="1">NINJA_DEV // PIRATE_CAPTAIN // MAGIC_KNIGHT // SLAYER</text>
+  <!-- English roles / class -->
+  <text class="mono" x="46" y="156" fill="#2ec4b6" font-size="13" letter-spacing="2" filter="url(#glowS)">FULL-STACK DEVELOPER // AI BUILDER // DATA ENGINEER</text>
+  <text class="mono" x="46" y="182" fill="#f5e6c8" font-size="12">CLASS &#183; PROTAGONIST_ARC<span class="cur" fill="#ff7a1a">_</span></text>
+  <text class="mono" x="46" y="206" fill="#8b8b9a" font-size="11">RANK &#183; <tspan fill="#ffd166" font-weight="700">S-CLASS</tspan> &#183; POWER LEVEL: <tspan fill="#ff7a1a">MAXED</tspan></text>
+  <text class="mono" x="46" y="230" fill="#7ae582" font-size="11">STATUS: MISSION COMPLETE &#183; AWAITING NEXT BATTLE</text>
+  <text class="mono" x="46" y="252" fill="#8b8b9a" font-size="10" letter-spacing="1">"I NEVER GO BACK ON MY WORD" &#183; NINJA CODE</text>
 
-  <!-- mission file lines -->
-  <text class="mono" x="46" y="198" fill="#8b8b9a" font-size="11">CLASS &#183; FULL_STACK_PIRAGE<span class="cur" fill="#ff7a1a">_</span></text>
-  <text class="mono" x="46" y="218" fill="#8b8b9a" font-size="11">RANK &#183; <tspan fill="#ffd166" font-weight="700">S-CLASS</tspan> &#183; BOUNTY: <tspan fill="#ff7a1a">¥∞</tspan></text>
-  <text class="jp" x="46" y="238" fill="#7ae582" font-size="11" opacity="0.9">任務完了 &#183; 次のミッション待機中</text>
-
-  <!-- ===== right: character select card ===== -->
-  <!-- rotating spell circle (Black Clover) -->
-  <g class="mcw" opacity="0.9">
-    <circle cx="655" cy="125" r="92" fill="none" stroke="#7ae582" stroke-width="1.2" stroke-dasharray="6 10" filter="url(#aGlowS)"/>
-    <circle cx="655" cy="125" r="84" fill="none" stroke="#2ec4b6" stroke-width="1" stroke-dasharray="2 8"/>
-    <!-- rune ticks -->
-    <g stroke="#7ae582" stroke-width="2" filter="url(#aGlowS)">
-      <line x1="655" y1="28" x2="655" y2="40"/>
-      <line x1="655" y1="210" x2="655" y2="222"/>
-      <line x1="558" y1="125" x2="570" y2="125"/>
-      <line x1="740" y1="125" x2="752" y2="125"/>
+  <!-- ===== Right: avatar + spell ring ===== -->
+  <g class="ringW" opacity=".9">
+    <circle cx="668" cy="140" r="92" fill="none" stroke="#7ae582" stroke-width="1.2" stroke-dasharray="6 10" filter="url(#glowS)"/>
+    <circle cx="668" cy="140" r="84" fill="none" stroke="#2ec4b6" stroke-width="1" stroke-dasharray="2 8"/>
+    <g stroke="#7ae582" stroke-width="2" filter="url(#glowS)">
+      <line x1="668" y1="42" x2="668" y2="54"/>
+      <line x1="668" y1="226" x2="668" y2="238"/>
+      <line x1="570" y1="140" x2="582" y2="140"/>
+      <line x1="754" y1="140" x2="766" y2="140"/>
     </g>
-    <polygon points="655,50 710,155 600,155" fill="none" stroke="#7ae582" stroke-opacity="0.5" stroke-width="1"/>
   </g>
-  <g class="mcw2" opacity="0.75">
-    <circle cx="655" cy="125" r="76" fill="none" stroke="#ffd166" stroke-width="1.4" stroke-dasharray="14 8"/>
-    <rect x="635" y="105" width="40" height="40" transform="rotate(45 655 125)" fill="none" stroke="#ff7a1a" stroke-opacity="0.7" stroke-width="1.2"/>
+  <g class="ringW2" opacity=".8">
+    <circle cx="668" cy="140" r="76" fill="none" stroke="#ffd166" stroke-width="1.4" stroke-dasharray="14 8"/>
+    <rect x="648" y="120" width="40" height="40" transform="rotate(45 668 140)" fill="none" stroke="#ff7a1a" stroke-opacity=".7" stroke-width="1.2"/>
   </g>
+  <g filter="url(#glowS)">
+    <circle cx="668" cy="140" r="64" fill="none" stroke="#ffd166" stroke-width="3"/>
+    <circle cx="668" cy="140" r="59" fill="none" stroke="#ff7a1a" stroke-width="1.2" stroke-dasharray="4 6"/>
+  </g>
+  <circle cx="668" cy="140" r="54" fill="#1a1410"/>
+  <image href="data:image/jpeg;base64,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CAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACsjxf/yKet/9eM//AKLatesjxf8A8inrf/XjP/6LataX8SPqhrc+YKKKK/QzcKKKKACiiigAooooA674Uf8AI/6X/wBtf/RT19EV87/Cj/kf9L/7a/8Aop6+iK+Szf8Ajr0/VmU9wooorxCAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACsjxf/AMinrf8A14z/APotq16yPF//ACKet/8AXjP/AOi2rWl/Ej6oa3PmCiiiv0M3CiiigAooooAKKKKAOu+FH/I/6X/21/8ART19EV87/Cj/AJH/AEv/ALa/+inr6Ir5LN/469P1ZlPcKKKK8QgKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAqG8tIr+0ntp08yCZGjkTJG5SMEZHPQ1NRTTtqgOR/4VR4V/wCgX/5MS/8AxVH/AAqjwr/0C/8AyYl/+KrrqK6PrNf/AJ+P72O7OR/4VR4V/wCgX/5MS/8AxVH/AAqjwr/0C/8AyYl/+KrrqKPrNf8A5+P72F2cj/wqjwr/ANAv/wAmJf8A4qj/AIVR4V/6Bf8A5MS//FV11FH1mv8A8/H97C7OR/4VR4V/6Bf/AJMS/wDxVH/CqPCv/QL/APJiX/4quuoo+s1/+fj+9hdnO6T8PtA0PUIr2ysPIuos7JPOkbGQQeCxHQmuioorGdSdR3m235iCiiioAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/2Q==" x="614" y="86" width="108" height="108" clip-path="url(#avClip)" preserveAspectRatio="xMidYMid slice"/>
 
-  <!-- wanted-poster style frame -->
-  <g filter="url(#aGlowS)">
-    <circle cx="655" cy="125" r="66" fill="none" stroke="#ffd166" stroke-width="3"/>
-    <circle cx="655" cy="125" r="61" fill="none" stroke="#ff7a1a" stroke-width="1.2" stroke-dasharray="4 6"/>
+  <!-- Yami katana slash (dimension cut on open) -->
+  <g>
+    <!-- bright cut line sweeping across whole hero -->
+    <line x1="-40" y1="270" x2="120" y2="10" stroke="url(#slashGrad)" stroke-width="4" opacity="0" filter="url(#glow)">
+      <animate attributeName="opacity" values="0;1;0" dur="1s" begin="0.4s" fill="freeze"/>
+      <animate attributeName="x1" values="-40;820" dur=".9s" begin="0.4s" fill="freeze"/>
+      <animate attributeName="x2" values="120;980" dur=".9s" begin="0.4s" fill="freeze"/>
+      <animate attributeName="y1" values="270;10" dur=".9s" begin="0.4s" fill="freeze"/>
+      <animate attributeName="y2" values="10;-250" dur=".9s" begin="0.4s" fill="freeze"/>
+    </line>
+    <!-- flash across screen at slash moment -->
+    <rect width="800" height="280" fill="#e8fbff" opacity="0">
+      <animate attributeName="opacity" values="0;0;.35;0" dur=".5s" begin="0.75s" fill="freeze"/>
+    </rect>
+    <!-- residual cut glow (stays as scar) -->
+    <line x1="0" y1="250" x2="800" y2="30" stroke="url(#cutGlow)" stroke-width="1.5" opacity="0" filter="url(#glowS)">
+      <animate attributeName="opacity" values="0;0;.8;.35;.5" dur="1.5s" begin="0.8s" fill="freeze"/>
+      <animate attributeName="opacity" values=".5;.2;.5;.2;.5" dur="3s" begin="2.3s" repeatCount="indefinite"/>
+    </line>
+    <!-- sparkle along scar -->
+    <circle cx="400" cy="140" r="3" fill="#e8fbff" opacity="0" filter="url(#glowS)">
+      <animate attributeName="opacity" values="0;1;0;1;0" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <text class="mono" x="400" y="160" text-anchor="middle" fill="#2ec4b6" font-size="9" letter-spacing="3" opacity="0" filter="url(#glowS)">
+      DIMENSION CUT
+      <animate attributeName="opacity" values="0;1;0" dur="2s" begin="0.9s" fill="freeze"/>
+    </text>
   </g>
-
-  <!-- avatar -->
-  <circle cx="655" cy="125" r="56" fill="#1a1410"/>
-  <image href="data:image/jpeg;base64,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CAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACsjxf/yKet/9eM//AKLatesjxf8A8inrf/XjP/6LataX8SPqhrc+YKKKK/QzcKKKKACiiigAooooA674Uf8AI/6X/wBtf/RT19EV87/Cj/kf9L/7a/8Aop6+iK+Szf8Ajr0/VmU9wooorxCAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACsjxf/AMinrf8A14z/APotq16yPF//ACKet/8AXjP/AOi2rWl/Ej6oa3PmCiiiv0M3CiiigAooooAKKKKAOu+FH/I/6X/21/8ART19EV87/Cj/AJH/AEv/ALa/+inr6Ir5LN/469P1ZlPcKKKK8QgKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAqG8tIr+0ntp08yCZGjkTJG5SMEZHPQ1NRTTtqgOR/4VR4V/wCgX/5MS/8AxVH/AAqjwr/0C/8AyYl/+KrrqK6PrNf/AJ+P72O7OR/4VR4V/wCgX/5MS/8AxVH/AAqjwr/0C/8AyYl/+KrrqKPrNf8A5+P72F2cj/wqjwr/ANAv/wAmJf8A4qj/AIVR4V/6Bf8A5MS//FV11FH1mv8A8/H97C7OR/4VR4V/6Bf/AJMS/wDxVH/CqPCv/QL/APJiX/4quuoo+s1/+fj+9hdnO6T8PtA0PUIr2ysPIuos7JPOkbGQQeCxHQmuioorGdSdR3m235iCiiioAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/2Q==" x="599" y="69" width="112" height="112" clip-path="url(#aAvatar)" preserveAspectRatio="xMidYMid slice"/>
 
   <!-- katana slash across avatar -->
-  <line x1="580" y1="190" x2="730" y2="55" stroke="url(#aSlash)" stroke-width="2.5" opacity="0.9" filter="url(#aGlowS)">
-    <animate attributeName="opacity" values="0.3;1;0.5;1" dur="3s" repeatCount="indefinite"/>
+  <line x1="590" y1="200" x2="750" y2="60" stroke="url(#slashGrad)" stroke-width="2.5" opacity=".9" filter="url(#glowS)">
+    <animate attributeName="opacity" values=".4;1;.5;1" dur="3s" repeatCount="indefinite"/>
   </line>
 
-  <!-- rotating name ring -->
-  <text class="mono" font-size="10" fill="#ffd166" letter-spacing="3" filter="url(#aGlowS)">
-    <textPath href="#aRingPath" startOffset="0%">WANTED // S-CLASS // 力 // BOUNTY // S-CLASS // WANTED // BOUNTY // S-CLASS //</textPath>
-    <animate attributeName="startOffset" from="0%" to="100%" dur="18s" repeatCount="indefinite"/>
+  <!-- rotating ring text -->
+  <text class="mono" font-size="10" fill="#ffd166" letter-spacing="3" filter="url(#glowS)">
+    <textPath href="#ringPath" startOffset="0%">S-CLASS // POWER // WANTED // S-CLASS // BOUNTY // POWER // S-CLASS //</textPath>
+    <animate attributeName="startOffset" from="0%" to="100%" dur="20s" repeatCount="indefinite"/>
   </text>
 
-  <!-- ON AIR status -->
-  <g filter="url(#aGlowS)">
-    <rect x="618" y="198" width="74" height="22" rx="3" fill="#0a0a0f" stroke="#ff3b5c" stroke-width="1.5"/>
-    <circle cx="632" cy="209" r="4" fill="#ff3b5c" class="air"/>
-    <text class="disp" x="672" y="214" text-anchor="middle" fill="#ff3b5c" font-size="11" font-weight="800" letter-spacing="2">ON AIR</text>
+  <!-- ON AIR -->
+  <g filter="url(#glowS)">
+    <rect x="631" y="216" width="74" height="22" rx="3" fill="#0a0a0f" stroke="#ff3b5c" stroke-width="1.5"/>
+    <circle cx="645" cy="227" r="4" fill="#ff3b5c" class="air"/>
+    <text class="disp" x="685" y="232" text-anchor="middle" fill="#ff3b5c" font-size="11" font-weight="800" letter-spacing="2">ON AIR</text>
   </g>
+  <text class="mono" x="668" y="258" text-anchor="middle" fill="#2ec4b6" font-size="11" letter-spacing="2">MAIN CHARACTER</text>
 
-  <!-- JP label under avatar -->
-  <text class="jp" x="655" y="240" text-anchor="middle" fill="#2ec4b6" font-size="11" letter-spacing="3">主人公 &#183; PROTAGONIST</text>
-
-  <!-- bottom slash rule -->
-  <rect x="0" y="246" width="800" height="4" fill="url(#aRule)" opacity="0.9"/>
-  <rect x="0" y="246" width="90" height="4" fill="#fff" opacity="0.55">
+  <!-- bottom rule -->
+  <rect x="0" y="274" width="800" height="6" fill="url(#rule)" opacity=".95"/>
+  <rect x="-90" y="274" width="90" height="6" fill="#fff" opacity=".55">
     <animate attributeName="x" values="-90;800" dur="3.2s" repeatCount="indefinite"/>
   </rect>
 </svg>

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero-banner.svg" alt="Anurag Yadav - Anime Protagonist Profile" width="100%"/>
+<img src="./assets/hero-banner.svg" alt="Anurag Yadav - Anime Hero with Madara fireball and Yami katana slash" width="100%"/>
 
 <br/>
 
@@ -12,11 +12,11 @@
 
 <br/><br/>
 
-<img src="./assets/header-intro.svg" alt="// SYSTEM_INTRO EP.01" width="100%"/>
+<img src="./assets/header-intro.svg" alt="Arc 01 - About Me" width="100%"/>
 
 <br/>
 
-<img src="./assets/intro-status.svg" alt="Character status screen - stats and equipment" width="100%"/>
+<img src="./assets/asta-sword-intro.svg" alt="Asta demon sword awakened - who I am" width="100%"/>
 
 <br/>
 
@@ -24,7 +24,19 @@
 
 <br/>
 
-<img src="./assets/header-projects.svg" alt="// FEATURED_MODULES EP.02" width="100%"/>
+<img src="./assets/header-skills.svg" alt="Section 02 - Skills and Technology" width="100%"/>
+
+<br/>
+
+<img src="./assets/sharingan-skills.svg" alt="Itachi Sharingan eyes awakening with skill stats" width="100%"/>
+
+<br/>
+
+<img src="./assets/divider.svg" alt="eyecatch divider" width="100%"/>
+
+<br/>
+
+<img src="./assets/header-projects.svg" alt="Arc 03 - Featured Projects" width="100%"/>
 
 </div>
 
@@ -32,25 +44,28 @@
 
 > [!IMPORTANT]
 > <div align="center">
-> <p><b>S-RANK MISSION // WANTED</b></p>
-> <h3><a href="https://github.com/anuragY77/CineVerse">CineVerse</a> — bounty: ¥∞</h3>
+> <p><b>NARUTO MODE &#183; I NEVER GO BACK ON MY WORD</b></p>
+> <h3><a href="https://github.com/anuragY77/CineVerse">CineVerse</a></h3>
 > <p><b>Premium movie/anime discovery platform with 3D effects, glassmorphism, real-time watch parties, and AI recommendations.</b></p>
+> <p><em>"That is my ninja way — ship it, never give up."</em></p>
 > <p><code>JavaScript</code> <code>React</code> <code>Three.js</code> <code>AI</code></p>
 > </div>
 
 > [!TIP]
 > <div align="center">
-> <p><b>A-RANK MISSION // GRIMOIRE ENTRY</b></p>
+> <p><b>ONE PIECE MODE &#183; I'M GONNA BE KING OF THE STACK</b></p>
 > <h3><a href="https://github.com/anuragY77/medcore-enterprise-hms">medcore-enterprise-hms</a></h3>
 > <p><b>Premium enterprise Hospital Management System with RBAC, Drizzle ORM, and a modern clinical dashboard.</b></p>
+> <p><em>"The treasure is a working enterprise system — and I will find it."</em></p>
 > <p><code>TypeScript</code> <code>Next.js</code> <code>PostgreSQL</code> <code>Drizzle ORM</code></p>
 > </div>
 
 > [!NOTE]
 > <div align="center">
-> <p><b>B-RANK MISSION // NEXT ISLAND</b></p>
+> <p><b>DEMON SLAYER MODE &#183; SET YOUR HEART ABLAZE</b></p>
 > <h3><a href="https://github.com/anuragY77/portfolio">portfolio</a></h3>
 > <p><b>Personal portfolio site built with Next.js — dark, fast, fully animated.</b></p>
+> <p><em>"Total Concentration: constant performance."</em></p>
 > <p><code>TypeScript</code> <code>Next.js</code> <code>Tailwind CSS</code></p>
 > </div>
 
@@ -62,7 +77,7 @@
 
 <br/>
 
-<img src="./assets/header-analytics.svg" alt="// ABILITY_STATS EP.03" width="100%"/>
+<img src="./assets/header-analytics.svg" alt="Arc 04 - GitHub Analytics" width="100%"/>
 
 <br/>
 
@@ -95,7 +110,7 @@
 
 <br/>
 
-<img src="./assets/header-feeds.svg" alt="// FEEDS_SIGNAL EP.04" width="100%"/>
+<img src="./assets/header-feeds.svg" alt="Next Episode - Latest Feeds" width="100%"/>
 
 <br/>
 
@@ -104,7 +119,7 @@
 <br/>
 
 <!-- START_SECTION:activity -->
-<sub>次回予告 — awaiting first sync — GitHub Actions will populate recent activity here.</sub>
+<sub>Next episode loading — awaiting first sync — GitHub Actions will populate recent activity here.</sub>
 <!-- END_SECTION:activity -->
 
 <br/>
@@ -114,7 +129,7 @@
 <br/>
 
 <!-- START_SECTION:content -->
-<sub>つづく — awaiting first sync — GitHub Actions will populate latest posts here.</sub>
+<sub>Stay tuned — awaiting first sync — GitHub Actions will populate latest posts here.</sub>
 <!-- END_SECTION:content -->
 
 <br/>
@@ -123,6 +138,6 @@
 
 <br/>
 
-<sub>NEXT EPISODE: <a href="https://github.com/anuragY77">@anuragY77</a> :: season 2026 · stay tuned つづく</sub>
+<sub>NEXT EPISODE: <a href="https://github.com/anuragY77">@anuragY77</a> :: Season 2026 · Stay tuned</sub>
 
 </div>

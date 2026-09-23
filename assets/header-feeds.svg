@@ -1,57 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 70" width="800" height="70" role="img" aria-label="Episode 04 header: feeds next episode preview">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 70" width="800" height="70" role="img" aria-label="Header: next episode feeds">
   <defs>
-    <linearGradient id="h4bg" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="fhBg" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#0a0a0f"/>
-      <stop offset="60%" stop-color="#0a1218"/>
+      <stop offset="55%" stop-color="#0a1218"/>
       <stop offset="100%" stop-color="#0a0a0f"/>
     </linearGradient>
-    <linearGradient id="h4line" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="fhLine" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#2ec4b6"/>
       <stop offset="70%" stop-color="#ff7a1a"/>
       <stop offset="100%" stop-color="#ff7a1a" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="h4beam" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="fhBeam" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#ff7a1a" stop-opacity="0"/>
       <stop offset="50%" stop-color="#fff0e0"/>
       <stop offset="100%" stop-color="#ff7a1a" stop-opacity="0"/>
     </linearGradient>
-    <filter id="h4g" x="-40%" y="-40%" width="180%" height="180%">
+    <filter id="fhG" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur stdDeviation="2" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    </defs>
+  </defs>
   <style>
-    @keyframes h4cur { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
-    @keyframes h4p { 0%,100% { opacity:.5; } 50% { opacity:1; } }
-    .cur { animation: h4cur 1s step-end infinite; }
-    .p { animation: h4p 2s ease-in-out infinite; }
+    @keyframes blink { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
+    @keyframes p { 0%,100% { opacity:.5; } 50% { opacity:1; } }
+    .cur { animation: blink 1s step-end infinite; }
+    .p { animation: p 2s ease-in-out infinite; }
   </style>
 
-  <rect width="800" height="70" fill="url(#h4bg)"/>
+  <rect width="800" height="70" fill="url(#fhBg)"/>
   <rect x="0" y="0" width="6" height="70" fill="#2ec4b6"/>
 
-  <!-- water-breathing EP badge -->
-  <g filter="url(#h4g)">
+  <g filter="url(#fhG)">
     <rect x="24" y="14" width="86" height="42" rx="3" fill="#2ec4b6"/>
-    <text x="67" y="34" text-anchor="middle" fill="#0a1218" font-family="Consolas,monospace" font-size="10" font-weight="700" letter-spacing="2">EPISODE</text>
-    <text x="67" y="50" text-anchor="middle" fill="#0a0a0f" font-family="Consolas,monospace" font-size="16" font-weight="800">04</text>
+    <text x="67" y="34" text-anchor="middle" fill="#0a1218" font-family="Consolas,monospace" font-size="10" font-weight="700" letter-spacing="2">NEXT</text>
+    <text x="67" y="50" text-anchor="middle" fill="#0a0a0f" font-family="Consolas,monospace" font-size="16" font-weight="800">EP</text>
   </g>
 
   <g>
-    <text x="128" y="32" fill="#ff7a1a" font-family="Consolas,monospace" font-size="11" letter-spacing="3">NEXT_EPISODE // 次回予告</text>
-    <text x="126" y="56" fill="#f0f0f5" font-family="'Segoe UI','Arial Black',Arial,sans-serif" font-size="24" font-weight="900" letter-spacing="2">FEEDS_SIGNAL</text>
+    <text x="128" y="32" fill="#ff7a1a" font-family="Consolas,monospace" font-size="11" letter-spacing="3">NEXT EPISODE &#183; WHAT HAPPENS NEXT</text>
+    <text x="126" y="56" fill="#f0f0f5" font-family="'Segoe UI','Arial Black',Arial,sans-serif" font-size="24" font-weight="900" letter-spacing="2">LATEST FEEDS</text>
     <text x="455" y="56" fill="#2ec4b6" font-family="'Segoe UI','Arial Black',Arial,sans-serif" font-size="24" font-weight="900" class="cur">_</text>
   </g>
 
-  <g stroke="#2ec4b6" stroke-width="2" opacity="0.6">
+  <g stroke="#2ec4b6" stroke-width="2" opacity=".6">
     <line x1="580" y1="18" x2="760" y2="18"/>
     <line x1="640" y1="36" x2="760" y2="36"/>
     <line x1="700" y1="54" x2="760" y2="54"/>
   </g>
   <circle cx="770" cy="18" r="3" fill="#ff7a1a" class="p"/>
 
-  <rect x="0" y="66" width="800" height="4" fill="url(#h4line)"/>
-  <rect x="-80" y="66" width="80" height="4" fill="url(#h4beam)">
+  <rect x="0" y="66" width="800" height="4" fill="url(#fhLine)"/>
+  <rect x="-80" y="66" width="80" height="4" fill="url(#fhBeam)">
     <animate attributeName="x" values="-80;800" dur="2.4s" repeatCount="indefinite"/>
   </rect>
 </svg>

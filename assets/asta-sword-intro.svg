@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Asta demon sword intro - who I am">
+  <defs>
+    <linearGradient id="asBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0d14"/>
+      <stop offset="100%" stop-color="#12081a"/>
+    </linearGradient>
+    <linearGradient id="blade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1a24"/>
+      <stop offset="40%" stop-color="#3a3a50"/>
+      <stop offset="55%" stop-color="#c0c0e0"/>
+      <stop offset="70%" stop-color="#3a3a50"/>
+      <stop offset="100%" stop-color="#1a1a24"/>
+    </linearGradient>
+    <linearGradient id="demonAura" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b388ff" stop-opacity=".9"/>
+      <stop offset="50%" stop-color="#7c4dff" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#1a0530" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="asRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b388ff"/>
+      <stop offset="50%" stop-color="#ff3b5c"/>
+      <stop offset="100%" stop-color="#ff3b5c" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="asGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="asDark" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+  <style>
+    @keyframes swordPulse { 0%,100% { opacity:.55; } 50% { opacity:1; } }
+    @keyframes auraFlux { 0%,100% { opacity:.4; transform: scaleY(1); } 50% { opacity:.9; transform: scaleY(1.08); } }
+    @keyframes bladeShine { 0%,100% { opacity:.3; } 50% { opacity:.95; } }
+    @keyframes blink { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
+    .p { animation: swordPulse 2s ease-in-out infinite; }
+    .aura { animation: auraFlux 2.4s ease-in-out infinite; transform-origin: bottom center; }
+    .shine { animation: bladeShine 2.8s ease-in-out infinite; }
+    .cur { animation: blink 1s step-end infinite; }
+  </style>
+
+  <rect width="800" height="200" fill="url(#asBg)"/>
+  <rect x="4" y="4" width="792" height="192" fill="none" stroke="#b388ff" stroke-opacity=".55" stroke-width="1.5"/>
+  <rect x="10" y="10" width="780" height="180" fill="none" stroke="#ff3b5c" stroke-opacity=".3" stroke-dasharray="6 6"/>
+
+  <!-- header -->
+  <rect x="24" y="22" width="8" height="18" fill="#b388ff"/>
+  <text x="42" y="37" fill="#ffd166" font-family="Consolas,monospace" font-size="13" font-weight="700" letter-spacing="3">INTRO // DEMON SWORD AWAKENED</text>
+  <text x="776" y="37" text-anchor="end" fill="#b388ff" font-family="Consolas,monospace" font-size="11" letter-spacing="2" class="p">ANTI-MAGIC ACTIVE</text>
+  <line x1="24" y1="48" x2="776" y2="48" stroke="#b388ff" stroke-opacity=".35"/>
+
+  <!-- ===== LEFT: Asta demon sword ===== -->
+  <g transform="translate(100,125)">
+    <!-- demon aura flames -->
+    <g class="aura" filter="url(#asDark)">
+      <ellipse cx="0" cy="10" rx="55" ry="70" fill="url(#demonAura)" opacity=".7"/>
+      <path d="M-40,40 Q-50,0 -30,-20 Q-20,-50 0,-60 Q20,-50 30,-20 Q50,0 40,40 Q30,60 0,65 Q-30,60 -40,40 Z" fill="#1a0530" opacity=".6"/>
+    </g>
+    <!-- dark energy sparks -->
+    <g fill="#b388ff" class="p">
+      <circle cx="-45" cy="-10" r="2.5" opacity=".8"/>
+      <circle cx="45" cy="-20" r="2" opacity=".7"/>
+      <circle cx="-35" cy="35" r="2" opacity=".75"/>
+      <circle cx="40" cy="30" r="2.5" opacity=".8"/>
+      <circle cx="0" cy="-70" r="3" opacity=".9"/>
+      <circle cx="-25" cy="-55" r="2" opacity=".7"/>
+      <circle cx="30" cy="-50" r="2" opacity=".7"/>
+    </g>
+    <!-- sword blade (vertical, demon-slayer style) -->
+    <g transform="rotate(-25)">
+      <!-- blade -->
+      <path d="M-6,-85 L6,-85 L10,40 L0,55 L-10,40 Z" fill="url(#blade)" stroke="#0a0a0f" stroke-width="1.5"/>
+      <!-- demon edge glow -->
+      <path d="M-6,-85 L0,-85 L2,40 L0,55 L-4,40 Z" fill="#b388ff" opacity=".5" class="shine"/>
+      <path d="M0,-85 L6,-85 L10,40 L2,50 Z" fill="#e8fbff" opacity=".35" class="shine"/>
+      <!-- runes on blade -->
+      <g stroke="#ff3b5c" stroke-width="1.5" fill="none" opacity=".9" filter="url(#asGlow)">
+        <path d="M-3,-50 L3,-45 L-3,-40"/>
+        <path d="M-3,-30 L3,-25 L-3,-20"/>
+        <path d="M-3,-10 L3,-5 L-3,0"/>
+        <path d="M-2,15 L2,20 L-2,25"/>
+      </g>
+      <!-- guard -->
+      <rect x="-22" y="55" width="44" height="8" rx="2" fill="#2a2a3a" stroke="#b388ff" stroke-width="1.5"/>
+      <!-- handle -->
+      <rect x="-5" y="63" width="10" height="28" rx="2" fill="#1a1a24" stroke="#ff3b5c" stroke-width="1"/>
+      <!-- pommel -->
+      <circle cx="0" cy="95" r="6" fill="#b388ff" stroke="#0a0a0f" stroke-width="1.5" class="p"/>
+    </g>
+    <text x="0" y="145" text-anchor="middle" fill="#b388ff" font-family="Consolas,monospace" font-size="10" letter-spacing="2" class="p">DEMON SLAYER SWORD</text>
+  </g>
+
+  <line x1="240" y1="62" x2="240" y2="188" stroke="#b388ff" stroke-opacity=".3"/>
+  <circle cx="240" cy="125" r="4" fill="#b388ff" class="p"/>
+
+  <!-- ===== RIGHT: intro text (English) ===== -->
+  <g font-family="'Segoe UI',Arial,sans-serif">
+    <text x="270" y="78" fill="#ffd166" font-size="16" font-weight="800" letter-spacing="1">WHO AM I</text>
+    <text x="270" y="104" fill="#f0f0f5" font-size="14">I build things that refuse to stay ordinary —</text>
+    <text x="270" y="126" fill="#f0f0f5" font-size="14">full-stack apps, AI tools, data pipelines.</text>
+    <text x="270" y="152" fill="#2ec4b6" font-size="13" font-family="Consolas,monospace">Same energy as a demon sword: sharp, loud, unbreakable.</text>
+    <text x="270" y="178" fill="#8b8b9a" font-size="11" font-family="Consolas,monospace">CURRENT ARC: shipping products &#183; open source &#183; AI <tspan fill="#ff7a1a" class="cur">_</tspan></text>
+  </g>
+
+  <!-- corner accents -->
+  <g stroke="#b388ff" stroke-width="2" fill="none">
+    <path d="M4,30 L4,4 L30,4"/>
+    <path d="M770,4 L796,4 L796,30"/>
+    <path d="M4,170 L4,196 L30,196"/>
+    <path d="M770,196 L796,196 L796,170"/>
+  </g>
+</svg>
