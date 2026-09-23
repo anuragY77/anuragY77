@@ -1,68 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 150" width="800" height="150" role="img" aria-label="To be continued footer">
   <defs>
-    <linearGradient id="fBg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#050508"/>
-      <stop offset="60%" stop-color="#0e0c14"/>
-      <stop offset="100%" stop-color="#1a0e06"/>
-    </linearGradient>
-    <linearGradient id="fTitle" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#fff6e8"/>
-      <stop offset="50%" stop-color="#ffd54f"/>
-      <stop offset="100%" stop-color="#ff7a1a"/>
-    </linearGradient>
-    <linearGradient id="fLine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#e01b24" stop-opacity="0"/>
-      <stop offset="30%" stop-color="#ff7a1a"/>
-      <stop offset="70%" stop-color="#ffd54f"/>
-      <stop offset="100%" stop-color="#ffd54f" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="fG" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2.4" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <pattern id="fSpeed" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(-22)">
-      <line x1="0" y1="0" x2="0" y2="46" stroke="#ffffff" stroke-opacity="0.04" stroke-width="8"/>
-      <line x1="22" y1="0" x2="22" y2="46" stroke="#ff7a1a" stroke-opacity="0.05" stroke-width="2.5"/>
+    <pattern id="fTone" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.3" fill="#141414" opacity=".1"/>
     </pattern>
+    <linearGradient id="fSea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff8c42"/>
+      <stop offset="55%" stop-color="#ffb347"/>
+      <stop offset="100%" stop-color="#ffd166"/>
+    </linearGradient>
   </defs>
   <style>
     .disp { font-family: Impact, "Arial Black", sans-serif; }
     .sans { font-family: "Segoe UI", Arial, sans-serif; font-style: italic; font-weight: 700; }
-    @keyframes fArr { 0%,100% { transform: translateX(0); } 50% { transform: translateX(12px); } }
-    @keyframes fP { 0%,100% { opacity:.55; } 50% { opacity:1; } }
-    .arr { animation: fArr 1.3s ease-in-out infinite; }
-    .p { animation: fP 1.8s ease-in-out infinite; }
+    @keyframes arr { 0%,100% { transform: translateX(0); } 50% { transform: translateX(14px); } }
+    @keyframes fade { 0%,100% { opacity:1; } 50% { opacity:.55; } }
+    .arr { animation: arr 1.2s ease-in-out infinite; }
+    .f { animation: fade 1.8s ease-in-out infinite; }
   </style>
 
-  <rect width="800" height="150" fill="url(#fBg)"/>
-  <rect width="800" height="150" fill="url(#fSpeed)"/>
+  <!-- warm sunset sea (One Piece end-card vibe) -->
+  <rect width="800" height="150" fill="url(#fSea)"/>
+  <rect width="800" height="150" fill="url(#fTone)"/>
 
-  <rect x="0" y="0" width="800" height="5" fill="url(#fLine)"/>
-  <rect x="-70" y="0" width="70" height="5" fill="#fff" opacity="0.55">
-    <animate attributeName="x" values="-70;800" dur="2.8s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- big dramatic slash strokes behind title -->
-  <g stroke="#ffffff" stroke-width="3" opacity=".16" stroke-linecap="round">
-    <line x1="60" y1="52" x2="260" y2="44"/>
-    <line x1="540" y1="44" x2="740" y2="52"/>
-    <line x1="90" y1="118" x2="300" y2="112"/>
-    <line x1="500" y1="112" x2="710" y2="118"/>
+  <!-- horizon speed lines -->
+  <g stroke="#141414" stroke-width="3" opacity=".2" stroke-linecap="round">
+    <line x1="40" y1="30" x2="240" y2="26"/>
+    <line x1="560" y1="26" x2="760" y2="30"/>
+    <line x1="60" y1="120" x2="280" y2="116"/>
+    <line x1="520" y1="116" x2="740" y2="120"/>
   </g>
 
-  <text class="sans p" x="400" y="40" text-anchor="middle" fill="#e01b24" font-size="13" letter-spacing="6">NEXT TIME — EPISODE 2026</text>
+  <!-- next episode caption -->
+  <text class="sans f" x="400" y="36" text-anchor="middle" fill="#141414" font-size="14" letter-spacing="5">NEXT TIME — EPISODE 2026</text>
 
-  <!-- One Piece style continued arrow -->
-  <g class="arr" filter="url(#fG)">
-    <g transform="translate(400,86)">
-      <polygon points="-250,-26 -214,-26 -178,0 -214,26 -250,26 -214,0" fill="#ff7a1a"/>
-      <rect x="-170" y="-26" width="300" height="52" fill="#050508" stroke="#ffd54f" stroke-width="3"/>
-      <text class="disp" x="-20" y="14" text-anchor="middle" fill="url(#fTitle)" font-size="34" letter-spacing="4" stroke="#050508" stroke-width="6" paint-order="stroke fill">TO BE CONTINUED</text>
-      <polygon points="130,-26 166,-26 202,0 166,26 130,26 166,0" fill="#ffd54f"/>
+  <!-- classic TO BE CONTINUED arrow board -->
+  <g class="arr">
+    <g transform="translate(400,84)">
+      <!-- left arrow -->
+      <polygon points="-268,-30 -220,-30 -172,0 -220,30 -268,30 -220,0" fill="#e60012" stroke="#141414" stroke-width="4"/>
+      <!-- board -->
+      <rect x="-168" y="-32" width="300" height="64" fill="#f7f1e3" stroke="#141414" stroke-width="5"/>
+      <rect x="-160" y="-24" width="284" height="48" fill="none" stroke="#e60012" stroke-width="2"/>
+      <text class="disp" x="-18" y="16" text-anchor="middle" fill="#141414" font-size="36" letter-spacing="2">TO BE CONTINUED</text>
+      <!-- right arrow -->
+      <polygon points="132,-30 180,-30 228,0 180,30 132,30 180,0" fill="#e60012" stroke="#141414" stroke-width="4"/>
     </g>
   </g>
 
-  <text class="sans p" x="400" y="128" text-anchor="middle" fill="#2ec4b6" font-size="13" letter-spacing="4">THANKS FOR WATCHING — SEE YOU NEXT SEASON</text>
+  <text class="sans" x="400" y="136" text-anchor="middle" fill="#141414" font-size="14" letter-spacing="4">THANKS FOR WATCHING — SEE YOU NEXT SEASON</text>
 
-  <rect x="0" y="145" width="800" height="5" fill="url(#fLine)"/>
+  <!-- thick ink frame -->
+  <rect x="2" y="2" width="796" height="146" fill="none" stroke="#141414" stroke-width="6"/>
 </svg>

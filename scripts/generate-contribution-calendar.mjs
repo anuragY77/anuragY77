@@ -72,11 +72,11 @@ for (const w of cal.weeks) {
 }
 
 const COLORS = {
-  NONE: "#16161f",
-  FIRST_QUARTILE: "#3d2209",
-  SECOND_QUARTILE: "#8a4b08",
-  THIRD_QUARTILE: "#ff7a1a",
-  FOURTH_QUARTILE: "#ffd166",
+  NONE: "#ddd2b8",
+  FIRST_QUARTILE: "#ffb380",
+  SECOND_QUARTILE: "#ff7a1a",
+  THIRD_QUARTILE: "#e60012",
+  FOURTH_QUARTILE: "#9b0010",
 };
 const MONTHS = [
   "Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -152,9 +152,9 @@ const columns = weekCols
         const y = CAL_Y + row * PITCH;
         // dim cells outside the target year (spill weeks)
         const outside = date.getUTCFullYear() !== YEAR ? ' opacity="0.35"' : "";
-        const strokeCol = level === "NONE" ? "#ffd166" : "#ff7a1a";
+        const strokeCol = "#141414";
         return `<rect x="${x}" y="${y}" width="${CW}" height="${CW}" rx="2" fill="${fill}" stroke="${strokeCol}" stroke-opacity="${
-          level === "NONE" ? 0.12 : 0.45
+          level === "NONE" ? 0.45 : 0.85
         }" stroke-width="0.8"${score} data-date="${key}"${outside}>${
           hot
             ? `<animate attributeName="opacity" values="0.45;1;0.75;1" dur="3s" begin="${(wi * 0.07).toFixed(2)}s" repeatCount="indefinite"/>`
@@ -171,55 +171,39 @@ const columns = weekCols
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${panelW} ${panelH}" width="${panelW}" height="${panelH}" role="img" aria-label="${yearTotal} contributions in ${YEAR}">
   <defs>
-    <linearGradient id="cLine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ff7a1a"/>
-      <stop offset="50%" stop-color="#ffd166"/>
-      <stop offset="100%" stop-color="#ff3b5c" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="cBeam" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="cGlow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="2.2" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
     <filter id="cGlowS" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="1.6" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      <feGaussianBlur stdDeviation="1.6"/>
     </filter>
   </defs>
   <style>
-    .mono { font-family: "Cascadia Code", Consolas, "Courier New", monospace; }
+    .sans { font-family: "Segoe UI", Arial, sans-serif; }
+    .disp { font-family: Impact, "Arial Black", sans-serif; }
     @keyframes cPulse { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
-    @keyframes cBlink { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
     .cDot { animation: cPulse 1.6s ease-in-out infinite; }
-    .cCur { animation: cBlink 1s step-end infinite; }
     .cNum { animation: cPulse 2.8s ease-in-out infinite; }
     @keyframes colIn { from { opacity: 0; } to { opacity: 1; } }
     .col { animation: colIn .5s ease-out both; }
   </style>
 
-  <rect width="${panelW}" height="${panelH}" fill="#0d0d14"/>
-  <rect x="0.5" y="0.5" width="${panelW - 1}" height="${panelH - 1}" fill="none" stroke="#ffd166" stroke-opacity="0.45"/>
+  <!-- manga paper page -->
+  <rect width="${panelW}" height="${panelH}" fill="#f7f1e3"/>
+  <rect x="3" y="3" width="${panelW - 6}" height="${panelH - 6}" fill="none" stroke="#141414" stroke-width="7"/>
 
-  <!-- header: GitHub-style title -->
-  <circle cx="30" cy="32" r="5" fill="#ff3b5c" class="cDot" filter="url(#cGlowS)"/>
-  <text class="mono" x="46" y="38" fill="#f0f0f5" font-size="20" font-weight="700" letter-spacing="1">
-    <tspan class="cNum" fill="#ffd166" filter="url(#cGlow)">${yearTotal}</tspan><tspan> contributions in ${YEAR}</tspan>
+  <!-- header -->
+  <circle cx="34" cy="34" r="7" fill="#e60012" class="cDot"/>
+  <text class="disp" x="52" y="42" fill="#141414" font-size="24" letter-spacing="1">
+    <tspan class="cNum" fill="#e60012">${yearTotal}</tspan><tspan fill="#141414"> contributions in ${YEAR}</tspan>
   </text>
-  <text class="mono" x="${panelW - 24}" y="36" text-anchor="end" fill="#ff7a1a" font-size="12" letter-spacing="2">// CONTRIBUTION_GRID</text>
-  <text class="mono" x="${panelW - 24}" y="54" text-anchor="end" fill="#2ec4b6" font-size="11">@${OWNER} &#183; live GraphQL<tspan class="cCur">_</tspan></text>
-  <rect x="24" y="64" width="${panelW - 48}" height="2" fill="url(#cLine)" opacity="0.85"/>
+  <text class="sans" x="${panelW - 28}" y="38" text-anchor="end" fill="#e60012" font-size="14" font-style="italic" font-weight="700">Adventure log · ${OWNER}</text>
+  <rect x="28" y="56" width="${panelW - 56}" height="5" fill="#141414"/>
 
-  <!-- month labels: Jan..Dec -->
-  <g class="mono" fill="#8b8b9a" font-size="11">
+  <!-- month labels -->
+  <g class="sans" fill="#141414" font-size="12" font-weight="700" opacity=".75">
     ${monthLabels.map((l) => `<text x="${l.x}" y="${CAL_Y - 10}">${l.label}</text>`).join("\n    ")}
   </g>
 
-  <!-- day labels (GitHub: Mon / Wed / Fri) — rows are Sun=0 … Sat=6 -->
-  <g class="mono" fill="#8b8b9a" font-size="10" text-anchor="end">
+  <!-- day labels -->
+  <g class="sans" fill="#141414" font-size="11" text-anchor="end" opacity=".75">
     <text x="${CAL_X - 8}" y="${CAL_Y + PITCH * 1 + 9}">Mon</text>
     <text x="${CAL_X - 8}" y="${CAL_Y + PITCH * 3 + 9}">Wed</text>
     <text x="${CAL_X - 8}" y="${CAL_Y + PITCH * 5 + 9}">Fri</text>
@@ -230,23 +214,18 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     ${columns}
   </g>
 
-  <!-- scanning beam -->
-  <rect x="${CAL_X - 3}" y="${CAL_Y - 3}" width="3" height="${ROWS * PITCH + 3}" fill="url(#cBeam)" opacity="0.55">
-    <animate attributeName="x" values="${CAL_X - 3};${CAL_X + calW};${CAL_X - 3}" dur="9s" repeatCount="indefinite"/>
-  </rect>
-
   <!-- footer: legend -->
-  <g class="mono" font-size="10" fill="#8b8b9a">
-    <text x="${panelW - 148}" y="${FOOT_Y + 4}">Less</text>
+  <g class="sans" font-size="11" fill="#141414" font-weight="700">
+    <text x="${panelW - 152}" y="${FOOT_Y + 4}">Less</text>
     ${["NONE", "FIRST_QUARTILE", "SECOND_QUARTILE", "THIRD_QUARTILE", "FOURTH_QUARTILE"]
       .map(
         (lv, i) =>
-          `<rect x="${panelW - 116 + i * 15}" y="${FOOT_Y - 7}" width="11" height="11" rx="2" fill="${COLORS[lv]}" stroke="#ff7a1a" stroke-opacity="0.4"/>`
+          `<rect x="${panelW - 116 + i * 15}" y="${FOOT_Y - 7}" width="11" height="11" rx="2" fill="${COLORS[lv]}" stroke="#141414" stroke-width="1.5"/>`
       )
       .join("\n    ")}
     <text x="${panelW - 36}" y="${FOOT_Y + 4}">More</text>
   </g>
-  <text class="mono" x="24" y="${FOOT_Y + 4}" fill="#2ec4b6" font-size="11">BATTLE LOG // ${YEAR} &#183; ${allTotal} all-time &#183; auto-refresh</text>
+  <text class="sans" x="28" y="${FOOT_Y + 4}" fill="#e60012" font-size="13" font-style="italic" font-weight="700">Training arc ${YEAR} · ${allTotal} total · never give up</text>
 </svg>
 `;
 

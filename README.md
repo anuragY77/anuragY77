@@ -4,15 +4,15 @@
 
 <br/>
 
-<img src="https://img.shields.io/badge/S-CLASS-Data_Engineer-ff7a1a?style=for-the-badge&logo=apacheairflow&logoColor=0a0a0f" alt="Data Engineer"/>
-<img src="https://img.shields.io/badge/S-CLASS-AI_Builder-ff3b5c?style=for-the-badge&logo=openai&logoColor=0a0a0f" alt="AI Builder"/>
-<img src="https://img.shields.io/badge/S-CLASS-Full_Stack-ffd166?style=for-the-badge&logo=nextdotjs&logoColor=0a0a0f" alt="Full Stack"/>
-<img src="https://img.shields.io/badge/TYPESCRIPT-7ae582?style=for-the-badge&logo=typescript&logoColor=0a0a0f" alt="TypeScript"/>
-<img src="https://img.shields.io/badge/PYTHON-2ec4b6?style=for-the-badge&logo=python&logoColor=0a0a0f" alt="Python"/>
+<img src="https://img.shields.io/badge/S-CLASS-Data_Engineer-ff6a00?style=for-the-badge&logo=apacheairflow&logoColor=ffffff" alt="Data Engineer"/>
+<img src="https://img.shields.io/badge/S-CLASS-AI_Builder-e60012?style=for-the-badge&logo=openai&logoColor=ffffff" alt="AI Builder"/>
+<img src="https://img.shields.io/badge/S-CLASS-Full_Stack-f0b429?style=for-the-badge&logo=nextdotjs&logoColor=141414" alt="Full Stack"/>
+<img src="https://img.shields.io/badge/TYPESCRIPT-3178c6?style=for-the-badge&logo=typescript&logoColor=ffffff" alt="TypeScript"/>
+<img src="https://img.shields.io/badge/PYTHON-0d9488?style=for-the-badge&logo=python&logoColor=ffffff" alt="Python"/>
 
 <br/><br/>
 
-<img src="./assets/header-intro.svg" alt="Arc 01 - About Me" width="100%"/>
+<img src="./assets/header-intro.svg" alt="Episode 01 - About Me" width="100%"/>
 
 <br/>
 
@@ -24,7 +24,7 @@
 
 <br/>
 
-<img src="./assets/header-skills.svg" alt="Section 02 - Skills and Technology" width="100%"/>
+<img src="./assets/header-skills.svg" alt="Episode 02 - Skills and Technology" width="100%"/>
 
 <br/>
 
@@ -36,38 +36,27 @@
 
 <br/>
 
-<img src="./assets/header-projects.svg" alt="Arc 03 - Featured Projects" width="100%"/>
+<img src="./assets/header-projects.svg" alt="Episode 03 - Featured Projects" width="100%"/>
 
 </div>
 
 <br/>
 
-> [!IMPORTANT]
-> <div align="center">
-> <p><b>NARUTO MODE &#183; I NEVER GO BACK ON MY WORD</b></p>
-> <h3><a href="https://github.com/anuragY77/CineVerse">CineVerse</a></h3>
-> <p><b>Premium movie/anime discovery platform with 3D effects, glassmorphism, real-time watch parties, and AI recommendations.</b></p>
-> <p><em>"That is my ninja way — ship it, never give up."</em></p>
-> <p><code>JavaScript</code> <code>React</code> <code>Three.js</code> <code>AI</code></p>
-> </div>
+<a href="https://github.com/anuragY77/CineVerse">
+<img src="./assets/project-cineverse.svg" alt="CineVerse - Naruto mode, never give up" width="100%"/>
+</a>
 
-> [!TIP]
-> <div align="center">
-> <p><b>ONE PIECE MODE &#183; I'M GONNA BE KING OF THE STACK</b></p>
-> <h3><a href="https://github.com/anuragY77/medcore-enterprise-hms">medcore-enterprise-hms</a></h3>
-> <p><b>Premium enterprise Hospital Management System with RBAC, Drizzle ORM, and a modern clinical dashboard.</b></p>
-> <p><em>"The treasure is a working enterprise system — and I will find it."</em></p>
-> <p><code>TypeScript</code> <code>Next.js</code> <code>PostgreSQL</code> <code>Drizzle ORM</code></p>
-> </div>
+<br/><br/>
 
-> [!NOTE]
-> <div align="center">
-> <p><b>DEMON SLAYER MODE &#183; SET YOUR HEART ABLAZE</b></p>
-> <h3><a href="https://github.com/anuragY77/portfolio">portfolio</a></h3>
-> <p><b>Personal portfolio site built with Next.js — dark, fast, fully animated.</b></p>
-> <p><em>"Total Concentration: constant performance."</em></p>
-> <p><code>TypeScript</code> <code>Next.js</code> <code>Tailwind CSS</code></p>
-> </div>
+<a href="https://github.com/anuragY77/medcore-enterprise-hms">
+<img src="./assets/project-medcore.svg" alt="medcore-enterprise-hms - One Piece mode, chase the dream" width="100%"/>
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/anuragY77/portfolio">
+<img src="./assets/project-portfolio.svg" alt="portfolio - Demon Slayer mode, set your heart ablaze" width="100%"/>
+</a>
 
 <div align="center">
 
@@ -77,11 +66,11 @@
 
 <br/>
 
-<img src="./assets/header-analytics.svg" alt="Arc 04 - GitHub Analytics" width="100%"/>
+<img src="./assets/header-analytics.svg" alt="Episode 04 - GitHub Analytics" width="100%"/>
 
 <br/>
 
-<img src="https://github-readme-activity-graph-rosy.vercel.app/graph?username=anuragY77&theme=react-dark&bg_color=0d0d14&color=ff7a1a&point=ffd166&hide_border=true" alt="Activity Graph" width="100%"/>
+<img src="https://github-readme-activity-graph-rosy.vercel.app/graph?username=anuragY77&theme=react-dark&bg_color=f7f1e3&color=e60012&point=ff6a00&hide_border=true" alt="Activity Graph" width="100%"/>
 
 <br/><br/>
 
@@ -138,6 +127,6 @@
 
 <br/>
 
-<sub>NEXT EPISODE: <a href="https://github.com/anuragY77">@anuragY77</a> :: Season 2026 · Stay tuned</sub>
+<sub>NEXT EPISODE: <a href="https://github.com/anuragY77">@anuragY77</a> · Season 2026 · Stay tuned</sub>
 
 </div>

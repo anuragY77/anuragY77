@@ -1,31 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 72" width="800" height="72" role="img" aria-label="Episode title card: Feeds">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 76" width="800" height="76" role="img" aria-label="Episode title card: Latest Feeds">
   <defs>
-    <linearGradient id="t5" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#2ec4b6"/>
-      <stop offset="100%" stop-color="#ffd54f"/>
-    </linearGradient>
+    <pattern id="tone5" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#141414" opacity=".07"/>
+    </pattern>
   </defs>
   <style>
     .disp { font-family: Impact, "Arial Black", sans-serif; }
-    .sans { font-family: "Segoe UI", Arial, sans-serif; }
-    @keyframes sl { 0%,100% { transform: translateX(0); } 50% { transform: translateX(8px); } }
-    @keyframes fl { 0%,100% { opacity:1; } 50% { opacity:.5; } }
-    .a { animation: sl 2s ease-in-out infinite; }
-    .f { animation: fl 1.4s ease-in-out infinite; }
+    .sans { font-family: "Segoe UI", Arial, sans-serif; font-style: italic; font-weight: 700; }
+    @keyframes stamp { 0% { transform: scale(1.6) rotate(-18deg); opacity:0; } 60% { transform: scale(.95) rotate(-8deg); opacity:1; } 100% { transform: scale(1) rotate(-8deg); opacity:1; } }
+    @keyframes under { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    .stamp { transform-box: fill-box; transform-origin: center; animation: stamp .5s ease-out both; }
+    .under { transform-origin: left center; animation: under .6s .2s ease-out both; }
   </style>
-  <rect width="800" height="72" fill="#061018"/>
-  <g stroke="#ffd54f" stroke-width="2" opacity=".15">
-    <line x1="500" y1="10" x2="780" y2="30"/>
-    <line x1="520" y1="36" x2="780" y2="50"/>
-    <line x1="540" y1="60" x2="780" y2="66"/>
+
+  <rect width="800" height="76" fill="#f7f1e3"/>
+  <rect width="800" height="76" fill="url(#tone5)"/>
+
+  <g stroke="#141414" stroke-width="2" opacity=".18" stroke-linecap="round">
+    <line x1="560" y1="12" x2="780" y2="28"/>
+    <line x1="580" y1="38" x2="780" y2="50"/>
+    <line x1="600" y1="62" x2="780" y2="68"/>
   </g>
-  <g transform="translate(28,14) skewX(-10)">
-    <rect width="72" height="44" fill="url(#t5)"/>
-    <text class="disp" x="36" y="20" text-anchor="middle" fill="#061018" font-size="11" letter-spacing="2">NEXT</text>
-    <text class="disp" x="36" y="40" text-anchor="middle" fill="#ffffff" font-size="20">EP</text>
-  </g>
-  <text class="sans" x="122" y="30" fill="#ffd54f" font-size="13" font-weight="700" letter-spacing="4" font-style="italic">PREVIEW — WHAT HAPPENS NEXT</text>
-  <text class="disp" x="120" y="60" fill="#ffffff" font-size="30" letter-spacing="4">LATEST FEEDS</text>
-  <rect x="120" y="64" width="260" height="4" fill="url(#t5)" class="a"/>
-  <circle cx="770" cy="36" r="5" fill="#ffd54f" class="f"/>
+
+  <g transform="translate(52,38)"><g class="stamp">
+    <circle r="28" fill="none" stroke="#e60012" stroke-width="4"/>
+    <circle r="22" fill="#e60012"/>
+    <text class="disp" x="0" y="-4" text-anchor="middle" fill="#f7f1e3" font-size="9" letter-spacing="1">NEXT</text>
+    <text class="disp" x="0" y="14" text-anchor="middle" fill="#ffffff" font-size="18">EP</text></g></g>
+
+  <text class="sans" x="98" y="28" fill="#e60012" font-size="13" letter-spacing="2">Preview — what happens next</text>
+  <text class="disp" x="96" y="60" fill="#141414" font-size="34" letter-spacing="3">LATEST FEEDS</text>
+  <rect class="under" x="96" y="66" width="280" height="5" fill="#e60012"/>
+
+  <rect x="2" y="2" width="796" height="72" fill="none" stroke="#141414" stroke-width="5"/>
 </svg>
