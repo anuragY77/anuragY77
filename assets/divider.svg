@@ -1,68 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 44" width="800" height="44" role="img" aria-label="Cyberpunk section divider">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 48" width="800" height="48" role="img" aria-label="Anime eyecatch divider">
   <defs>
-    <linearGradient id="dLine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
-      <stop offset="15%" stop-color="#22d3ee"/>
-      <stop offset="50%" stop-color="#56d4dd"/>
-      <stop offset="85%" stop-color="#c084fc"/>
-      <stop offset="100%" stop-color="#c084fc" stop-opacity="0"/>
+    <linearGradient id="eBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="50%" stop-color="#14121c"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
     </linearGradient>
-    <linearGradient id="dBeam" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    <linearGradient id="eLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff7a1a" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#ff7a1a"/>
+      <stop offset="50%" stop-color="#ffd166"/>
+      <stop offset="70%" stop-color="#ff3b5c"/>
+      <stop offset="100%" stop-color="#ff3b5c" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="dDiamond" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#22d3ee"/>
-      <stop offset="100%" stop-color="#c084fc"/>
+    <linearGradient id="eBeam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
-    <filter id="dGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <filter id="eGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="2.2" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="dGlowS" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="1.3" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
   <style>
-    @keyframes dPulse { 0%,100% { opacity: .4; } 50% { opacity: 1; } }
-    .n1 { animation: dPulse 2.4s ease-in-out infinite; }
-    .n2 { animation: dPulse 2.4s ease-in-out infinite .5s; }
-    .n3 { animation: dPulse 2.4s ease-in-out infinite 1s; }
-    .n4 { animation: dPulse 2.4s ease-in-out infinite 1.5s; }
+    @keyframes eP { 0%,100% { opacity: .4; } 50% { opacity: 1; } }
+    @keyframes eB { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+    .p1 { animation: eP 2s ease-in-out infinite; }
+    .p2 { animation: eP 2s ease-in-out infinite .4s; }
+    .p3 { animation: eP 2s ease-in-out infinite .8s; }
+    .b { animation: eB 1.1s step-end infinite; }
   </style>
 
-  <!-- solid dark bar so it pops on light AND dark mode -->
-  <rect width="800" height="44" fill="#0d1117"/>
-  <rect width="800" height="44" fill="none" stroke="#22d3ee" stroke-opacity="0.25" stroke-width="1"/>
+  <rect width="800" height="48" fill="url(#eBg)"/>
+  <rect width="800" height="48" fill="none" stroke="#ffd166" stroke-opacity="0.25"/>
 
-  <line x1="30" y1="22" x2="770" y2="22" stroke="url(#dLine)" stroke-width="1.8" filter="url(#dGlow)"/>
+  <!-- speed ticks -->
+  <g stroke="#ff7a1a" stroke-width="2" opacity="0.7">
+    <line x1="40" y1="24" x2="120" y2="24"/>
+    <line x1="680" y1="24" x2="760" y2="24"/>
+  </g>
+  <g stroke="#ffd166" stroke-width="1.4" opacity="0.55">
+    <line x1="130" y1="24" x2="190" y2="24"/>
+    <line x1="610" y1="24" x2="670" y2="24"/>
+  </g>
 
-  <!-- traveling beam -->
-  <rect x="-70" y="20.5" width="70" height="3" fill="url(#dBeam)" filter="url(#dGlowS)">
-    <animate attributeName="x" values="-70;800" dur="2.8s" repeatCount="indefinite"/>
+  <!-- center shuriken/compass emblem -->
+  <g filter="url(#eGlow)">
+    <circle cx="400" cy="24" r="14" fill="none" stroke="#ffd166" stroke-width="2"/>
+    <circle cx="400" cy="24" r="7" fill="#ff7a1a" class="p1"/>
+    <g stroke="#2ec4b6" stroke-width="2" class="p2">
+      <line x1="400" y1="6" x2="400" y2="12"/>
+      <line x1="400" y1="36" x2="400" y2="42"/>
+      <line x1="382" y1="24" x2="388" y2="24"/>
+      <line x1="412" y1="24" x2="418" y2="24"/>
+    </g>
+  </g>
+
+  <!-- eyesch Japanese label -->
+  <text class="p2" x="430" y="28" fill="#f5e6c8" font-family="Consolas,monospace" font-size="11" letter-spacing="3" filter="url(#eGlow)">EYECATCH &#183; 番組編成</text>
+  <text x="370" y="28" text-anchor="end" fill="#7ae582" font-family="Consolas,monospace" font-size="11" letter-spacing="2" class="p3">-- COMMERCIAL --</text>
+
+  <!-- nodes -->
+  <circle cx="240" cy="24" r="2.6" fill="#ff7a1a" class="p1"/>
+  <circle cx="300" cy="24" r="2.6" fill="#ffd166" class="p2"/>
+  <circle cx="500" cy="24" r="2.6" fill="#ff3b5c" class="p3"/>
+  <circle cx="560" cy="24" r="2.6" fill="#2ec4b6" class="p1"/>
+
+  <!-- bottom gradient -->
+  <rect x="0" y="45" width="800" height="3" fill="url(#eLine)" opacity="0.9"/>
+  <rect x="-60" y="45" width="60" height="3" fill="url(#eBeam)">
+    <animate attributeName="x" values="-60;800" dur="2.6s" repeatCount="indefinite"/>
   </rect>
-
-  <!-- side nodes -->
-  <circle cx="300" cy="22" r="2.8" fill="#22d3ee" class="n2" filter="url(#dGlowS)"/>
-  <circle cx="500" cy="22" r="2.8" fill="#c084fc" class="n3" filter="url(#dGlowS)"/>
-  <circle cx="210" cy="22" r="1.8" fill="#56d4dd" class="n4"/>
-  <circle cx="590" cy="22" r="1.8" fill="#c084fc" class="n1"/>
-  <circle cx="120" cy="22" r="1.4" fill="#22d3ee" opacity="0.6" class="n2"/>
-  <circle cx="680" cy="22" r="1.4" fill="#56d4dd" opacity="0.6" class="n3"/>
-  <rect x="368" y="19.5" width="12" height="5" rx="1" fill="#22d3ee" opacity="0.8" class="n2"/>
-  <rect x="420" y="19.5" width="12" height="5" rx="1" fill="#c084fc" opacity="0.8" class="n3"/>
-
-  <!-- center diamond -->
-  <g filter="url(#dGlow)">
-    <rect x="390" y="10" width="24" height="24" rx="2" transform="rotate(45 402 22)" fill="#0d1117" stroke="url(#dDiamond)" stroke-width="2"/>
-    <rect x="396.5" y="16.5" width="11" height="11" transform="rotate(45 402 22)" fill="#56d4dd" class="n1"/>
-  </g>
-
-  <!-- corner ticks -->
-  <g stroke="#56d4dd" stroke-width="1.3" opacity="0.7">
-    <path d="M14,12 L14,32"/>
-    <path d="M786,12 L786,32"/>
-  </g>
 </svg>

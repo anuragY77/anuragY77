@@ -1,71 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 130" width="800" height="130" role="img" aria-label="System deployment successful footer">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 140" width="800" height="140" role="img" aria-label="To be continued footer">
   <defs>
+    <linearGradient id="fBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="55%" stop-color="#12101a"/>
+      <stop offset="100%" stop-color="#1a0e08"/>
+    </linearGradient>
     <linearGradient id="fTitle" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#22d3ee"/>
-      <stop offset="50%" stop-color="#56d4dd"/>
-      <stop offset="100%" stop-color="#c084fc"/>
+      <stop offset="0%" stop-color="#fff6e8"/>
+      <stop offset="50%" stop-color="#ffd166"/>
+      <stop offset="100%" stop-color="#ff7a1a"/>
     </linearGradient>
-    <linearGradient id="fBar" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#22d3ee"/>
-      <stop offset="100%" stop-color="#c084fc"/>
+    <linearGradient id="fLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff3b5c" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#ff7a1a"/>
+      <stop offset="70%" stop-color="#ffd166"/>
+      <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="fShine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="fGlow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
+    <filter id="fG" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="fGlowS" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="1.8" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <clipPath id="fType">
-      <rect x="0" y="38" width="0" height="40">
-        <animate attributeName="width" from="0" to="800" dur="2.4s" fill="freeze"/>
-      </rect>
-    </clipPath>
+    <pattern id="fSpeed" width="50" height="50" patternUnits="userSpaceOnUse" patternTransform="rotate(-24)">
+      <line x1="0" y1="0" x2="0" y2="50" stroke="#f0f0f5" stroke-opacity="0.035" stroke-width="9"/>
+      <line x1="24" y1="0" x2="24" y2="50" stroke="#ff7a1a" stroke-opacity="0.045" stroke-width="2.5"/>
+    </pattern>
   </defs>
   <style>
-    .mono { font-family: "Cascadia Code", Consolas, "Courier New", monospace; }
-    @keyframes fPulse { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
-    @keyframes fBlink { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
-    .fDot { animation: fPulse 1.6s ease-in-out infinite; }
-    .fCur { animation: fBlink 0.95s step-end infinite; }
-    .fTitlePulse { animation: fPulse 3s ease-in-out infinite; }
+    @keyframes fArr { 0% { transform: translateX(0); } 50% { transform: translateX(14px); } 100% { transform: translateX(0); } }
+    @keyframes fP { 0%,100% { opacity:.6; } 50% { opacity:1; } }
+    .arr { animation: fArr 1.4s ease-in-out infinite; transform-origin: center; }
+    .p { animation: fP 2s ease-in-out infinite; }
   </style>
 
-  <rect width="800" height="130" fill="#0d1117"/>
-  <rect x="0.5" y="0.5" width="799" height="129" fill="none" stroke="#3fb950" stroke-opacity="0.5"/>
+  <rect width="800" height="140" fill="url(#fBg)"/>
+  <rect width="800" height="140" fill="url(#fSpeed)"/>
 
-  <!-- top status row -->
-  <circle cx="30" cy="24" r="5" fill="#3fb950" class="fDot" filter="url(#fGlowS)"/>
-  <text class="mono" x="46" y="28" fill="#3fb950" font-size="12" letter-spacing="2" filter="url(#fGlowS)">EXIT_CODE: 0 &#183; PIPELINE_PASSED</text>
-  <text class="mono" x="776" y="28" text-anchor="end" fill="#8b949e" font-size="11">main@06a53a1</text>
-
-  <!-- typed main title -->
-  <g clip-path="url(#fType)">
-    <text class="mono fTitlePulse" x="400" y="66" text-anchor="middle" fill="url(#fTitle)" font-size="30" font-weight="700" letter-spacing="4" filter="url(#fGlow)">SYSTEM DEPLOYMENT SUCCESSFUL</text>
-  </g>
-
-  <!-- progress 100% -->
-  <rect x="60" y="82" width="680" height="10" rx="5" fill="#161b22" stroke="#22d3ee" stroke-opacity="0.4"/>
-  <rect x="62" y="84" width="676" height="6" rx="3" fill="url(#fBar)" filter="url(#fGlowS)"/>
-  <rect x="62" y="84" width="80" height="6" rx="3" fill="url(#fShine)">
-    <animate attributeName="x" values="62;658;62" dur="2.2s" repeatCount="indefinite"/>
+  <!-- top rule -->
+  <rect x="0" y="0" width="800" height="4" fill="url(#fLine)"/>
+  <rect x="-70" y="0" width="70" height="4" fill="#fff" opacity="0.5">
+    <animate attributeName="x" values="-70;800" dur="3s" repeatCount="indefinite"/>
   </rect>
-  <text class="mono" x="752" y="92" fill="#3fb950" font-size="11" filter="url(#fGlowS)">100%</text>
 
-  <!-- bottom line -->
-  <text class="mono" x="400" y="116" text-anchor="middle" fill="#c084fc" font-size="14" letter-spacing="6">PROFILE REDESIGNED<tspan class="fCur" fill="#56d4dd">_</tspan></text>
-
-  <!-- corner brackets -->
-  <g stroke="#3fb950" stroke-width="1.5" fill="none" opacity="0.8">
-    <path d="M10,40 L10,10 L40,10"/>
-    <path d="M760,10 L790,10 L790,40"/>
-    <path d="M10,90 L10,120 L40,120"/>
-    <path d="M760,120 L790,120 L790,90"/>
+  <!-- corner -->
+  <g stroke="#ffd166" stroke-width="2" fill="none" opacity="0.85" filter="url(#fG)">
+    <path d="M14,40 L14,14 L46,14"/>
+    <path d="M754,14 L786,14 L786,40"/>
+    <path d="M14,100 L14,126 L46,126"/>
+    <path d="M754,126 L786,126 L786,100"/>
   </g>
+
+  <!-- center block -->
+  <text class="p" x="400" y="42" text-anchor="middle" fill="#ff3b5c" font-family="Consolas,monospace" font-size="11" letter-spacing="5" filter="url(#fG)">END OF TRANSMISSION</text>
+
+  <g class="arr">
+    <text x="400" y="84" text-anchor="middle" fill="#0a0a0f" stroke="#0a0a0f" stroke-width="10" stroke-linejoin="round" font-family="'Segoe UI','Arial Black',Arial,sans-serif" font-size="34" font-weight="900" letter-spacing="3">TO BE CONTINUED</text>
+    <text x="400" y="84" text-anchor="middle" fill="url(#fTitle)" stroke="#ffd166" stroke-width="1" font-family="'Segoe UI','Arial Black',Arial,sans-serif" font-size="34" font-weight="900" letter-spacing="3" filter="url(#fG)">TO BE CONTINUED &#10132;</text>
+  </g>
+
+  <text class="p" x="400" y="110" text-anchor="middle" fill="#2ec4b6" font-family="'Yu Gothic','Segoe UI',sans-serif" font-size="12" letter-spacing="4">つづく &#183; THANKS FOR WATCHING &#183; 次回もお楽しみに</text>
+  <text x="400" y="128" text-anchor="middle" fill="#8b8b9a" font-family="Consolas,monospace" font-size="10" letter-spacing="2">SEASON 2026 // EP.2026 FINALE // STAY TUNED</text>
+
+  <!-- bottom rule -->
+  <rect x="0" y="136" width="800" height="4" fill="url(#fLine)"/>
 </svg>

@@ -72,11 +72,11 @@ for (const w of cal.weeks) {
 }
 
 const COLORS = {
-  NONE: "#161b22",
-  FIRST_QUARTILE: "#0f3f47",
-  SECOND_QUARTILE: "#177a87",
-  THIRD_QUARTILE: "#22d3ee",
-  FOURTH_QUARTILE: "#7df9ff",
+  NONE: "#16161f",
+  FIRST_QUARTILE: "#3d2209",
+  SECOND_QUARTILE: "#8a4b08",
+  THIRD_QUARTILE: "#ff7a1a",
+  FOURTH_QUARTILE: "#ffd166",
 };
 const MONTHS = [
   "Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -152,7 +152,8 @@ const columns = weekCols
         const y = CAL_Y + row * PITCH;
         // dim cells outside the target year (spill weeks)
         const outside = date.getUTCFullYear() !== YEAR ? ' opacity="0.35"' : "";
-        return `<rect x="${x}" y="${y}" width="${CW}" height="${CW}" rx="2" fill="${fill}" stroke="#22d3ee" stroke-opacity="${
+        const strokeCol = level === "NONE" ? "#ffd166" : "#ff7a1a";
+        return `<rect x="${x}" y="${y}" width="${CW}" height="${CW}" rx="2" fill="${fill}" stroke="${strokeCol}" stroke-opacity="${
           level === "NONE" ? 0.12 : 0.45
         }" stroke-width="0.8"${score} data-date="${key}"${outside}>${
           hot
@@ -171,9 +172,9 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${panelW} ${panelH}" width="${panelW}" height="${panelH}" role="img" aria-label="${yearTotal} contributions in ${YEAR}">
   <defs>
     <linearGradient id="cLine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#22d3ee"/>
-      <stop offset="50%" stop-color="#c084fc"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ff7a1a"/>
+      <stop offset="50%" stop-color="#ffd166"/>
+      <stop offset="100%" stop-color="#ff3b5c" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="cBeam" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
@@ -200,25 +201,25 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     .col { animation: colIn .5s ease-out both; }
   </style>
 
-  <rect width="${panelW}" height="${panelH}" fill="#0d1117"/>
-  <rect x="0.5" y="0.5" width="${panelW - 1}" height="${panelH - 1}" fill="none" stroke="#22d3ee" stroke-opacity="0.4"/>
+  <rect width="${panelW}" height="${panelH}" fill="#0d0d14"/>
+  <rect x="0.5" y="0.5" width="${panelW - 1}" height="${panelH - 1}" fill="none" stroke="#ffd166" stroke-opacity="0.45"/>
 
   <!-- header: GitHub-style title -->
-  <circle cx="30" cy="32" r="5" fill="#3fb950" class="cDot" filter="url(#cGlowS)"/>
-  <text class="mono" x="46" y="38" fill="#e6edf3" font-size="20" font-weight="700" letter-spacing="1">
-    <tspan class="cNum" fill="#7df9ff" filter="url(#cGlow)">${yearTotal}</tspan><tspan> contributions in ${YEAR}</tspan>
+  <circle cx="30" cy="32" r="5" fill="#ff3b5c" class="cDot" filter="url(#cGlowS)"/>
+  <text class="mono" x="46" y="38" fill="#f0f0f5" font-size="20" font-weight="700" letter-spacing="1">
+    <tspan class="cNum" fill="#ffd166" filter="url(#cGlow)">${yearTotal}</tspan><tspan> contributions in ${YEAR}</tspan>
   </text>
-  <text class="mono" x="${panelW - 24}" y="36" text-anchor="end" fill="#c084fc" font-size="12" letter-spacing="2">// CONTRIBUTION_GRID</text>
-  <text class="mono" x="${panelW - 24}" y="54" text-anchor="end" fill="#56d4dd" font-size="11">@${OWNER} &#183; live GraphQL<tspan class="cCur">_</tspan></text>
+  <text class="mono" x="${panelW - 24}" y="36" text-anchor="end" fill="#ff7a1a" font-size="12" letter-spacing="2">// BOUNTY_GRID</text>
+  <text class="mono" x="${panelW - 24}" y="54" text-anchor="end" fill="#2ec4b6" font-size="11">@${OWNER} &#183; live GraphQL<tspan class="cCur">_</tspan></text>
   <rect x="24" y="64" width="${panelW - 48}" height="2" fill="url(#cLine)" opacity="0.85"/>
 
   <!-- month labels: Jan..Dec -->
-  <g class="mono" fill="#8b949e" font-size="11">
+  <g class="mono" fill="#8b8b9a" font-size="11">
     ${monthLabels.map((l) => `<text x="${l.x}" y="${CAL_Y - 10}">${l.label}</text>`).join("\n    ")}
   </g>
 
   <!-- day labels (GitHub: Mon / Wed / Fri) — rows are Sun=0 … Sat=6 -->
-  <g class="mono" fill="#8b949e" font-size="10" text-anchor="end">
+  <g class="mono" fill="#8b8b9a" font-size="10" text-anchor="end">
     <text x="${CAL_X - 8}" y="${CAL_Y + PITCH * 1 + 9}">Mon</text>
     <text x="${CAL_X - 8}" y="${CAL_Y + PITCH * 3 + 9}">Wed</text>
     <text x="${CAL_X - 8}" y="${CAL_Y + PITCH * 5 + 9}">Fri</text>
@@ -235,17 +236,17 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   </rect>
 
   <!-- footer: legend -->
-  <g class="mono" font-size="10" fill="#8b949e">
+  <g class="mono" font-size="10" fill="#8b8b9a">
     <text x="${panelW - 148}" y="${FOOT_Y + 4}">Less</text>
     ${["NONE", "FIRST_QUARTILE", "SECOND_QUARTILE", "THIRD_QUARTILE", "FOURTH_QUARTILE"]
       .map(
         (lv, i) =>
-          `<rect x="${panelW - 116 + i * 15}" y="${FOOT_Y - 7}" width="11" height="11" rx="2" fill="${COLORS[lv]}" stroke="#22d3ee" stroke-opacity="0.35"/>`
+          `<rect x="${panelW - 116 + i * 15}" y="${FOOT_Y - 7}" width="11" height="11" rx="2" fill="${COLORS[lv]}" stroke="#ff7a1a" stroke-opacity="0.4"/>`
       )
       .join("\n    ")}
     <text x="${panelW - 36}" y="${FOOT_Y + 4}">More</text>
   </g>
-  <text class="mono" x="24" y="${FOOT_Y + 4}" fill="#56d4dd" font-size="11">SYS:// ${YEAR} grid &#183; ${allTotal} all-time &#183; auto-refresh</text>
+  <text class="mono" x="24" y="${FOOT_Y + 4}" fill="#2ec4b6" font-size="11">MISSION LOG // ${YEAR} &#183; ${allTotal} all-time &#183; auto-refresh</text>
 </svg>
 `;
 
