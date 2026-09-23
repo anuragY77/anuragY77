@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 52" width="240" height="52" role="img" aria-label="One Piece mode — Full Stack Development">
+  <style>.disp { font-family: Impact, "Arial Black", sans-serif; }.sans { font-family: "Segoe UI", Arial, sans-serif; font-weight:700; }</style>
+  <rect width="240" height="52" fill="#e60012" stroke="#141414" stroke-width="4"/>
+  <g transform="translate(30,26)">
+    <ellipse cy="4" rx="16" ry="6" fill="#ffd166" stroke="#141414" stroke-width="2.5"/>
+    <path d="M-9,4 Q-9,-11 0,-11 Q9,-11 9,4" fill="#ffd166" stroke="#141414" stroke-width="2.5"/>
+    <rect x="-10" y="0" width="20" height="4" fill="#e60012" stroke="#141414" stroke-width="1.5"/>
+  </g>
+  <text class="disp" x="58" y="24" fill="#ffffff" font-size="14" letter-spacing="1">FULL STACK</text>
+  <text class="sans" x="58" y="40" fill="#ffd166" font-size="11" letter-spacing="2">ONE PIECE MODE</text>
+</svg>

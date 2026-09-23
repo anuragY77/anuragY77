@@ -32,6 +32,57 @@
 
 <br/>
 
+<img src="./assets/header-tech.svg" alt="Tech Stack - many anime, one arsenal" width="100%"/>
+
+<br/>
+
+<table>
+<tr>
+<td valign="top" width="33%">
+<img src="./assets/tech-col-fullstack.svg" alt="One Piece mode - Full Stack" width="100%"/>
+<br/><br/>
+<img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+<img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+<img src="https://img.shields.io/badge/-React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"/>
+<img src="https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js"/>
+<img src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js"/>
+<img src="https://img.shields.io/badge/-Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express"/>
+<img src="https://img.shields.io/badge/-Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
+<img src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+<img src="https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB"/>
+<img src="https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL"/>
+</td>
+<td valign="top" width="33%">
+<img src="./assets/tech-col-data.svg" alt="Dr. Stone mode - Data Analytics and ML" width="100%"/>
+<br/><br/>
+<img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+<img src="https://img.shields.io/badge/-Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"/>
+<img src="https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy"/>
+<img src="https://img.shields.io/badge/-scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn"/>
+<img src="https://img.shields.io/badge/-Random_Forest-2E7D32?style=flat-square" alt="Random Forest"/>
+<img src="https://img.shields.io/badge/-Matplotlib-11557C?style=flat-square&logo=plotly&logoColor=white" alt="Matplotlib"/>
+<img src="https://img.shields.io/badge/-Sentence--Transformers-FFB000?style=flat-square" alt="Sentence-Transformers"/>
+<img src="https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
+<img src="https://img.shields.io/badge/-Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter"/>
+</td>
+<td valign="top" width="33%">
+<img src="./assets/tech-col-tools.svg" alt="Naruto mode - Software Engineering and Tools" width="100%"/>
+<br/><br/>
+<img src="https://img.shields.io/badge/-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java"/>
+<img src="https://img.shields.io/badge/-C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" alt="C++"/>
+<img src="https://img.shields.io/badge/-DBMS-4479A1?style=flat-square&logo=databricks&logoColor=white" alt="DBMS"/>
+<img src="https://img.shields.io/badge/-Networking-003366?style=flat-square&logo=cisco&logoColor=white" alt="Networking"/>
+<img src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"/>
+<img src="https://img.shields.io/badge/-GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions"/>
+<img src="https://img.shields.io/badge/-Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel"/>
+<img src="https://img.shields.io/badge/-AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white" alt="AWS"/>
+<img src="https://img.shields.io/badge/-Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman"/>
+</td>
+</tr>
+</table>
+
+<br/>
+
 <img src="./assets/divider.svg" alt="eyecatch divider" width="100%"/>
 
 <br/>
@@ -43,37 +94,37 @@
 <br/>
 
 <a href="https://github.com/anuragY77">
-<img src="./assets/project-disease.svg" alt="Disease Prediction Engine - ML medic mode" width="100%"/>
+<img src="./assets/project-disease.svg" alt="Disease Prediction Engine - Psycho-Pass mode" width="100%"/>
 </a>
 
 <br/><br/>
 
 <a href="https://github.com/anuragY77">
-<img src="./assets/project-crop.svg" alt="Smart Crop Advisory System - harvest mode" width="100%"/>
+<img src="./assets/project-crop.svg" alt="Smart Crop Advisory System - Silver Spoon mode" width="100%"/>
 </a>
 
 <br/><br/>
 
 <a href="https://github.com/anuragY77/medcore-enterprise-hms">
-<img src="./assets/project-medcore.svg" alt="medcore-enterprise-hms - One Piece mode, chase the dream" width="100%"/>
+<img src="./assets/project-medcore.svg" alt="medcore-enterprise-hms - Cells at Work mode" width="100%"/>
 </a>
 
 <br/><br/>
 
 <a href="https://github.com/anuragY77/CineVerse">
-<img src="./assets/project-cineverse.svg" alt="CineVerse - Naruto mode, never give up" width="100%"/>
+<img src="./assets/project-cineverse.svg" alt="CineVerse - Re:Creators mode" width="100%"/>
 </a>
 
 <br/><br/>
 
 <a href="https://github.com/anuragY77">
-<img src="./assets/project-resumematch.svg" alt="ResumeMatch AI - ranking mode" width="100%"/>
+<img src="./assets/project-resumematch.svg" alt="ResumeMatch AI - Hunter x Hunter mode" width="100%"/>
 </a>
 
 <br/><br/>
 
 <a href="https://github.com/anuragY77">
-<img src="./assets/project-aurelia.svg" alt="Aurelia - premium e-commerce mode" width="100%"/>
+<img src="./assets/project-aurelia.svg" alt="Aurelia - Paradise Kiss mode" width="100%"/>
 </a>
 
 <div align="center">
@@ -88,7 +139,7 @@
 
 <br/>
 
-<img src="./assets/activity-graph.svg?v=1790195968" alt="Activity Graph - contributions last 30 days, auto-updating" width="100%"/>
+<img src="./assets/activity-graph.svg?v=1790195968" alt="Activity Graph - contributions last 30 days with hover tooltips, auto-updating" width="100%"/>
 
 <br/><br/>
 
@@ -99,8 +150,7 @@
 <table border="0">
   <tr>
     <td>
-      <img src="https://github-stats-extended.vercel.app/api?username=anuragY77&theme=tokyonight&bg_color=0d0d14&title_color=ffd166&icon_color=ff7a1a&text_color=f5e6c8&hide_border=true" alt="GitHub Stats"/>
-    </td>
+      <img src="https://github-stats-extended.vercel.app/api?username=anuragY77&theme=tokyonight&bg_color=0d0d14&title_color=ffd166&icon_color=ff7a1a&text_color=f5e6c8&hide_border=true" alt="GitHub Stats"/>    </td>
     <td>
       <img src="https://github-stats-extended.vercel.app/api/top-langs?username=anuragY77&theme=tokyonight&bg_color=0d0d14&title_color=ffd166&icon_color=ff7a1a&hide_border=true&layout=compact" alt="Top Languages"/>
     </td>

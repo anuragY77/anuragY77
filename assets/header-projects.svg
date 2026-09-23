@@ -29,23 +29,35 @@
     <text class="disp" x="0" y="-4" text-anchor="middle" fill="#f7f1e3" font-size="9" letter-spacing="1">EP</text>
     <text class="disp" x="0" y="14" text-anchor="middle" fill="#ffffff" font-size="20">03</text></g></g>
 
-  <text class="sans" x="98" y="28" fill="#e60012" font-size="13" letter-spacing="2">Missions — those who never back down</text>
+  <text class="sans" x="98" y="28" fill="#e60012" font-size="13" letter-spacing="2">Missions — six builds, six universes</text>
   <text class="disp" x="96" y="62" fill="#141414" font-size="34" letter-spacing="3">FEATURED PROJECTS</text>
   <rect class="under" x="96" y="68" width="380" height="5" fill="#e60012"/>
 
-  <!-- character mode tags (manga stickers) -->
-  <g class="tag" font-size="10">
+  <!-- character mode tags — unique anime per project -->
+  <g class="tag" font-size="8">
     <g transform="translate(96,78)">
-      <rect width="148" height="16" fill="#ff6a00" stroke="#141414" stroke-width="2"/>
-      <text x="74" y="12" text-anchor="middle" fill="#141414">NARUTO Â· NEVER GIVE UP</text>
+      <rect width="106" height="16" fill="#1a237e" stroke="#141414" stroke-width="2"/>
+      <text x="53" y="12" text-anchor="middle" fill="#ffffff">PSYCHO-PASS</text>
     </g>
-    <g transform="translate(254,78)">
-      <rect width="132" height="16" fill="#e60012" stroke="#141414" stroke-width="2"/>
-      <text x="66" y="12" text-anchor="middle" fill="#ffffff">ONE PIECE Â· DREAM</text>
+    <g transform="translate(208,78)">
+      <rect width="106" height="16" fill="#558b2f" stroke="#141414" stroke-width="2"/>
+      <text x="53" y="12" text-anchor="middle" fill="#ffffff">SILVER SPOON</text>
     </g>
-    <g transform="translate(396,78)">
-      <rect width="156" height="16" fill="#0d9488" stroke="#141414" stroke-width="2"/>
-      <text x="78" y="12" text-anchor="middle" fill="#ffffff">DEMON SLAYER Â· FIGHT ON</text>
+    <g transform="translate(320,78)">
+      <rect width="112" height="16" fill="#c62828" stroke="#141414" stroke-width="2"/>
+      <text x="56" y="12" text-anchor="middle" fill="#ffffff">CELLS AT WORK</text>
+    </g>
+    <g transform="translate(438,78)">
+      <rect width="104" height="16" fill="#4527a0" stroke="#141414" stroke-width="2"/>
+      <text x="52" y="12" text-anchor="middle" fill="#ffffff">RE:CREATORS</text>
+    </g>
+    <g transform="translate(548,78)">
+      <rect width="118" height="16" fill="#2e7d32" stroke="#141414" stroke-width="2"/>
+      <text x="59" y="12" text-anchor="middle" fill="#ffffff">HUNTER x HUNTER</text>
+    </g>
+    <g transform="translate(672,78)">
+      <rect width="116" height="16" fill="#880e4f" stroke="#141414" stroke-width="2"/>
+      <text x="58" y="12" text-anchor="middle" fill="#ffffff">PARADISE KISS</text>
     </g>
   </g>
 

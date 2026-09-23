@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 90" width="800" height="90" role="img" aria-label="Tech Stack — many anime, one arsenal">
+  <defs>
+    <pattern id="tkTone" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#141414" opacity=".07"/>
+    </pattern>
+  </defs>
+  <style>
+    .disp { font-family: Impact, "Arial Black", sans-serif; }
+    .sans { font-family: "Segoe UI", Arial, sans-serif; font-style: italic; font-weight: 700; }
+    @keyframes stamp { 0% { transform: scale(1.6) rotate(-18deg); opacity:0; } 60% { transform: scale(.95) rotate(-8deg); opacity:1; } 100% { transform: scale(1) rotate(-8deg); opacity:1; } }
+    @keyframes under { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    .stamp { transform-box: fill-box; transform-origin: center; animation: stamp .5s ease-out both; }
+    .under { transform-origin: left center; animation: under .6s .2s ease-out both; }
+  </style>
+
+  <rect width="800" height="90" fill="#f7f1e3"/>
+  <rect width="800" height="90" fill="url(#tkTone)"/>
+
+  <g stroke="#141414" stroke-width="2" opacity=".18" stroke-linecap="round">
+    <line x1="580" y1="12" x2="780" y2="26"/>
+    <line x1="600" y1="40" x2="780" y2="52"/>
+    <line x1="620" y1="66" x2="780" y2="74"/>
+  </g>
+
+  <g transform="translate(52,42)"><g class="stamp">
+    <circle r="28" fill="none" stroke="#e60012" stroke-width="4"/>
+    <circle r="22" fill="#e60012"/>
+    <text class="disp" x="0" y="-4" text-anchor="middle" fill="#f7f1e3" font-size="9" letter-spacing="1">EP</text>
+    <text class="disp" x="0" y="14" text-anchor="middle" fill="#ffffff" font-size="20">02</text></g></g>
+
+  <text class="sans" x="98" y="28" fill="#e60012" font-size="13" letter-spacing="2">Many anime · one arsenal — equip everything</text>
+  <text class="disp" x="96" y="62" fill="#141414" font-size="34" letter-spacing="3">TECH STACK</text>
+  <rect class="under" x="96" y="68" width="300" height="5" fill="#e60012"/>
+
+  <!-- multi-anime mini emblems -->
+  <g transform="translate(560,42)">
+    <!-- One Piece straw hat -->
+    <g transform="translate(0,0)">
+      <ellipse cy="4" rx="18" ry="7" fill="#ffd166" stroke="#141414" stroke-width="2.5"/>
+      <path d="M-10,4 Q-10,-12 0,-12 Q10,-12 10,4" fill="#ffd166" stroke="#141414" stroke-width="2.5"/>
+      <rect x="-11" y="0" width="22" height="4" fill="#e60012" stroke="#141414" stroke-width="1.5"/>
+    </g>
+    <!-- Dr. Stone flask -->
+    <g transform="translate(48,0)">
+      <path d="M-5,-14 L-5,-4 L-14,12 Q-16,16 -10,16 L10,16 Q16,16 14,12 L5,-4 L5,-14 Z" fill="#b3e5fc" stroke="#141414" stroke-width="2.5"/>
+      <rect x="-7" y="-18" width="14" height="5" rx="1" fill="#141414"/>
+      <path d="M-10,8 Q0,4 10,8 Q12,14 8,14 L-8,14 Q-12,14 -10,8 Z" fill="#00897b" stroke="#141414" stroke-width="1.5"/>
+      <circle cx="-3" cy="6" r="2" fill="#fff" opacity=".8"/>
+      <circle cx="5" cy="10" r="1.5" fill="#fff" opacity=".7"/>
+    </g>
+    <!-- Naruto leaf -->
+    <g transform="translate(96,0)">
+      <circle r="16" fill="#f7f1e3" stroke="#141414" stroke-width="2.5"/>
+      <path d="M0,-11 A11,11 0 1,1 -8,8" fill="none" stroke="#ff6a00" stroke-width="3" stroke-linecap="round"/>
+      <path d="M0,-11 L4,-14 M0,-11 L-4,-14" fill="none" stroke="#ff6a00" stroke-width="2.5" stroke-linecap="round"/>
+      <circle r="3" fill="#ff6a00"/>
+    </g>
+    <!-- Demon Slayer check -->
+    <g transform="translate(144,0)">
+      <rect x="-14" y="-14" width="28" height="28" fill="#127a58" stroke="#141414" stroke-width="2.5"/>
+      <rect x="-14" y="-14" width="14" height="14" fill="#141414"/>
+      <rect x="0" y="0" width="14" height="14" fill="#141414"/>
+    </g>
+    <!-- Sharingan dot -->
+    <g transform="translate(192,0)">
+      <circle r="15" fill="#f5e6d0" stroke="#141414" stroke-width="2.5"/>
+      <circle r="9" fill="#e01b24" stroke="#8b0000" stroke-width="2"/>
+      <circle r="3.5" fill="#120000"/>
+      <circle cx="0" cy="-6" r="2" fill="#120000"/>
+      <circle cx="5.5" cy="4" r="2" fill="#120000"/>
+      <circle cx="-5.5" cy="4" r="2" fill="#120000"/>
+    </g>
+  </g>
+
+  <rect x="2" y="2" width="796" height="86" fill="none" stroke="#141414" stroke-width="5"/>
+</svg>
