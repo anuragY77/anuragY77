@@ -2,12 +2,13 @@ name: Update Contribution Calendar
 
 on:
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "7 */1 * * *"
   workflow_dispatch:
   push:
     branches: [main]
     paths:
       - "scripts/generate-contribution-calendar.mjs"
+      - "scripts/generate-activity-graph.mjs"
 
 permissions:
   contents: write
@@ -30,14 +31,20 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: node scripts/generate-contribution-calendar.mjs
 
+      - name: Generate activity graph SVG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: node scripts/generate-activity-graph.mjs
+
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/contribution-calendar.svg
+          git add assets/contribution-calendar.svg assets/activity-graph.svg
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "chore: refresh contribution calendar"
+            git commit -m "chore: refresh contribution calendar + activity graph"
             git push
           fi

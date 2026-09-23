@@ -110,7 +110,8 @@ const panelW = 800;
 const CAL_X = 70;
 const CAL_Y = 96;
 const calW = weekCols.length * PITCH;
-const FOOT_Y = CAL_Y + ROWS * PITCH + 36;
+const TRACK_H = 56; // Demon Slayer running lane
+const FOOT_Y = CAL_Y + ROWS * PITCH + TRACK_H + 30;
 const panelH = FOOT_Y + 30;
 
 // month labels: first week column containing that month's day 1 (or first col of month)
@@ -168,6 +169,206 @@ const columns = weekCols
 
 // GitHub row order: Sun top → Sat bottom; labels on Mon/Wed/Fri
 // Our weeks are already Sun..Sat (index 0=Sun)
+
+/** Running lane with Tanjiro, Zenitsu, Inosuke (chibi side-view, SMIL translate). */
+function demonSlayerTrack(x0, y0, w, h) {
+  const groundY = y0 + h - 14;
+  const lane = `<rect x="${x0}" y="${y0 + 4}" width="${w}" height="${h - 8}" rx="6" fill="#f7f1e3" stroke="#141414" stroke-width="2.5" opacity=".9"/>
+    <line x1="${x0 + 6}" y1="${groundY}" x2="${x0 + w - 6}" y2="${groundY}" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+    <line x1="${x0 + 6}" y1="${groundY + 4}" x2="${x0 + w - 6}" y2="${groundY + 4}" stroke="#141414" stroke-width="1.5" stroke-dasharray="8 10" opacity=".5"/>
+    <text class="disp" x="${x0 + 10}" y="${y0 + 16}" fill="#e60012" font-size="11" letter-spacing="2" opacity=".85">HASHIRA SPRINT</text>`;
+
+  // Each runner: nested static translate so SMIL on outer g works reliably.
+  const start = x0 + 8;
+  const end = x0 + w - 48;
+  const runners = [
+    {
+      id: "tanjiroRun",
+      dur: "7s",
+      begin: "0s",
+      y: groundY - 2,
+      svg: tanjiroChibi(),
+    },
+    {
+      id: "zenitsuRun",
+      dur: "6.2s",
+      begin: "-2.1s",
+      y: groundY - 2,
+      svg: zenitsuChibi(),
+    },
+    {
+      id: "inosukeRun",
+      dur: "5.6s",
+      begin: "-4s",
+      y: groundY - 2,
+      svg: inosukeChibi(),
+    },
+  ];
+
+  const groups = runners
+    .map(
+      (r) => `  <g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="${start},${r.y}; ${end},${r.y}" dur="${r.dur}" begin="${r.begin}" repeatCount="indefinite"/>
+      <g transform="translate(0,0)">${r.svg}</g>
+    </g>
+  </g>`
+    )
+    .join("\n");
+
+  return `  <!-- DS runners -->
+  <g>
+${lane}
+${groups}
+  </g>`;
+}
+
+function tanjiroChibi() {
+  // side view running left→right; green/black checkered haori, scar, sword
+  return `<g transform="translate(0,-28)">
+    <!-- motion lines -->
+    <line x1="-28" y1="6" x2="-48" y2="6" stroke="#141414" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+    <line x1="-24" y1="14" x2="-44" y2="14" stroke="#141414" stroke-width="2" stroke-linecap="round" opacity=".35"/>
+    <!-- back leg -->
+    <path d="M0,18 L-10,28 L-16,30" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M0,18 L-10,28 L-16,30" fill="none" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- front leg -->
+    <path d="M2,18 L12,26 L18,24" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2,18 L12,26 L18,24" fill="none" stroke="#2a2a2a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- sandals -->
+    <ellipse cx="-17" cy="31" rx="5" ry="3" fill="#c4a574" stroke="#141414" stroke-width="1.5"/>
+    <ellipse cx="19" cy="25" rx="5" ry="3" fill="#c4a574" stroke="#141414" stroke-width="1.5"/>
+    <!-- torso / haori checkered -->
+    <path d="M-8,-4 L10,-4 L8,20 L-6,20 Z" fill="#141414" stroke="#141414" stroke-width="2"/>
+    <path d="M-8,-4 L10,-4 L8,20 L-6,20 Z" fill="#0f7a5a"/>
+    <!-- check pattern -->
+    <g fill="#141414" opacity=".9">
+      <rect x="-8" y="-4" width="7" height="8"/>
+      <rect x="1" y="4" width="7" height="8"/>
+      <rect x="-7" y="12" width="7" height="8"/>
+      <rect x="2" y="-4" width="4" height="6" opacity=".4"/>
+      <rect x="-3" y="0" width="7" height="6" opacity=".35"/>
+    </g>
+    <!-- arms pumping -->
+    <path d="M8,0 L18,6 L22,2" fill="none" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+    <path d="M8,0 L18,6 L22,2" fill="none" stroke="#f5c89a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-6,2 L-14,10 L-12,4" fill="none" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-6,2 L-14,10 L-12,4" fill="none" stroke="#f5c89a" stroke-width="3" stroke-linecap="round"/>
+    <!-- sword on back -->
+    <line x1="-14" y1="-14" x2="8" y2="8" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-14" y1="-14" x2="8" y2="8" stroke="#9aa3b2" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-15" cy="-15" r="3" fill="#e60012" stroke="#141414" stroke-width="1.5"/>
+    <!-- head -->
+    <circle cx="4" cy="-16" r="11" fill="#f5c89a" stroke="#141414" stroke-width="2"/>
+    <!-- scar -->
+    <path d="M7,-22 L11,-18" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/>
+    <!-- eye forward -->
+    <circle cx="9" cy="-17" r="2" fill="#141414"/>
+    <!-- determined mouth -->
+    <path d="M7,-11 L12,-12" stroke="#141414" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- black hair -->
+    <path d="M-6,-22 Q0,-34 8,-28 Q14,-32 15,-24 Q10,-30 4,-28 Q-2,-30 -6,-22 Z" fill="#141414"/>
+    <!-- hair tuft -->
+    <path d="M6,-30 L4,-36 L10,-31" fill="#141414"/>
+  </g>`;
+}
+
+function zenitsuChibi() {
+  // yellow hair, triangle haori, scared running
+  return `<g transform="translate(0,-28)">
+    <line x1="-30" y1="8" x2="-52" y2="8" stroke="#141414" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+    <line x1="-26" y1="16" x2="-46" y2="16" stroke="#141414" stroke-width="2" stroke-linecap="round" opacity=".35"/>
+    <!-- legs -->
+    <path d="M0,18 L-8,28 L-14,31" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M0,18 L-8,28 L-14,31" fill="none" stroke="#1d1d1d" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M3,18 L13,27 L20,26" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3,18 L13,27 L20,26" fill="none" stroke="#2a2a2a" stroke-width="3.5" stroke-linecap="round"/>
+    <ellipse cx="-15" cy="32" rx="5" ry="3" fill="#c4a574" stroke="#141414" stroke-width="1.5"/>
+    <ellipse cx="21" cy="27" rx="5" ry="3" fill="#c4a574" stroke="#141414" stroke-width="1.5"/>
+    <!-- body / yellow haori -->
+    <path d="M-8,-4 L10,-4 L8,20 L-6,20 Z" fill="#f5c89a" stroke="#141414" stroke-width="2"/>
+    <path d="M-8,-4 L10,-4 L8,20 L-6,20 Z" fill="#f0b429"/>
+    <!-- triangle pattern -->
+    <g fill="#141414" opacity=".85">
+      <polygon points="-6,2 -2,8 -6,8"/>
+      <polygon points="0,2 4,8 0,8"/>
+      <polygon points="6,2 10,8 6,8"/>
+      <polygon points="-3,10 1,16 -3,16"/>
+      <polygon points="3,10 7,16 3,16"/>
+    </g>
+    <!-- flailing arms -->
+    <path d="M8,-2 L20,-12 L24,-4" fill="none" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+    <path d="M8,-2 L20,-12 L24,-4" fill="none" stroke="#f5c89a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-6,0 L-16,-10 L-20,-2" fill="none" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-6,0 L-16,-10 L-20,-2" fill="none" stroke="#f5c89a" stroke-width="3" stroke-linecap="round"/>
+    <!-- head -->
+    <circle cx="4" cy="-16" r="11" fill="#f5c89a" stroke="#141414" stroke-width="2"/>
+    <!-- scared eyes -->
+    <ellipse cx="8" cy="-18" rx="3" ry="3.5" fill="#ffffff" stroke="#141414" stroke-width="1.2"/>
+    <circle cx="9" cy="-18" r="1.4" fill="#141414"/>
+    <ellipse cx="2" cy="-18" rx="2.5" ry="3" fill="#ffffff" stroke="#141414" stroke-width="1.2"/>
+    <circle cx="3" cy="-18" r="1.2" fill="#141414"/>
+    <!-- screaming mouth -->
+    <ellipse cx="8" cy="-11" rx="3" ry="4" fill="#141414"/>
+    <!-- tears -->
+    <path d="M12,-16 Q14,-10 12,-8" fill="none" stroke="#7ec8ff" stroke-width="2" stroke-linecap="round"/>
+    <!-- yellow hair -->
+    <path d="M-7,-24 Q-4,-34 4,-32 Q12,-36 16,-28 Q18,-32 16,-24 Q14,-30 8,-28 Q2,-32 -4,-28 Z" fill="#f0b429" stroke="#141414" stroke-width="1.5"/>
+    <path d="M-7,-24 L-10,-18 L-4,-22" fill="#f0b429" stroke="#141414" stroke-width="1"/>
+    <path d="M16,-24 L19,-18 L13,-22" fill="#f0b429" stroke="#141414" stroke-width="1"/>
+  </g>`;
+}
+
+function inosukeChibi() {
+  // boar mask, dual swords, bare torso
+  return `<g transform="translate(0,-30)">
+    <line x1="-30" y1="10" x2="-54" y2="10" stroke="#141414" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+    <line x1="-26" y1="18" x2="-48" y2="18" stroke="#141414" stroke-width="2" stroke-linecap="round" opacity=".35"/>
+    <!-- dual swords crossed on back -->
+    <line x1="-16" y1="-20" x2="14" y2="10" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-16" y1="-20" x2="14" y2="10" stroke="#b0b7c3" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-14" y1="10" x2="16" y2="-18" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-14" y1="10" x2="16" y2="-18" stroke="#b0b7c3" stroke-width="2" stroke-linecap="round"/>
+    <!-- legs -->
+    <path d="M0,18 L-10,28 L-16,31" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M0,18 L-10,28 L-16,31" fill="none" stroke="#f5c89a" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M3,18 L14,26 L20,24" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3,18 L14,26 L20,24" fill="none" stroke="#f5c89a" stroke-width="3.5" stroke-linecap="round"/>
+    <ellipse cx="-17" cy="32" rx="5" ry="3" fill="#c4a574" stroke="#141414" stroke-width="1.5"/>
+    <ellipse cx="21" cy="25" rx="5" ry="3" fill="#c4a574" stroke="#141414" stroke-width="1.5"/>
+    <!-- shorts -->
+    <path d="M-8,6 L10,6 L9,20 L-7,20 Z" fill="#3d2b1f" stroke="#141414" stroke-width="2"/>
+    <!-- bare muscular torso -->
+    <path d="M-8,-6 L10,-6 L9,8 L-7,8 Z" fill="#f5c89a" stroke="#141414" stroke-width="2"/>
+    <!-- muscle lines -->
+    <path d="M1,-6 L1,8" stroke="#141414" stroke-width="1.2" opacity=".5"/>
+    <path d="M-6,-2 L8,-2" stroke="#141414" stroke-width="1.2" opacity=".35"/>
+    <!-- arms with swords forward -->
+    <path d="M8,-2 L22,4 L28,-2" fill="none" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+    <path d="M8,-2 L22,4 L28,-2" fill="none" stroke="#f5c89a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="24" y1="2" x2="40" y2="-6" stroke="#141414" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="24" y1="2" x2="40" y2="-6" stroke="#b0b7c3" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M-6,0 L-16,8 L-14,0" fill="none" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-6,0 L-16,8 L-14,0" fill="none" stroke="#f5c89a" stroke-width="3" stroke-linecap="round"/>
+    <!-- boar mask -->
+    <ellipse cx="6" cy="-18" rx="13" ry="11" fill="#e8d4c0" stroke="#141414" stroke-width="2"/>
+    <!-- snout -->
+    <ellipse cx="16" cy="-16" rx="7" ry="6" fill="#d4b8a0" stroke="#141414" stroke-width="2"/>
+    <circle cx="18" cy="-17" r="1.5" fill="#141414"/>
+    <circle cx="20" cy="-14" r="1.5" fill="#141414"/>
+    <!-- angry eyes -->
+    <path d="M0,-22 L6,-20" stroke="#141414" stroke-width="2" stroke-linecap="round"/>
+    <path d="M8,-22 L12,-20" stroke="#141414" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="4" cy="-19" r="1.5" fill="#141414"/>
+    <circle cx="11" cy="-19" r="1.5" fill="#141414"/>
+    <!-- pink ears / fur tufts -->
+    <path d="M-4,-26 L-8,-34 L0,-28" fill="#f0a0b0" stroke="#141414" stroke-width="1.5"/>
+    <path d="M6,-28 L8,-36 L12,-30" fill="#f0a0b0" stroke="#141414" stroke-width="1.5"/>
+    <!-- fur fringe -->
+    <path d="M-6,-20 Q-12,-26 -6,-30 Q0,-34 4,-30" fill="#c4b5a0" stroke="#141414" stroke-width="1.5"/>
+  </g>`;
+}
+
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${panelW} ${panelH}" width="${panelW}" height="${panelH}" role="img" aria-label="${yearTotal} contributions in ${YEAR}">
   <defs>
@@ -213,6 +414,9 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   <g>
     ${columns}
   </g>
+
+  <!-- Demon Slayer running track: Tanjiro, Zenitsu, Inosuke -->
+  ${demonSlayerTrack(CAL_X, CAL_Y + ROWS * PITCH + 6, panelW - CAL_X - 28, TRACK_H)}
 
   <!-- footer: legend -->
   <g class="sans" font-size="11" fill="#141414" font-weight="700">

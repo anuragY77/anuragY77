@@ -42,8 +42,14 @@
 
 <br/>
 
-<a href="https://github.com/anuragY77/CineVerse">
-<img src="./assets/project-cineverse.svg" alt="CineVerse - Naruto mode, never give up" width="100%"/>
+<a href="https://github.com/anuragY77">
+<img src="./assets/project-disease.svg" alt="Disease Prediction Engine - ML medic mode" width="100%"/>
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/anuragY77">
+<img src="./assets/project-crop.svg" alt="Smart Crop Advisory System - harvest mode" width="100%"/>
 </a>
 
 <br/><br/>
@@ -54,8 +60,20 @@
 
 <br/><br/>
 
-<a href="https://github.com/anuragY77/portfolio">
-<img src="./assets/project-portfolio.svg" alt="portfolio - Demon Slayer mode, set your heart ablaze" width="100%"/>
+<a href="https://github.com/anuragY77/CineVerse">
+<img src="./assets/project-cineverse.svg" alt="CineVerse - Naruto mode, never give up" width="100%"/>
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/anuragY77">
+<img src="./assets/project-resumematch.svg" alt="ResumeMatch AI - ranking mode" width="100%"/>
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/anuragY77">
+<img src="./assets/project-aurelia.svg" alt="Aurelia - premium e-commerce mode" width="100%"/>
 </a>
 
 <div align="center">
@@ -70,11 +88,11 @@
 
 <br/>
 
-<img src="https://github-readme-activity-graph-rosy.vercel.app/graph?username=anuragY77&theme=react-dark&bg_color=f7f1e3&color=e60012&point=ff6a00&hide_border=true" alt="Activity Graph" width="100%"/>
+<img src="./assets/activity-graph.svg" alt="Activity Graph with Luffy - contributions last 30 days" width="100%"/>
 
 <br/><br/>
 
-<img src="./assets/contribution-calendar.svg" alt="52 contributions in 2026 - contribution calendar" width="100%"/>
+<img src="./assets/contribution-calendar.svg" alt="54 contributions in 2026 - contribution calendar with Demon Slayer runners" width="100%"/>
 
 <br/><br/>
 
