@@ -12,12 +12,11 @@
 
 <br/><br/>
 
-### // SYSTEM_INTRO
+<img src="./assets/header-intro.svg" alt="// SYSTEM_INTRO" width="100%"/>
 
-Turning data and code into products — building data pipelines by day,
-shipping AI-assisted full-stack applications by night.
+<br/>
 
-`Python` `TypeScript` `React` `Next.js` `Node.js` `PostgreSQL`
+<img src="./assets/intro-terminal.svg" alt="System intro terminal" width="100%"/>
 
 <br/>
 
@@ -25,31 +24,34 @@ shipping AI-assisted full-stack applications by night.
 
 <br/>
 
-## // FEATURED_MODULES
+<img src="./assets/header-projects.svg" alt="// FEATURED_MODULES" width="100%"/>
+
+</div>
 
 <br/>
 
 > [!IMPORTANT]
-> **[CineVerse](https://github.com/anuragY77/CineVerse)**
-> Premium movie/anime discovery platform with 3D effects, glassmorphism, real-time watch parties, and AI recommendations.
->
-> `JavaScript` `React` `Three.js` `AI`
-
-<br/>
+> <div align="center">
+> <h3><a href="https://github.com/anuragY77/CineVerse">CineVerse</a></h3>
+> <p><b>Premium movie/anime discovery platform with 3D effects, glassmorphism, real-time watch parties, and AI recommendations.</b></p>
+> <p><code>JavaScript</code> <code>React</code> <code>Three.js</code> <code>AI</code></p>
+> </div>
 
 > [!TIP]
-> **[medcore-enterprise-hms](https://github.com/anuragY77/medcore-enterprise-hms)**
-> Premium enterprise Hospital Management System with RBAC, Drizzle ORM, and a modern clinical dashboard.
->
-> `TypeScript` `Next.js` `PostgreSQL` `Drizzle ORM`
-
-<br/>
+> <div align="center">
+> <h3><a href="https://github.com/anuragY77/medcore-enterprise-hms">medcore-enterprise-hms</a></h3>
+> <p><b>Premium enterprise Hospital Management System with RBAC, Drizzle ORM, and a modern clinical dashboard.</b></p>
+> <p><code>TypeScript</code> <code>Next.js</code> <code>PostgreSQL</code> <code>Drizzle ORM</code></p>
+> </div>
 
 > [!NOTE]
-> **[portfolio](https://github.com/anuragY77/portfolio)**
-> Personal portfolio site built with Next.js — dark, fast, fully animated.
->
-> `TypeScript` `Next.js` `Tailwind CSS`
+> <div align="center">
+> <h3><a href="https://github.com/anuragY77/portfolio">portfolio</a></h3>
+> <p><b>Personal portfolio site built with Next.js — dark, fast, fully animated.</b></p>
+> <p><code>TypeScript</code> <code>Next.js</code> <code>Tailwind CSS</code></p>
+> </div>
+
+<div align="center">
 
 <br/>
 
@@ -57,7 +59,7 @@ shipping AI-assisted full-stack applications by night.
 
 <br/>
 
-## // GITHUB_ANALYTICS
+<img src="./assets/header-analytics.svg" alt="// GITHUB_ANALYTICS" width="100%"/>
 
 <br/>
 
@@ -90,32 +92,31 @@ shipping AI-assisted full-stack applications by night.
 
 <br/>
 
-## // AUTOMATED_FEEDS
+<img src="./assets/header-feeds.svg" alt="// AUTOMATED_FEEDS" width="100%"/>
 
 <br/>
 
-**Recent Activity**
+<img src="./assets/sync-loader.svg" alt="Sync loader - activity" width="100%"/>
+
+<br/>
 
 <!-- START_SECTION:activity -->
-_Awaiting first sync — GitHub Actions will populate recent activity here._
+<sub>Awaiting first sync — GitHub Actions will populate recent activity here.</sub>
 <!-- END_SECTION:activity -->
 
 <br/>
 
-**Latest Content**
+<img src="./assets/sync-loader.svg" alt="Sync loader - content" width="100%"/>
+
+<br/>
 
 <!-- START_SECTION:content -->
-_Awaiting first sync — GitHub Actions will populate latest posts here._
+<sub>Awaiting first sync — GitHub Actions will populate latest posts here.</sub>
 <!-- END_SECTION:content -->
 
 <br/>
 
-<img src="./assets/divider.svg" alt="divider" width="100%"/>
-
-<br/>
-
-<img src="https://img.shields.io/badge/SYSTEM-DEPLOYMENT_SUCCESSFUL-22d3ee?style=for-the-badge&logo=github&logoColor=0d1117" alt="Deployment Successful"/>
-<img src="https://img.shields.io/badge/PROFILE-REDESIGNED-c084fc?style=for-the-badge&logo=vercel&logoColor=0d1117" alt="Profile Redesigned"/>
+<img src="./assets/footer-banner.svg" alt="System deployment successful" width="100%"/>
 
 <br/>
 

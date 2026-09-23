@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 130" width="800" height="130" role="img" aria-label="System deployment successful footer">
+  <defs>
+    <linearGradient id="fTitle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#56d4dd"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="fBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="fShine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="fGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="fGlowS" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="fType">
+      <rect x="0" y="38" width="0" height="40">
+        <animate attributeName="width" from="0" to="800" dur="2.4s" fill="freeze"/>
+      </rect>
+    </clipPath>
+  </defs>
+  <style>
+    .mono { font-family: "Cascadia Code", Consolas, "Courier New", monospace; }
+    @keyframes fPulse { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
+    @keyframes fBlink { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+    .fDot { animation: fPulse 1.6s ease-in-out infinite; }
+    .fCur { animation: fBlink 0.95s step-end infinite; }
+    .fTitlePulse { animation: fPulse 3s ease-in-out infinite; }
+  </style>
+
+  <rect width="800" height="130" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="129" fill="none" stroke="#3fb950" stroke-opacity="0.5"/>
+
+  <!-- top status row -->
+  <circle cx="30" cy="24" r="5" fill="#3fb950" class="fDot" filter="url(#fGlowS)"/>
+  <text class="mono" x="46" y="28" fill="#3fb950" font-size="12" letter-spacing="2" filter="url(#fGlowS)">EXIT_CODE: 0 &#183; PIPELINE_PASSED</text>
+  <text class="mono" x="776" y="28" text-anchor="end" fill="#8b949e" font-size="11">main@06a53a1</text>
+
+  <!-- typed main title -->
+  <g clip-path="url(#fType)">
+    <text class="mono fTitlePulse" x="400" y="66" text-anchor="middle" fill="url(#fTitle)" font-size="30" font-weight="700" letter-spacing="4" filter="url(#fGlow)">SYSTEM DEPLOYMENT SUCCESSFUL</text>
+  </g>
+
+  <!-- progress 100% -->
+  <rect x="60" y="82" width="680" height="10" rx="5" fill="#161b22" stroke="#22d3ee" stroke-opacity="0.4"/>
+  <rect x="62" y="84" width="676" height="6" rx="3" fill="url(#fBar)" filter="url(#fGlowS)"/>
+  <rect x="62" y="84" width="80" height="6" rx="3" fill="url(#fShine)">
+    <animate attributeName="x" values="62;658;62" dur="2.2s" repeatCount="indefinite"/>
+  </rect>
+  <text class="mono" x="752" y="92" fill="#3fb950" font-size="11" filter="url(#fGlowS)">100%</text>
+
+  <!-- bottom line -->
+  <text class="mono" x="400" y="116" text-anchor="middle" fill="#c084fc" font-size="14" letter-spacing="6">PROFILE REDESIGNED<tspan class="fCur" fill="#56d4dd">_</tspan></text>
+
+  <!-- corner brackets -->
+  <g stroke="#3fb950" stroke-width="1.5" fill="none" opacity="0.8">
+    <path d="M10,40 L10,10 L40,10"/>
+    <path d="M760,10 L790,10 L790,40"/>
+    <path d="M10,90 L10,120 L40,120"/>
+    <path d="M760,120 L790,120 L790,90"/>
+  </g>
+</svg>
