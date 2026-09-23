@@ -85,7 +85,7 @@
 
 <br/><br/>
 
-<img src="./assets/contribution-calendar.svg" alt="48 contributions in 2026 - contribution calendar" width="100%"/>
+<img src="./assets/contribution-calendar.svg" alt="52 contributions in 2026 - contribution calendar" width="100%"/>
 
 <br/><br/>
 

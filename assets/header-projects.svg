@@ -1,65 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 90" width="800" height="90" role="img" aria-label="Projects header: never back down">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 90" width="800" height="90" role="img" aria-label="Episode title card: Projects">
   <defs>
-    <linearGradient id="phBg" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#0a0a0f"/>
-      <stop offset="50%" stop-color="#141008"/>
-      <stop offset="100%" stop-color="#0a0a0f"/>
-    </linearGradient>
-    <linearGradient id="phLine" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="t3" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#ff7a1a"/>
-      <stop offset="50%" stop-color="#ffd166"/>
-      <stop offset="100%" stop-color="#ff3b5c" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e01b24"/>
+      <stop offset="100%" stop-color="#2ec4b6"/>
     </linearGradient>
-    <linearGradient id="phBeam" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ffd166" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#fff6e8"/>
-      <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="phG" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="2" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <style>
-    @keyframes blink { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
-    @keyframes p { 0%,100% { opacity:.5; } 50% { opacity:1; } }
-    .cur { animation: blink 1s step-end infinite; }
-    .p { animation: p 2s ease-in-out infinite; }
+    .disp { font-family: Impact, "Arial Black", sans-serif; }
+    .sans { font-family: "Segoe UI", Arial, sans-serif; }
+    @keyframes sl { 0%,100% { transform: translateX(0); } 50% { transform: translateX(8px); } }
+    @keyframes fl { 0%,100% { opacity:1; } 50% { opacity:.5; } }
+    .a { animation: sl 2s ease-in-out infinite; }
+    .f { animation: fl 1.4s ease-in-out infinite; }
   </style>
-
-  <rect width="800" height="90" fill="url(#phBg)"/>
-  <rect x="0" y="0" width="6" height="90" fill="#ff7a1a"/>
-
-  <g filter="url(#phG)">
-    <rect x="24" y="14" width="86" height="42" rx="3" fill="#ffd166"/>
-    <text x="67" y="34" text-anchor="middle" fill="#1a0e10" font-family="Consolas,monospace" font-size="10" font-weight="700" letter-spacing="2">ARC</text>
-    <text x="67" y="50" text-anchor="middle" fill="#0a0a0f" font-family="Consolas,monospace" font-size="16" font-weight="800">03</text>
+  <rect width="800" height="90" fill="#0a0a10"/>
+  <g stroke="#ffffff" stroke-width="2" opacity=".12">
+    <line x1="500" y1="10" x2="780" y2="30"/>
+    <line x1="520" y1="40" x2="780" y2="55"/>
+    <line x1="540" y1="70" x2="780" y2="80"/>
   </g>
-
-  <g>
-    <text x="128" y="32" fill="#ff7a1a" font-family="Consolas,monospace" font-size="11" letter-spacing="3">MISSIONS &#183; THOSE WHO NEVER BACK DOWN</text>
-    <text x="126" y="56" fill="#f0f0f5" font-family="'Segoe UI','Arial Black',Arial,sans-serif" font-size="24" font-weight="900" letter-spacing="2">FEATURED PROJECTS</text>
-    <text x="480" y="56" fill="#ffd166" font-family="'Segoe UI','Arial Black',Arial,sans-serif" font-size="24" font-weight="900" class="cur">_</text>
+  <g transform="translate(28,14) skewX(-10)">
+    <rect width="72" height="44" fill="url(#t3)"/>
+    <text class="disp" x="36" y="20" text-anchor="middle" fill="#0a0a10" font-size="11" letter-spacing="2">EPISODE</text>
+    <text class="disp" x="36" y="40" text-anchor="middle" fill="#ffffff" font-size="22">03</text>
   </g>
-
-  <!-- three character-motto chips -->
-  <g font-family="Consolas,monospace" font-size="9" letter-spacing="1">
-    <rect x="128" y="66" width="150" height="16" rx="3" fill="#ff7a1a" opacity=".9"/>
-    <text x="203" y="77" text-anchor="middle" fill="#0a0a0f" font-weight="700">NARUTO &#183; NEVER GIVE UP</text>
-    <rect x="288" y="66" width="140" height="16" rx="3" fill="#ff3b5c" opacity=".9"/>
-    <text x="358" y="77" text-anchor="middle" fill="#fff" font-weight="700">ONE PIECE &#183; DREAM</text>
-    <rect x="438" y="66" width="160" height="16" rx="3" fill="#2ec4b6" opacity=".9"/>
-    <text x="518" y="77" text-anchor="middle" fill="#0a0a0f" font-weight="700">DEMON SLAYER &#183; FIGHT ON</text>
+  <text class="sans" x="122" y="30" fill="#ffd54f" font-size="13" font-weight="700" letter-spacing="4" font-style="italic">MISSIONS — THOSE WHO NEVER BACK DOWN</text>
+  <text class="disp" x="120" y="60" fill="#ffffff" font-size="30" letter-spacing="4">FEATURED PROJECTS</text>
+  <rect x="120" y="64" width="360" height="4" fill="url(#t3)" class="a"/>
+  <!-- three character energy chips -->
+  <g class="sans" font-size="10" font-weight="700">
+    <g transform="translate(120,74) skewX(-8)"><rect width="140" height="14" fill="#ff7a1a"/><text x="70" y="11" text-anchor="middle" fill="#0a0a10">NARUTO · NEVER GIVE UP</text></g>
+    <g transform="translate(270,74) skewX(-8)"><rect width="130" height="14" fill="#e01b24"/><text x="65" y="11" text-anchor="middle" fill="#fff">ONE PIECE · DREAM</text></g>
+    <g transform="translate(410,74) skewX(-8)"><rect width="150" height="14" fill="#2ec4b6"/><text x="75" y="11" text-anchor="middle" fill="#0a0a10">DEMON SLAYER · FIGHT ON</text></g>
   </g>
-
-  <g stroke="#ff7a1a" stroke-width="2" opacity=".6">
-    <line x1="620" y1="24" x2="760" y2="24"/>
-    <line x1="660" y1="42" x2="760" y2="42"/>
-  </g>
-  <circle cx="770" cy="24" r="3" fill="#ffd166" class="p"/>
-
-  <rect x="0" y="86" width="800" height="4" fill="url(#phLine)"/>
-  <rect x="-80" y="86" width="80" height="4" fill="url(#phBeam)">
-    <animate attributeName="x" values="-80;800" dur="2.4s" repeatCount="indefinite"/>
-  </rect>
+  <circle cx="770" cy="36" r="5" fill="#e01b24" class="f"/>
 </svg>

@@ -1,46 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 40" width="800" height="40" role="img" aria-label="Next episode loading">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 44" width="800" height="44" role="img" aria-label="Next episode loading">
   <defs>
     <linearGradient id="lProg" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#ff7a1a"/>
-      <stop offset="50%" stop-color="#ffd166"/>
-      <stop offset="100%" stop-color="#ff3b5c"/>
+      <stop offset="50%" stop-color="#ffd54f"/>
+      <stop offset="100%" stop-color="#e01b24"/>
     </linearGradient>
     <linearGradient id="lBeam" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ffd166" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ffd54f" stop-opacity="0"/>
       <stop offset="50%" stop-color="#fff6e8"/>
-      <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffd54f" stop-opacity="0"/>
     </linearGradient>
     <filter id="lG" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
   <style>
+    .disp { font-family: Impact, "Arial Black", sans-serif; }
+    .sans { font-family: "Segoe UI", Arial, sans-serif; font-style: italic; font-weight: 700; }
     @keyframes lB { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
     @keyframes lP { 0%,100% { opacity:.5; } 50% { opacity:1; } }
-    .cur { animation: lB .9s step-end infinite; }
-    .p { animation: lP 1.4s ease-in-out infinite; }
+    .cur { animation: lB .8s step-end infinite; }
+    .p { animation: lP 1.3s ease-in-out infinite; }
   </style>
 
-  <rect width="800" height="40" fill="#0d0d14"/>
-  <rect x="0.5" y="0.5" width="799" height="39" fill="none" stroke="#ffd166" stroke-opacity="0.35"/>
-
-  <text x="30" y="25" fill="#ffd166" font-family="Consolas,monospace" font-size="12" font-weight="700" letter-spacing="3" filter="url(#lG)">NEXT EPISODE LOADING<span class="cur" fill="#ff7a1a">...</span></text>
-  <text x="330" y="25" fill="#2ec4b6" font-family="Consolas,monospace" font-size="11" letter-spacing="2">STAY TUNED</text>
-
-  <rect x="430" y="14" width="260" height="12" rx="3" fill="#1e1e28" stroke="#ff7a1a" stroke-opacity="0.5"/>
-  <rect x="433" y="17" width="0" height="6" rx="2" fill="url(#lProg)">
-    <animate attributeName="width" values="0;40;160;254;254" dur="3s" repeatCount="indefinite"/>
-  </rect>
-  <rect x="-40" y="14" width="40" height="12" fill="url(#lBeam)" opacity="0.6">
-    <animate attributeName="x" values="-40;700" dur="2.2s" repeatCount="indefinite"/>
-  </rect>
-
-  <g class="p">
-    <polygon points="720,20 730,14 730,26" fill="#ff7a1a"/>
-    <polygon points="736,20 746,14 746,26" fill="#ffd166"/>
-    <polygon points="752,20 762,14 762,26" fill="#ff3b5c"/>
+  <rect width="800" height="44" fill="#050508"/>
+  <!-- speed lines -->
+  <g stroke="#ffffff" stroke-width="2" opacity=".1">
+    <line x1="620" y1="6" x2="790" y2="16"/>
+    <line x1="640" y1="38" x2="790" y2="30"/>
   </g>
 
-  <rect x="0" y="37" width="800" height="3" fill="url(#lBeam)" opacity="0.5"/>
+  <!-- skew label -->
+  <g transform="translate(24,8) skewX(-10)">
+    <rect width="220" height="28" fill="#e01b24"/>
+    <text class="disp" x="110" y="21" text-anchor="middle" fill="#ffffff" font-size="15" letter-spacing="3">NEXT EPISODE</text>
+  </g>
+
+  <text class="disp" x="262" y="28" fill="#ffd54f" font-size="16" letter-spacing="3" filter="url(#lG)">LOADING<span class="cur">...</span></text>
+  <text class="sans p" x="408" y="27" fill="#2ec4b6" font-size="12" letter-spacing="2">STAY TUNED</text>
+
+  <!-- anime progress bar -->
+  <g transform="translate(545,14)">
+    <rect width="210" height="16" fill="#12101a" stroke="#ff7a1a" stroke-width="2" transform="skewX(-12)"/>
+    <rect x="3" y="3" width="0" height="10" fill="url(#lProg)" transform="skewX(-12)">
+      <animate attributeName="width" values="0;36;130;204;204" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-40" y="0" width="40" height="16" fill="url(#lBeam)" opacity=".7" transform="skewX(-12)">
+      <animate attributeName="x" values="-40;230" dur="2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <g class="p">
+    <polygon points="768,22 778,16 778,28" fill="#ff7a1a"/>
+    <polygon points="782,22 792,16 792,28" fill="#ffd54f"/>
+  </g>
+
+  <rect x="0" y="41" width="800" height="3" fill="url(#lBeam)" opacity=".55"/>
 </svg>

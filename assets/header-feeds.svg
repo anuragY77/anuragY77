@@ -1,56 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 70" width="800" height="70" role="img" aria-label="Header: next episode feeds">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 72" width="800" height="72" role="img" aria-label="Episode title card: Feeds">
   <defs>
-    <linearGradient id="fhBg" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#0a0a0f"/>
-      <stop offset="55%" stop-color="#0a1218"/>
-      <stop offset="100%" stop-color="#0a0a0f"/>
-    </linearGradient>
-    <linearGradient id="fhLine" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="t5" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#2ec4b6"/>
-      <stop offset="70%" stop-color="#ff7a1a"/>
-      <stop offset="100%" stop-color="#ff7a1a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffd54f"/>
     </linearGradient>
-    <linearGradient id="fhBeam" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ff7a1a" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#fff0e0"/>
-      <stop offset="100%" stop-color="#ff7a1a" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="fhG" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="2" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <style>
-    @keyframes blink { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
-    @keyframes p { 0%,100% { opacity:.5; } 50% { opacity:1; } }
-    .cur { animation: blink 1s step-end infinite; }
-    .p { animation: p 2s ease-in-out infinite; }
+    .disp { font-family: Impact, "Arial Black", sans-serif; }
+    .sans { font-family: "Segoe UI", Arial, sans-serif; }
+    @keyframes sl { 0%,100% { transform: translateX(0); } 50% { transform: translateX(8px); } }
+    @keyframes fl { 0%,100% { opacity:1; } 50% { opacity:.5; } }
+    .a { animation: sl 2s ease-in-out infinite; }
+    .f { animation: fl 1.4s ease-in-out infinite; }
   </style>
-
-  <rect width="800" height="70" fill="url(#fhBg)"/>
-  <rect x="0" y="0" width="6" height="70" fill="#2ec4b6"/>
-
-  <g filter="url(#fhG)">
-    <rect x="24" y="14" width="86" height="42" rx="3" fill="#2ec4b6"/>
-    <text x="67" y="34" text-anchor="middle" fill="#0a1218" font-family="Consolas,monospace" font-size="10" font-weight="700" letter-spacing="2">NEXT</text>
-    <text x="67" y="50" text-anchor="middle" fill="#0a0a0f" font-family="Consolas,monospace" font-size="16" font-weight="800">EP</text>
+  <rect width="800" height="72" fill="#061018"/>
+  <g stroke="#ffd54f" stroke-width="2" opacity=".15">
+    <line x1="500" y1="10" x2="780" y2="30"/>
+    <line x1="520" y1="36" x2="780" y2="50"/>
+    <line x1="540" y1="60" x2="780" y2="66"/>
   </g>
-
-  <g>
-    <text x="128" y="32" fill="#ff7a1a" font-family="Consolas,monospace" font-size="11" letter-spacing="3">NEXT EPISODE &#183; WHAT HAPPENS NEXT</text>
-    <text x="126" y="56" fill="#f0f0f5" font-family="'Segoe UI','Arial Black',Arial,sans-serif" font-size="24" font-weight="900" letter-spacing="2">LATEST FEEDS</text>
-    <text x="455" y="56" fill="#2ec4b6" font-family="'Segoe UI','Arial Black',Arial,sans-serif" font-size="24" font-weight="900" class="cur">_</text>
+  <g transform="translate(28,14) skewX(-10)">
+    <rect width="72" height="44" fill="url(#t5)"/>
+    <text class="disp" x="36" y="20" text-anchor="middle" fill="#061018" font-size="11" letter-spacing="2">NEXT</text>
+    <text class="disp" x="36" y="40" text-anchor="middle" fill="#ffffff" font-size="20">EP</text>
   </g>
-
-  <g stroke="#2ec4b6" stroke-width="2" opacity=".6">
-    <line x1="580" y1="18" x2="760" y2="18"/>
-    <line x1="640" y1="36" x2="760" y2="36"/>
-    <line x1="700" y1="54" x2="760" y2="54"/>
-  </g>
-  <circle cx="770" cy="18" r="3" fill="#ff7a1a" class="p"/>
-
-  <rect x="0" y="66" width="800" height="4" fill="url(#fhLine)"/>
-  <rect x="-80" y="66" width="80" height="4" fill="url(#fhBeam)">
-    <animate attributeName="x" values="-80;800" dur="2.4s" repeatCount="indefinite"/>
-  </rect>
+  <text class="sans" x="122" y="30" fill="#ffd54f" font-size="13" font-weight="700" letter-spacing="4" font-style="italic">PREVIEW — WHAT HAPPENS NEXT</text>
+  <text class="disp" x="120" y="60" fill="#ffffff" font-size="30" letter-spacing="4">LATEST FEEDS</text>
+  <rect x="120" y="64" width="260" height="4" fill="url(#t5)" class="a"/>
+  <circle cx="770" cy="36" r="5" fill="#ffd54f" class="f"/>
 </svg>
