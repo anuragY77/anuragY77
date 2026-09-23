@@ -67,7 +67,7 @@
 
 <br/><br/>
 
-<img src="https://ghchart.rshah.org/22d3ee/anuragY77" alt="anuragY77 contribution chart" width="100%"/>
+<img src="./assets/contribution-calendar.svg" alt="48 contributions in 2026 - contribution calendar" width="100%"/>
 
 <br/><br/>
 
