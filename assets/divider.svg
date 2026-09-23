@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 36" width="800" height="36" role="img" aria-label="Cyberpunk section divider">
+  <defs>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="18%" stop-color="#22d3ee" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#56d4dd"/>
+      <stop offset="82%" stop-color="#c084fc" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="diamondGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="divGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="divGlowSoft" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="1.4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes divPulse {
+      0%, 100% { opacity: 0.45; }
+      50% { opacity: 1; }
+    }
+    .div-node { animation: divPulse 2.4s ease-in-out infinite; }
+    .div-node-2 { animation: divPulse 2.4s ease-in-out infinite 0.5s; }
+    .div-node-3 { animation: divPulse 2.4s ease-in-out infinite 1s; }
+  </style>
+
+  <line x1="20" y1="18" x2="780" y2="18" stroke="url(#lineGrad)" stroke-width="1.6" filter="url(#divGlow)"/>
+
+  <!-- side nodes -->
+  <circle cx="300" cy="18" r="2.6" fill="#22d3ee" class="div-node-2" filter="url(#divGlowSoft)"/>
+  <circle cx="500" cy="18" r="2.6" fill="#c084fc" class="div-node-3" filter="url(#divGlowSoft)"/>
+  <circle cx="210" cy="18" r="1.7" fill="#56d4dd" opacity="0.7"/>
+  <circle cx="590" cy="18" r="1.7" fill="#c084fc" opacity="0.7"/>
+  <rect x="372" y="15.5" width="10" height="5" rx="1" fill="#22d3ee" opacity="0.75" class="div-node-2"/>
+  <rect x="418" y="15.5" width="10" height="5" rx="1" fill="#c084fc" opacity="0.75" class="div-node-3"/>
+
+  <!-- center diamond -->
+  <g filter="url(#divGlow)">
+    <rect x="390" y="6" width="20" height="20" rx="2" transform="rotate(45 400 16)" fill="none" stroke="url(#diamondGrad)" stroke-width="1.8"/>
+    <rect x="395.5" y="11.5" width="9" height="9" transform="rotate(45 400 16)" fill="#56d4dd" class="div-node"/>
+  </g>
+
+  <!-- small corner ticks -->
+  <g stroke="#56d4dd" stroke-width="1.2" opacity="0.55">
+    <path d="M20,10 L20,26" />
+    <path d="M780,10 L780,26" />
+  </g>
+</svg>
