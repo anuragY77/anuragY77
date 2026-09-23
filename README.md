@@ -4,9 +4,9 @@
 
 <br/>
 
-<img src="https://img.shields.io/badge/S-CLASS-Data_Engineer-ff6a00?style=for-the-badge&logo=apacheairflow&logoColor=ffffff" alt="Data Engineer"/>
-<img src="https://img.shields.io/badge/S-CLASS-AI_Builder-e60012?style=for-the-badge&logo=openai&logoColor=ffffff" alt="AI Builder"/>
-<img src="https://img.shields.io/badge/S-CLASS-Full_Stack-f0b429?style=for-the-badge&logo=nextdotjs&logoColor=141414" alt="Full Stack"/>
+<img src="https://img.shields.io/badge/S%20CLASS-Data%20Engineer-ff6a00?style=for-the-badge&logo=apacheairflow&logoColor=ffffff" alt="Data Engineer"/>
+<img src="https://img.shields.io/badge/S%20CLASS-AI%20Builder-e60012?style=for-the-badge&logo=openai&logoColor=ffffff" alt="AI Builder"/>
+<img src="https://img.shields.io/badge/S%20CLASS-Full%20Stack-f0b429?style=for-the-badge&logo=nextdotjs&logoColor=141414" alt="Full Stack"/>
 <img src="https://img.shields.io/badge/TYPESCRIPT-3178c6?style=for-the-badge&logo=typescript&logoColor=ffffff" alt="TypeScript"/>
 <img src="https://img.shields.io/badge/PYTHON-0d9488?style=for-the-badge&logo=python&logoColor=ffffff" alt="Python"/>
 
@@ -88,7 +88,7 @@
 
 <br/>
 
-<img src="./assets/activity-graph.svg" alt="Activity Graph with Luffy - contributions last 30 days" width="100%"/>
+<img src="./assets/activity-graph.svg" alt="Activity Graph - contributions last 30 days, auto-updating" width="100%"/>
 
 <br/><br/>
 

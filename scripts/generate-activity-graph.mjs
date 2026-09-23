@@ -80,11 +80,11 @@ const isPeak = last >= maxV && maxV > 0 && last > 0;
 const isDown = last3 < prev3 || (last === 0 && prev === 0 && maxV > 0);
 const isRising = last3 > prev3;
 
-// quotes
-const peakQuote = "BEST DAY YET! I can almost taste the One Piece — pure joy!";
-const downQuote = "A dip just winds up the rubber... NEXT JUMP GOES HIGHER!";
-const riseQuote = "We're climbing! Grab the next peak — I'm all in!";
-const idleQuote = "Every commit is training. Watch me launch!";
+// quotes — data-driven (real numbers in the lines)
+const peakQuote = `PEAK! ${last} commits today — One Piece is RIGHT THERE!`;
+const downQuote = `Dip detected... next jump launches HARDER than the last peak of ${maxV}!`;
+const riseQuote = `Climbing fast — ${last3} in 3 days. Grab the next summit!`;
+const idleQuote = `Steady training. ${total} total — every commit sharpens the blade!`;
 let mood = "idle";
 let quote = idleQuote;
 if (isPeak) {
@@ -200,7 +200,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   <text class="disp" x="50" y="44" fill="#141414" font-size="22" letter-spacing="1">
     <tspan fill="#e60012">${total}</tspan> contributions · last ${DAYS} days
   </text>
-  <text class="sans" x="${W - 28}" y="42" text-anchor="end" fill="#e60012" font-size="13" font-style="italic" font-weight="700">Luffy's training log · ${OWNER}</text>
+  <text class="sans" x="${W - 28}" y="42" text-anchor="end" fill="#e60012" font-size="13" font-style="italic" font-weight="700">LIVE · auto-updating</text>
   <rect x="24" y="56" width="${W - 48}" height="5" fill="#141414"/>
 
   <!-- y ticks -->

@@ -30,10 +30,6 @@
       <stop offset="45%" stop-color="#ffd54f"/>
       <stop offset="100%" stop-color="#ff8f00"/>
     </linearGradient>
-    <linearGradient id="subBar" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1a0505"/>
-      <stop offset="100%" stop-color="#3d0f0f"/>
-    </linearGradient>
     <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur stdDeviation="6"/>
     </filter>
@@ -41,10 +37,6 @@
       <feGaussianBlur stdDeviation="3" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="shock" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="4" stdDeviation="0" flood-color="#1a0000" flood-opacity="0.9"/>
-    </filter>
-    <clipPath id="avC"><circle cx="660" cy="130" r="62"/></clipPath>
   </defs>
   <style>
     .disp { font-family: Impact, "Arial Black", "Segoe UI Black", sans-serif; }
@@ -55,10 +47,8 @@
     .fl { animation: flick .18s steps(2) infinite; }
   </style>
 
-  <!-- cinematic black -->
   <rect width="800" height="320" fill="#050508"/>
 
-  <!-- manga screentone dots -->
   <g fill="#ffffff" opacity=".04">
     <circle cx="40" cy="40" r="1.4"/><circle cx="80" cy="40" r="1.4"/><circle cx="120" cy="40" r="1.4"/><circle cx="160" cy="40" r="1.4"/>
     <circle cx="60" cy="80" r="1.4"/><circle cx="100" cy="80" r="1.4"/><circle cx="140" cy="80" r="1.4"/><circle cx="180" cy="80" r="1.4"/>
@@ -69,7 +59,6 @@
     <circle cx="40" cy="240" r="1.4"/><circle cx="80" cy="240" r="1.4"/><circle cx="120" cy="240" r="1.4"/><circle cx="160" cy="240" r="1.4"/>
   </g>
 
-  <!-- radial speed lines (manga concentration lines) - appear after fireball -->
   <g stroke="#ffffff" stroke-linecap="round" opacity="0">
     <animate attributeName="opacity" values="0;0;.85;.7" keyTimes="0;.45;.55;1" dur="2.2s" begin="0.35s" fill="freeze"/>
     <line x1="400" y1="140" x2="40" y2="20" stroke-width="3"/>
@@ -95,9 +84,7 @@
     <line x1="400" y1="140" x2="60" y2="270" stroke-width="2"/>
   </g>
 
-  <!-- MADARA GIANT FIREBALL - erupts, engulfs left/center -->
   <g>
-    <!-- outer shockwave rings -->
     <circle cx="240" cy="150" r="40" fill="none" stroke="#ff6b1a" stroke-width="4" opacity="0">
       <animate attributeName="r" values="40;320" dur="1s" begin="0.3s" fill="freeze"/>
       <animate attributeName="opacity" values=".9;0" dur="1s" begin="0.3s" fill="freeze"/>
@@ -107,8 +94,6 @@
       <animate attributeName="r" values="30;260" dur=".9s" begin="0.45s" fill="freeze"/>
       <animate attributeName="opacity" values=".8;0" dur=".9s" begin="0.45s" fill="freeze"/>
     </circle>
-
-    <!-- fireball body grows -->
     <g filter="url(#soft)">
       <circle cx="240" cy="150" r="0" fill="url(#fbGlow)">
         <animate attributeName="r" values="0;150;130;145;135" dur="1.4s" begin="0.25s" fill="freeze"/>
@@ -117,21 +102,16 @@
         <animate attributeName="r" values="0;110;95;105;98" dur="1.4s" begin="0.25s" fill="freeze"/>
       </circle>
     </g>
-    <!-- fire licks -->
     <g fill="#ff6b1a" class="fl">
       <path d="M140,90 Q130,50 160,55 Q170,25 200,50 Q230,20 250,55 Q290,40 285,80 Q310,90 295,120" opacity=".7"/>
       <path d="M100,160 Q70,140 95,120 Q80,90 120,95" opacity=".5"/>
       <path d="M300,100 Q340,90 330,130 Q360,150 335,180" opacity=".55"/>
     </g>
-
-    <!-- impact starburst at fireball center -->
     <g opacity="0" filter="url(#hot)">
       <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.4;.7;1" dur="1.6s" begin="0.3s" fill="freeze"/>
       <polygon points="240,60 255,130 320,110 265,150 310,200 245,165 220,230 225,160 155,190 215,148 160,100 228,132" fill="url(#impactStar)"/>
       <polygon points="240,85 250,135 295,125 255,150 285,185 245,160 230,205 232,158 185,178 225,148 185,115 234,138" fill="#ffffff" opacity=".85"/>
     </g>
-
-    <!-- embers flying -->
     <g fill="#ffd54f">
       <circle cx="350" cy="80" r="3" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2s" begin=".8s" fill="freeze"/><animate attributeName="cx" values="350;420" dur="2s" begin=".8s" fill="freeze"/><animate attributeName="cy" values="80;40" dur="2s" begin=".8s" fill="freeze"/></circle>
       <circle cx="340" cy="220" r="2.5" fill="#ff6b1a" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.2s" begin="1s" fill="freeze"/><animate attributeName="cx" values="340;410" dur="2.2s" begin="1s" fill="freeze"/></circle>
@@ -140,26 +120,19 @@
     </g>
   </g>
 
-  <!-- white flash frame (impact) -->
   <rect width="800" height="320" fill="#ffffff" opacity="0">
     <animate attributeName="opacity" values="0;0;.92;0;0" keyTimes="0;.28;.34;.42;1" dur=".6s" begin="0.28s" fill="freeze"/>
   </rect>
 
-  <!-- NAME SLAM (scale overshoot like title card) -->
   <g class="shk" opacity="0">
     <animate attributeName="opacity" values="0;1" dur=".01s" begin="0.7s" fill="freeze"/>
-    <!-- shadow slam -->
     <text class="disp" x="48" y="168" font-size="64" letter-spacing="2" fill="#1a0000" stroke="#1a0000" stroke-width="14" stroke-linejoin="round" style="paint-order:stroke fill">ANURAG YADAV</text>
-    <!-- main gold -->
     <text class="disp" x="44" y="164" font-size="64" letter-spacing="2" fill="url(#nameGold)" stroke="#3e1a00" stroke-width="6" stroke-linejoin="round" style="paint-order:stroke fill" filter="url(#hot)">ANURAG YADAV</text>
-    <!-- hot rim -->
     <text class="disp" x="44" y="164" font-size="64" letter-spacing="2" fill="none" stroke="#fffde7" stroke-width="1.5" opacity=".8">ANURAG YADAV</text>
-    <!-- scale slam animation via SMIL on group -->
     <animateTransform attributeName="transform" type="scale" values="1.6;0.96;1.02;1" keyTimes="0;0.5;0.75;1" dur=".45s" begin="0.7s" fill="freeze" additive="sum"/>
     <animateTransform attributeName="transform" type="translate" values="80 40;0 0" dur=".45s" begin="0.7s" fill="freeze" additive="sum"/>
   </g>
 
-  <!-- subtitle slash under name -->
   <g opacity="0">
     <animate attributeName="opacity" values="0;1" dur=".3s" begin="1.15s" fill="freeze"/>
     <rect x="46" y="178" width="420" height="5" fill="#e01b24" transform="skewX(-20)"/>
@@ -168,7 +141,6 @@
     <text class="sans" x="52" y="268" font-size="13" fill="#b0b0b8" letter-spacing="1">SEASON 2026  ·  THE HERO KEEPS BUILDING  ·  NEVER GIVE UP</text>
   </g>
 
-  <!-- NOW AIRING red banner (anime broadcast style, not tech) -->
   <g opacity="0">
     <animate attributeName="opacity" values="0;1" dur=".3s" begin="1.3s" fill="freeze"/>
     <g transform="translate(52,28) skewX(-12)">
@@ -179,27 +151,7 @@
     <text class="sans" x="212" y="48" fill="#ffd54f" font-size="13" font-weight="700" letter-spacing="2">EP. 2026 — SEASON FINALE</text>
   </g>
 
-  <!-- AVATAR revealed with slash -->
-  <g opacity="0">
-    <animate attributeName="opacity" values="0;1" dur=".4s" begin="1.5s" fill="freeze"/>
-    <!-- rough manga frame -->
-    <rect x="588" y="56" width="150" height="150" fill="#0d0d12" stroke="#ffd54f" stroke-width="4" transform="rotate(-3 663 131)"/>
-    <rect x="594" y="62" width="138" height="138" fill="none" stroke="#e01b24" stroke-width="3" transform="rotate(-3 663 131)"/>
-    <image href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAGkAaQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9K6KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDzj4j/EfU/B+uQWdnBaSxPbLMTOjFslmHZhx8orlP+F5a9/z6ad/37k/+Lo+OX/I2Wn/Xin/oySvO6+wwmEoToQlKCbaNUlY9E/4Xlr3/AD6ad/37k/8Ai6P+F5a9/wA+mnf9+5P/AIuvO6K6/qWG/kRVkeif8Ly17/n007/v3J/8XR/wvLXv+fTTv+/cn/xded0UfUsN/Igsj0T/AIXlr3/Ppp3/AH7k/wDi6P8AheWvf8+mnf8AfuT/AOLrzuij6lhv5EFkeif8Ly17/n007/v3J/8AF16r4J1yfxL4YstSukjjnm37liBCjDsoxkk9AO9fM1fRHwo/5EDS/wDtr/6NevJzLD0qNFSpxs7/AKMiSSR11FFFfNGYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABXnHxH+I+p+D9cgs7OC0lie2WYmdGLZLMOzDj5RXo9eG/HL/kbLT/rxT/0ZJXpZfThVr8s1dWKirsP+F5a9/z6ad/37k/+Lo/4Xlr3/Ppp3/fuT/4uvO6K+p+pYb+RGtkeif8AC8te/wCfTTv+/cn/AMXR/wALy17/AJ9NO/79yf8Axded0UfUsN/Igsj0T/heWvf8+mnf9+5P/i6P+F5a9/z6ad/37k/+Lrzuij6lhv5EFkeif8Ly17/n007/AL9yf/F0f8Ly17/n007/AL9yf/F153RR9Sw38iCyPpnwTrk/iXwxZaldJHHPNv3LECFGHZRjJJ6Ad63a5H4Uf8iBpf8A21/9GvXXV8XiIqNacY7Jv8zF7hRRRWAgooooAKKKKACiiigDw345f8jZaf8AXin/AKMkrzuvRPjl/wAjZaf9eKf+jJK87r7vBf7vD0N1sFFFFdowooooAKKKKACvoj4Uf8iBpf8A21/9GvXzvX0R8KP+RA0v/tr/AOjXrxM3/gL1/RkT2Ouooor5IyCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK8N+OX/ACNlp/14p/6Mkr3KvDfjl/yNlp/14p/6Mkr18r/3hejLjued0UUV9iahRRRQAUUUUAFFFFAH0R8KP+RA0v8A7a/+jXrrq5H4Uf8AIgaX/wBtf/Rr111fAYn+PU9X+Zg9wooormEFFFFABRRRQAUUUUAeG/HL/kbLT/rxT/0ZJXndeifHL/kbLT/rxT/0ZJXndfd4L/d4ehutgooortGFFFFABRRRQAV9EfCj/kQNL/7a/wDo16+d6+iPhR/yIGl/9tf/AEa9eJm/8Bev6Miex11FFFfJGQUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABXhvxy/5Gy0/68U/9GSV7lXhvxy/5Gy0/wCvFP8A0ZJXr5X/ALwvRlx3PO6KKK+xNQooooAKKKKACiiigD6I+FH/ACIGl/8AbX/0a9ddXI/Cj/kQNL/7a/8Ao1666vgMT/Hqer/Mwe4UUUVzCCiiigAooooAKKKKAPDfjl/yNlp/14p/6MkrzuvRPjl/yNlp/wBeKf8AoySvO6+7wX+7w9DdbBRRRXaMKKKKACiiigAr6I+FH/IgaX/21/8ARr18719EfCj/AJEDS/8Atr/6NevEzf8AgL1/RkT2Ouooor5IyCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK8N+OX/I2Wn/AF4p/wCjJK9yrw345f8AI2Wn/Xin/oySvXyv/eF6MuO553RRRX2JqFFFFABRRRQAUUUUAfRHwo/5EDS/+2v/AKNeuurkfhR/yIGl/wDbX/0a9ddXwGJ/j1PV/mYPcKKKK5hBRRRQAUUUUAFFFFAHhvxy/wCRstP+vFP/AEZJXndeifHL/kbLT/rxT/0ZJXndfd4L/d4ehutgooortGFFFFABRRRQAV9EfCj/AJEDS/8Atr/6NevnetG08R6tYW6QWuqXttAmdsUVw6quTk4AOOpNcGNwzxVNQTtrf8yWrn1LRXzB/wAJfr3/AEG9R/8AAuT/ABo/4S/Xv+g3qP8A4Fyf41439j1P50TyH0/RXzB/wl+vf9BvUf8AwLk/xo/4S/Xv+g3qP/gXJ/jR/Y9T+dByH0/RXzB/wl+vf9BvUf8AwLk/xo/4S/Xv+g3qP/gXJ/jR/Y9T+dByH0/RXzB/wl+vf9BvUf8AwLk/xo/4S/Xv+g3qP/gXJ/jR/Y9T+dByH0/RXzB/wl+vf9BvUf8AwLk/xo/4S/Xv+g3qP/gXJ/jR/Y9T+dByH0/RXzB/wl+vf9BvUf8AwLk/xo/4S/Xv+g3qP/gXJ/jR/Y9T+dByH0/RXzB/wl+vf9BvUf8AwLk/xo/4S/Xv+g3qP/gXJ/jR/Y9T+dByH0/RXzB/wl+vf9BvUf8AwLk/xo/4S/Xv+g3qP/gXJ/jR/Y9T+dByH0/RXzB/wl+vf9BvUf8AwLk/xo/4S/Xv+g3qP/gXJ/jR/Y9T+dByH0/RXzB/wl+vf9BvUf8AwLk/xo/4S/Xv+g3qP/gXJ/jR/Y9T+dByH0/RXzB/wl+vf9BvUf8AwLk/xo/4S/Xv+g3qP/gXJ/jR/Y9T+dByH0/RXzB/wl+vf9BvUf8AwLk/xo/4S/Xv+g3qP/gXJ/jR/Y9T+dByH0/Xhvxy/wCRstP+vFP/AEZJXJf8Jfr3/Qb1H/wLk/xqjfald6pMJby6mu5Qu0PPIXYDrjJPTk/nXZhMvlhqvtHK41GzK1FFFe4WFFFFABRRRQAUUUUAfRHwo/5EDS/+2v8A6NeuurkfhR/yIGl/9tf/AEa9ddXwGJ/j1PV/mYPcKKKK5hBRRRQAUUUUAFFFFAHhvxy/5Gy0/wCvFP8A0ZJXndeifHL/AJGy0/68U/8ARkled193gv8Ad4ehutgooortGFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB9EfCj/kQNL/7a/8Ao1666uR+FH/IgaX/ANtf/Rr111fAYn+PU9X+Zg9wooormEFFFFABRRRQAUUUUAeG/HL/AJGy0/68U/8ARkled16J8cv+RstP+vFP/Rkled193gv93h6G62Ciiiu0YUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH0R8KP+RA0v8A7a/+jXrrq5H4Uf8AIgaX/wBtf/Rr111fAYn+PU9X+Zg9wooormEFFFFABRRRQAUUUUAeG/HL/kbLT/rxT/0ZJXndeifHL/kbLT/rxT/0ZJXndfd4L/d4ehutgooortGFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB9EfCj/AJEDS/8Atr/6NeuurkfhR/yIGl/9tf8A0a9ddXwGJ/j1PV/mYPcKKKK5hBRRRQAUUUUAFFFFAHhvxy/5Gy0/68U/9GSV53Xonxy/5Gy0/wCvFP8A0ZJXndfd4L/d4ehutgooortGFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB9EfCj/kQNL/7a/wDo1666uR+FH/IgaX/21/8ARr111fAYn+PU9X+Zg9wooormEFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABXB6l8ZNF0vUbqzltb9pbeV4XKRoVJUkHHz9OK7yvmDxf/AMjZrf8A1/T/APoxq9bL8NTxM5Kp0Kirnrf/AAvLQf8An01H/v3H/wDF0f8AC8tB/wCfTUf+/cf/AMXXhtFe5/ZeG7P7zTlR7l/wvLQf+fTUf+/cf/xdH/C8tB/59NR/79x//F14bRR/ZeG7P7w5Ue5f8Ly0H/n01H/v3H/8XR/wvLQf+fTUf+/cf/xdeG0Uf2Xhuz+8OVHuX/C8tB/59NR/79x//F0f8Ly0H/n01H/v3H/8XXhtFH9l4bs/vDlR7l/wvLQf+fTUf+/cf/xdH/C8tB/59NR/79x//F14bRR/ZeG7P7w5Ue5f8Ly0H/n01H/v3H/8XR/wvLQf+fTUf+/cf/xdeG0Uf2Xhuz+8OVHuX/C8tB/59NR/79x//F0f8Ly0H/n01H/v3H/8XXhtFH9l4bs/vDlR7l/wvLQf+fTUf+/cf/xdH/C8tB/59NR/79x//F14bRR/ZeG7P7w5Ue5f8Ly0H/n01H/v3H/8XR/wvLQf+fTUf+/cf/xdeG0Uf2Xhuz+8OVHuX/C8tB/59NR/79x//F0f8Ly0H/n01H/v3H/8XXhtFH9l4bs/vDlR7l/wvLQf+fTUf+/cf/xdH/C8tB/59NR/79x//F14bRR/ZeG7P7w5Ue5f8Ly0H/n01H/v3H/8XR/wvLQf+fTUf+/cf/xdeG0Uf2Xhuz+8OVHuX/C8tB/59NR/79x//F10XhHxzYeNPtf2KG5i+zbN/wBoVRnduxjDH+6a+a69b+An/Md/7Yf+1K4sZgKNGhKpC91b8yXFJHrdFFFfNGYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAV8weL/wDkbNb/AOv6f/0Y1fT9fMHi/wD5GzW/+v6f/wBGNXv5P/En6Fw3MiiiivqTUKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAr1v4Cf8AMd/7Yf8AtSvJK9b+An/Md/7Yf+1K83Mf91n8vzRMtj1uiiiviTEKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK+YPF/wDyNmt/9f0//oxq+n6+YPF//I2a3/1/T/8Aoxq9/J/4k/QuG5kUUUV9SahRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFet/AT/AJjv/bD/ANqV5JXrfwE/5jv/AGw/9qV5uY/7rP5fmiZbHrdFFFfEmIUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAV8weL/APkbNb/6/p//AEY1fT9fMHi//kbNb/6/p/8A0Y1e/k/8SfoXDcyKKKK+pNQooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvW/gJ/zHf+2H/tSvJK9b+An/Md/wC2H/tSvNzH/dZ/L80TLY9booor4kxCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvmDxf/yNmt/9f0//AKMavp+vL9Y+Cf8AaurXt7/bPlfaZ3m8v7LnbuYnGd/OM17GW4inh5ydR2ui4ux4zRXrf/ChP+o7/wCSf/2yj/hQn/Ud/wDJP/7ZXvf2jhf5/wAH/kXzI8kor1v/AIUJ/wBR3/yT/wDtlH/ChP8AqO/+Sf8A9so/tHC/z/g/8g5keSUV63/woT/qO/8Akn/9so/4UJ/1Hf8AyT/+2Uf2jhf5/wAH/kHMjySivW/+FCf9R3/yT/8AtlVNY+Cf9laTe3v9s+b9mgeby/suN21ScZ38ZxTWYYaTsp/g/wDIOZHl9FFFeiUFFFFABRRRQAUUUUAFFa/hPQP+Eo1+10zz/s3n7/3uzft2oW6ZGemOteif8KE/6jv/AJJ//bK5K2Lo0JctSVn6MTaR5JRXrf8AwoT/AKjv/kn/APbKP+FCf9R3/wAk/wD7ZWH9o4X+f8H/AJC5keSUV63/AMKE/wCo7/5J/wD2yj/hQn/Ud/8AJP8A+2Uf2jhf5/wf+QcyPJKK9b/4UJ/1Hf8AyT/+2Uf8KE/6jv8A5J//AGyj+0cL/P8Ag/8AIOZHklet/AT/AJjv/bD/ANqUf8KE/wCo7/5J/wD2yut8A+Af+EH+3f6d9t+1eX/yx8vbt3f7Rznd+lcWNxtCth5QhK7duj7ryE2mjrqKKK+WMgooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKyPF//Ip63/14z/8Aotq16yPF/wDyKet/9eM//otq1pfxI+qGtz5gooor9DNwooooAKKKKACiiigDrvhR/wAj/pf/AG1/9FPX0RXzv8KP+R/0v/tr/wCinr6Ir5LN/wCOvT9WZT3CiiivEICiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKyPF/8AyKet/wDXjP8A+i2rXrI8X/8AIp63/wBeM/8A6LataX8SPqhrc+YKKKK/QzcKKKKACiiigAooooA674Uf8j/pf/bX/wBFPX0RXzv8KP8Akf8AS/8Atr/6Kevoivks3/jr0/VmU9wooorxCAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACsjxf/yKet/9eM//AKLatesjxf8A8inrf/XjP/6LataX8SPqhrc+YKKKK/QzcKKKKACiiigAooooA674Uf8AI/6X/wBtf/RT19EV87/Cj/kf9L/7a/8Aop6+iK+Szf8Ajr0/VmU9wooorxCAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACsjxf/AMinrf8A14z/APotq16yPF//ACKet/8AXjP/AOi2rWl/Ej6oa3PmCiiiv0M3CiiigAooooAKKKKAOu+FH/I/6X/21/8ART19EV87/Cj/AJH/AEv/ALa/+inr6Ir5LN/469P1ZlPcKKKK8QgKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAqG8tIr+0ntp08yCZGjkTJG5SMEZHPQ1NRTTtqgOR/4VR4V/wCgX/5MS/8AxVH/AAqjwr/0C/8AyYl/+KrrqK6PrNf/AJ+P72O7OR/4VR4V/wCgX/5MS/8AxVH/AAqjwr/0C/8AyYl/+KrrqKPrNf8A5+P72F2cj/wqjwr/ANAv/wAmJf8A4qj/AIVR4V/6Bf8A5MS//FV11FH1mv8A8/H97C7OR/4VR4V/6Bf/AJMS/wDxVH/CqPCv/QL/APJiX/4quuoo+s1/+fj+9hdnO6T8PtA0PUIr2ysPIuos7JPOkbGQQeCxHQmuioorGdSdR3m235iCiiioAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/2Q==" x="598" y="66" width="130" height="130" clip-path="url(#avC)" preserveAspectRatio="xMidYMid slice"/>
-    <!-- speed lines on avatar -->
-    <g stroke="#ffffff" stroke-width="1.5" opacity=".5">
-      <line x1="590" y1="70" x2="620" y2="70"/>
-      <line x1="590" y1="90" x2="640" y2="90"/>
-      <line x1="590" y1="190" x2="640" y2="190"/>
-      <line x1="590" y1="200" x2="620" y2="200"/>
-    </g>
-    <text class="disp" x="663" y="236" text-anchor="middle" fill="#ffd54f" font-size="18" letter-spacing="3">PROTAGONIST</text>
-    <text class="sans" x="663" y="256" text-anchor="middle" fill="#e01b24" font-size="12" font-weight="700" letter-spacing="4" font-style="italic">MAIN CHARACTER</text>
-  </g>
-
-  <!-- YAMI KATANA DIMENSION CUT - slashes across whole frame -->
   <g>
-    <!-- slash trail -->
     <line x1="-60" y1="320" x2="60" y2="200" stroke="url(#slashWhite)" stroke-width="6" stroke-linecap="round" opacity="0" filter="url(#hot)">
       <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.7;1" dur=".55s" begin="1.7s" fill="freeze"/>
       <animate attributeName="x1" values="-60;860" dur=".4s" begin="1.7s" fill="freeze"/>
@@ -207,16 +159,13 @@
       <animate attributeName="x2" values="60;980" dur=".4s" begin="1.7s" fill="freeze"/>
       <animate attributeName="y2" values="200;-200" dur=".4s" begin="1.7s" fill="freeze"/>
     </line>
-    <!-- slash flash -->
     <rect width="800" height="320" fill="#e8fbff" opacity="0">
       <animate attributeName="opacity" values="0;.55;0" keyTimes="0;.4;1" dur=".35s" begin="1.85s" fill="freeze"/>
     </rect>
-    <!-- residual dimension-cut scar -->
     <line x1="0" y1="300" x2="800" y2="20" stroke="#7df9ff" stroke-width="2" opacity="0" filter="url(#hot)">
       <animate attributeName="opacity" values="0;1;.55;.8" keyTimes="0;.3;.6;1" dur=".8s" begin="1.9s" fill="freeze"/>
       <animate attributeName="opacity" values=".8;.3;.7;.3;.6" dur="3.5s" begin="2.7s" repeatCount="indefinite"/>
     </line>
-    <!-- dimension shards along cut -->
     <g fill="#7df9ff" opacity="0">
       <animate attributeName="opacity" values="0;1;.5" keyTimes="0;.5;1" dur=".6s" begin="2s" fill="freeze"/>
       <polygon points="300,180 320,170 310,195"/>
@@ -230,7 +179,6 @@
     </text>
   </g>
 
-  <!-- bottom cinematic letterbox bar -->
   <rect x="0" y="308" width="800" height="12" fill="#000000"/>
   <rect x="0" y="0" width="800" height="8" fill="#000000"/>
 </svg>

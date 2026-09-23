@@ -186,31 +186,34 @@ function demonSlayerTrack(x0, y0, w, h) {
       id: "tanjiroRun",
       dur: "7s",
       begin: "0s",
-      y: groundY - 2,
+      y: groundY - 4,
+      scale: 1.35,
       svg: tanjiroChibi(),
     },
     {
       id: "zenitsuRun",
       dur: "6.2s",
-      begin: "-2.1s",
-      y: groundY - 2,
+      begin: "0s",
+      y: groundY - 4,
+      scale: 1.35,
       svg: zenitsuChibi(),
     },
     {
       id: "inosukeRun",
       dur: "5.6s",
-      begin: "-4s",
-      y: groundY - 2,
+      begin: "0s",
+      y: groundY - 4,
+      scale: 1.35,
       svg: inosukeChibi(),
     },
   ];
 
   const groups = runners
     .map(
-      (r) => `  <g>
+      (r, i) => `  <g>
     <g>
       <animateTransform attributeName="transform" type="translate" values="${start},${r.y}; ${end},${r.y}" dur="${r.dur}" begin="${r.begin}" repeatCount="indefinite"/>
-      <g transform="translate(0,0)">${r.svg}</g>
+      <g transform="scale(${r.scale})">${r.svg}</g>
     </g>
   </g>`
     )
