@@ -139,11 +139,11 @@
 
 <br/>
 
-<img src="./assets/activity-graph.svg?v=1790195968" alt="Activity Graph - contributions last 30 days with hover tooltips, auto-updating" width="100%"/>
+<img src="./assets/activity-graph.svg?v=1790198280" alt="Activity Graph - contributions last 30 days with hover tooltips, auto-updating" width="100%"/>
 
 <br/><br/>
 
-<img src="./assets/contribution-calendar.svg?v=1790195968" alt="54 contributions in 2026 - contribution calendar with Demon Slayer runners" width="100%"/>
+<img src="./assets/contribution-calendar.svg?v=1790198280" alt="54 contributions in 2026 - contribution calendar with Demon Slayer runners" width="100%"/>
 
 <br/><br/>
 
