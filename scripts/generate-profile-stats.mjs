@@ -133,154 +133,185 @@ function escapeXml(s) {
 
 // ---- layout ----
 const W = 800;
-const H = 400;
+const H = 420;
 
-const metrics = [
-  { label: "COMMITS", value: commits12, note: "12 mo" },
-  { label: "STARS EARNED", value: stars, note: "total" },
-  { label: "PULL REQUESTS", value: prsAuthored, note: "opened" },
-  { label: "ISSUES CLOSED", value: issuesClosed, note: "resolved" },
-  { label: "REPOSITORIES", value: repos, note: "public" },
-  { label: "FOLLOWERS", value: followers, note: "community" },
+const zero = (v) => (v === 0);
+
+// secondary metrics as clean rows (muted when zero)
+const secondary = [
+  { label: "Stars earned", value: stars },
+  { label: "Pull requests", value: prsAuthored },
+  { label: "Issues closed", value: issuesClosed },
+  { label: "Public repositories", value: repos },
+  { label: "Followers", value: followers },
 ];
 
-const metricCells = metrics
+const secRows = secondary
   .map((m, i) => {
-    const col = i % 3;
-    const row = Math.floor(i / 3);
-    const x = 64 + col * 150;
-    const y = 132 + row * 64;
+    const y = 168 + i * 36;
+    const dim = zero(m.value);
+    return `
+  <g transform="translate(250,${y})">
+    <line x1="0" y1="-14" x2="230" y2="-14" stroke="#141414" stroke-opacity=".12" stroke-width="1"/>
+    <text class="sans" x="0" y="6" fill="${dim ? "#141414" : "#141414"}" fill-opacity="${dim ? ".35" : ".75"}" font-size="13" font-weight="600">${escapeXml(m.label)}</text>
+    <text class="disp" x="230" y="8" text-anchor="end" fill="${dim ? "#141414" : "#e60012"}" fill-opacity="${dim ? ".28" : "1"}" font-size="20">${m.value}</text>
+  </g>`;
+  })
+  .join("");
+
+// languages: single stacked ribbon + legend
+const LANG_X = 530;
+const LANG_Y = 148;
+const LANG_W = 246;
+const ribbon = (() => {
+  let x = LANG_X;
+  const h = 14;
+  const parts = langPcts
+    .map((l) => {
+      const w = (l.pct / 100) * LANG_W;
+      const seg = `<rect x="${x.toFixed(1)}" y="${LANG_Y}" width="${Math.max(w, 2).toFixed(1)}" height="${h}" fill="${escapeXml(l.color || "#ff6a00")}"/>`;
+      x += w;
+      return seg;
+    })
+    .join("");
+  return `<rect x="${LANG_X}" y="${LANG_Y}" width="${LANG_W}" height="${h}" rx="7" fill="#ddd2b8"/>
+    <g clip-path="url(#langClip)">${parts}</g>
+    <rect x="${LANG_X}" y="${LANG_Y}" width="${LANG_W}" height="${h}" rx="7" fill="none" stroke="#141414" stroke-width="2"/>`;
+})();
+
+const langLegend = langPcts
+  .map((l, i) => {
+    const col = i % 2;
+    const row = Math.floor(i / 2);
+    const x = LANG_X + col * 124;
+    const y = LANG_Y + 40 + row * 34;
     return `
   <g transform="translate(${x},${y})">
-    <rect x="0" y="0" width="138" height="54" rx="4" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
-    <rect x="0" y="0" width="6" height="54" fill="#e60012"/>
-    <text class="disp" x="16" y="28" fill="#141414" font-size="26" letter-spacing="1">${m.value}</text>
-    <text class="sans" x="16" y="44" fill="#e60012" font-size="8" font-weight="700" letter-spacing="0.8">${escapeXml(m.label)}</text>
-    <text class="sans" x="130" y="16" text-anchor="end" fill="#141414" font-size="7" opacity=".5">${escapeXml(m.note)}</text>
+    <circle cx="5" cy="-4" r="5" fill="${escapeXml(l.color || "#ff6a00")}" stroke="#141414" stroke-width="1.5"/>
+    <text class="sans" x="16" y="0" fill="#141414" font-size="12" font-weight="700">${escapeXml(l.name)}</text>
+    <text class="disp" x="16" y="16" fill="#e60012" font-size="13">${l.pct.toFixed(1)}%</text>
   </g>`;
   })
   .join("");
-
-const langRows = langPcts
-  .map((l, i) => {
-    const y = 136 + i * 26;
-    const barW = 168;
-    const fillW = Math.max(4, (l.pct / 100) * barW);
-    return `
-  <g transform="translate(536,${y})">
-    <text class="sans" x="0" y="0" fill="#141414" font-size="11" font-weight="700">${escapeXml(l.name)}</text>
-    <text class="disp" x="232" y="1" text-anchor="end" fill="#e60012" font-size="13">${l.pct.toFixed(1)}%</text>
-    <rect x="0" y="6" width="${barW}" height="9" rx="3" fill="#ddd2b8" stroke="#141414" stroke-width="1.5"/>
-    <rect x="0" y="6" width="${fillW.toFixed(1)}" height="9" rx="3" fill="${escapeXml(l.color || "#ff6a00")}" stroke="#141414" stroke-width="1.5"/>
-  </g>`;
-  })
-  .join("");
-
-const flamePulse = `
-  <g transform="translate(340,324)" style="pointer-events:none">
-    <circle r="28" fill="#fff7ed" stroke="#141414" stroke-width="3"/>
-    <circle r="22" fill="none" stroke="#ff6a00" stroke-width="4" stroke-dasharray="${Math.min(130, currentStreak * 10)} 130" stroke-linecap="round" transform="rotate(-90)"/>
-    <path class="pulse" d="M0,-15 C6,-9 9,-4 9,3 C9,9 5,15 0,15 C-5,15 -9,9 -9,3 C-9,-4 -6,-9 0,-15 Z" fill="#e60012" stroke="#141414" stroke-width="2"/>
-    <path d="M0,-5 C3,-2 4,1 4,4 C4,7 2,9 0,9 C-2,9 -4,7 -4,4 C-4,1 -3,-2 0,-5 Z" fill="#ffd166"/>
-    <text class="disp" x="44" y="2" fill="#ffd166" font-size="28">${currentStreak}</text>
-    <text class="sans" x="44" y="22" fill="#f7f1e3" font-size="10" font-weight="700" letter-spacing="1.2">CURRENT STREAK</text>
-  </g>`;
 
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Engineering profile for ${escapeXml(displayName)} — ${commits12} commits last year, ${stars} stars, streak ${currentStreak}">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Engineering profile for ${escapeXml(displayName)} — ${commits12} commits last year, streak ${currentStreak}">
   <defs>
-    <pattern id="psTone" width="8" height="8" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.1" fill="#141414" opacity=".07"/>
+    <pattern id="psTone" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="0.9" fill="#141414" opacity=".055"/>
     </pattern>
-    <pattern id="psLines" width="12" height="12" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="11.5" x2="12" y2="11.5" stroke="#141414" stroke-width="0.6" opacity=".12"/>
+    <pattern id="psHatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#e60012" stroke-width="1.2" opacity=".12"/>
     </pattern>
-    <filter id="psInk" x="-15%" y="-15%" width="130%" height="130%">
-      <feDropShadow dx="3" dy="3" stdDeviation="0" flood-color="#000" flood-opacity="0.85"/>
+    <clipPath id="langClip">
+      <rect x="${LANG_X}" y="${LANG_Y}" width="${LANG_W}" height="14" rx="7"/>
+    </clipPath>
+    <clipPath id="psClip"><rect width="${W}" height="${H}"/></clipPath>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#141414" flood-opacity=".12"/>
     </filter>
-    <clipPath id="psClip"><rect width="${W}" height="${H}" rx="0"/></clipPath>
   </defs>
   <style>
     .disp { font-family: Impact, "Arial Black", sans-serif; }
     .sans { font-family: "Segoe UI", Arial, sans-serif; }
-    @keyframes psPulse { 0%,100% { opacity:.55; } 50% { opacity:1; } }
-    @keyframes psSlash { from { stroke-dashoffset: 400; } to { stroke-dashoffset: 0; } }
-    .pulse { animation: psPulse 2s ease-in-out infinite; }
-    .slash { stroke-dasharray: 400; animation: psSlash 1.4s ease-out both; }
+    .mono { font-family: "Consolas", "Courier New", monospace; }
+    @keyframes psPulse { 0%,100% { opacity:.5; } 50% { opacity:1; } }
+    .pulse { animation: psPulse 2.2s ease-in-out infinite; }
   </style>
 
   <g clip-path="url(#psClip)">
     <rect width="${W}" height="${H}" fill="#f7f1e3"/>
     <rect width="${W}" height="${H}" fill="url(#psTone)"/>
 
-    <!-- manga speed lines (top-right impact frame) -->
-    <g stroke="#141414" stroke-width="1.6" opacity=".14" stroke-linecap="round">
-      <line x1="620" y1="8" x2="790" y2="22"/>
-      <line x1="640" y1="28" x2="790" y2="38"/>
-      <line x1="660" y1="48" x2="790" y2="54"/>
-      <line x1="600" y1="68" x2="780" y2="70"/>
+    <!-- left red rail -->
+    <rect x="0" y="0" width="10" height="${H}" fill="#e60012"/>
+    <rect x="10" y="0" width="3" height="${H}" fill="#141414"/>
+
+    <!-- ghost number -->
+    <text class="disp" x="195" y="310" text-anchor="middle" fill="#141414" fill-opacity=".045" font-size="200" letter-spacing="-6">${commits12}</text>
+
+    <!-- corner registration marks -->
+    <g stroke="#141414" stroke-width="1.5" opacity=".35">
+      <path d="M28,28 h14 M28,28 v14"/>
+      <path d="M${W - 28},28 h-14 M${W - 28},28 v14"/>
+      <path d="M28,${H - 28} h14 M28,${H - 28} v-14"/>
+      <path d="M${W - 28},${H - 28} h-14 M${W - 28},${H - 28} v-14"/>
     </g>
+
+    <!-- hatch accent behind languages -->
+    <rect x="${LANG_X - 12}" y="${LANG_Y - 48}" width="${LANG_W + 24}" height="210" fill="url(#psHatch)" rx="8"/>
 
     <!-- header -->
-    <circle cx="34" cy="34" r="8" fill="#e60012" class="pulse"/>
-    <text class="disp" x="54" y="42" fill="#141414" font-size="22" letter-spacing="1.5">ENGINEERING PROFILE</text>
-    <text class="sans" x="${W - 28}" y="32" text-anchor="end" fill="#e60012" font-size="12" font-weight="700" font-style="italic">LIVE · auto-updating</text>
-    <text class="sans" x="${W - 28}" y="50" text-anchor="end" fill="#141414" font-size="11" opacity=".7">${escapeXml(displayName)} · github.com/${escapeXml(u.login)}</text>
-    <rect x="24" y="62" width="${W - 48}" height="5" fill="#141414"/>
+    <g>
+      <rect x="40" y="36" width="8" height="36" fill="#e60012"/>
+      <text class="disp" x="62" y="54" fill="#141414" font-size="26" letter-spacing="2">ENGINEERING PROFILE</text>
+      <text class="sans" x="64" y="74" fill="#141414" fill-opacity=".55" font-size="12" font-weight="600" letter-spacing=".5">${escapeXml(displayName)} — github.com/${escapeXml(u.login)}</text>
 
-    <!-- left panel: profile metrics -->
-    <g filter="url(#psInk)">
-      <rect x="24" y="82" width="476" height="176" rx="6" fill="#ffffff" stroke="#141414" stroke-width="3.5"/>
-      <rect x="24" y="82" width="476" height="176" rx="6" fill="url(#psLines)"/>
-      <rect x="24" y="82" width="476" height="28" fill="#141414"/>
-      <text class="disp" x="62" y="101" fill="#f7f1e3" font-size="13" letter-spacing="2">PROFILE METRICS</text>
-      <text class="sans" x="484" y="101" text-anchor="end" fill="#ffd166" font-size="10" font-weight="700">12-MONTH SNAPSHOT</text>
-      <rect x="52" y="82" width="4" height="176" fill="#e60012" opacity=".85"/>
-    </g>
-    ${metricCells}
-
-    <!-- right panel: languages -->
-    <g filter="url(#psInk)">
-      <rect x="516" y="82" width="260" height="176" rx="6" fill="#ffffff" stroke="#141414" stroke-width="3.5"/>
-      <rect x="516" y="82" width="260" height="28" fill="#e60012"/>
-      <text class="disp" x="532" y="101" fill="#ffffff" font-size="13" letter-spacing="2">TOP LANGUAGES</text>
-      <text class="sans" x="768" y="101" text-anchor="end" fill="#ffe4d6" font-size="9" font-weight="700">by size</text>
-    </g>
-    ${langRows || `<text class="sans" x="536" y="140" fill="#141414" font-size="12" opacity=".6">No language data yet</text>`}
-
-    <!-- bottom band: contribution consistency -->
-    <g filter="url(#psInk)">
-      <rect x="24" y="284" width="752" height="88" rx="6" fill="#141414"/>
-      <rect x="24" y="284" width="8" height="88" fill="#e60012"/>
-      <rect x="768" y="284" width="8" height="88" fill="#ff6a00"/>
+      <!-- LIVE pill -->
+      <g transform="translate(${W - 168},44)">
+        <rect x="0" y="0" width="136" height="28" rx="14" fill="#141414"/>
+        <circle cx="18" cy="14" r="5" fill="#e60012" class="pulse"/>
+        <text class="sans" x="32" y="18" fill="#f7f1e3" font-size="11" font-weight="700" letter-spacing="1">LIVE · UPDATED</text>
+      </g>
     </g>
 
-    <path class="slash" d="M48,360 L190,300" stroke="#e60012" stroke-width="3" opacity=".45" fill="none"/>
-    <path class="slash" d="M620,300 L752,360" stroke="#ff6a00" stroke-width="3" opacity=".45" fill="none"/>
+    <line x1="40" y1="92" x2="${W - 40}" y2="92" stroke="#141414" stroke-width="3"/>
 
-    <g transform="translate(56,308)">
-      <text class="disp" x="0" y="30" fill="#ffd166" font-size="32">${totalContrib}</text>
-      <text class="sans" x="0" y="48" fill="#f7f1e3" font-size="10" font-weight="700" letter-spacing="1.5">TOTAL CONTRIBUTIONS</text>
+    <!-- HERO stat -->
+    <g transform="translate(48,140)">
+      <text class="mono" x="0" y="14" fill="#e60012" font-size="11" font-weight="700" letter-spacing="3">01 — VELOCITY</text>
+      <text class="disp" x="0" y="92" fill="#141414" font-size="96" letter-spacing="-2">${commits12}</text>
+      <text class="sans" x="4" y="118" fill="#141414" font-size="14" font-weight="700" letter-spacing="2">COMMITS · LAST 12 MONTHS</text>
+      <rect x="4" y="130" width="120" height="4" fill="#e60012"/>
     </g>
 
-    ${flamePulse}
+    <!-- secondary metrics -->
+    <g transform="translate(40,130)">
+      <text class="mono" x="210" y="14" fill="#e60012" font-size="11" font-weight="700" letter-spacing="3">02 — LEDGER</text>
+    </g>
+    ${secRows}
 
-    <g transform="translate(520,308)">
-      <text class="disp" x="0" y="30" fill="#ffd166" font-size="32">${longestStreak}</text>
-      <text class="sans" x="0" y="48" fill="#f7f1e3" font-size="10" font-weight="700" letter-spacing="1.5">LONGEST STREAK</text>
-      <text class="sans" x="244" y="30" text-anchor="end" fill="#ff6a00" font-size="28" font-weight="700">${commits12}</text>
-      <text class="sans" x="244" y="48" text-anchor="end" fill="#f7f1e3" font-size="10" font-weight="700" letter-spacing="1.5">COMMITS / 12 MO</text>
+    <!-- languages -->
+    <g filter="url(#soft)">
+      <rect x="${LANG_X - 16}" y="${LANG_Y - 60}" width="${LANG_W + 32}" height="230" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
+    </g>
+    <text class="mono" x="${LANG_X}" y="${LANG_Y - 34}" fill="#e60012" font-size="11" font-weight="700" letter-spacing="3">03 — STACK</text>
+    <text class="disp" x="${LANG_X}" y="${LANG_Y - 14}" fill="#141414" font-size="16" letter-spacing="1.5">TOP LANGUAGES</text>
+    ${ribbon}
+    ${langLegend || `<text class="sans" x="${LANG_X}" y="${LANG_Y + 50}" fill="#141414" fill-opacity=".5" font-size="12">No language data yet</text>`}
+
+    <!-- footer streak band -->
+    <g>
+      <rect x="40" y="${H - 96}" width="${W - 80}" height="68" rx="6" fill="#141414"/>
+      <rect x="40" y="${H - 96}" width="6" height="68" fill="#e60012"/>
+      <!-- diagonal cut accent -->
+      <polygon points="${W - 40 - 90},${H - 96} ${W - 40},${H - 96} ${W - 40},${H - 96 + 68} ${W - 40 - 40},${H - 96 + 68}" fill="#e60012" opacity=".9"/>
+      <polygon points="${W - 40 - 70},${H - 96} ${W - 40 - 50},${H - 96} ${W - 40 - 10},${H - 96 + 68} ${W - 40 - 30},${H - 96 + 68}" fill="#ff6a00" opacity=".85"/>
     </g>
 
-    <!-- status stamp (between title and LIVE — no overlap) -->
-    <g transform="translate(470,40) rotate(-10)" style="pointer-events:none">
-      <rect x="-36" y="-15" width="72" height="30" rx="3" fill="none" stroke="#e60012" stroke-width="3"/>
-      <rect x="-32" y="-11" width="64" height="22" rx="2" fill="none" stroke="#e60012" stroke-width="1.5"/>
-      <text class="disp" x="0" y="5" text-anchor="middle" fill="#e60012" font-size="12" letter-spacing="2">ACTIVE</text>
+    <g transform="translate(64,${H - 52})">
+      <text class="disp" x="0" y="4" fill="#ffd166" font-size="26">${totalContrib}</text>
+      <text class="sans" x="0" y="22" fill="#f7f1e3" fill-opacity=".8" font-size="9" font-weight="700" letter-spacing="1.4">TOTAL CONTRIBUTIONS</text>
     </g>
+
+    <g transform="translate(270,${H - 52})">
+      <circle cx="10" cy="-4" r="14" fill="none" stroke="#ff6a00" stroke-width="3" stroke-dasharray="${Math.min(70, currentStreak * 8)} 70" transform="rotate(-90 10 -4)"/>
+      <path class="pulse" d="M10,-14 C13,-9 16,-6 16,-1 C16,5 13,10 10,10 C7,10 4,5 4,-1 C4,-6 7,-9 10,-14 Z" fill="#e60012"/>
+      <text class="disp" x="34" y="4" fill="#ffd166" font-size="26">${currentStreak}</text>
+      <text class="sans" x="34" y="22" fill="#f7f1e3" fill-opacity=".8" font-size="9" font-weight="700" letter-spacing="1.4">CURRENT STREAK</text>
+    </g>
+
+    <g transform="translate(480,${H - 52})">
+      <text class="disp" x="0" y="4" fill="#ffd166" font-size="26">${longestStreak}</text>
+      <text class="sans" x="0" y="22" fill="#f7f1e3" fill-opacity=".8" font-size="9" font-weight="700" letter-spacing="1.4">LONGEST STREAK</text>
+    </g>
+
+    <!-- thin dividers in footer -->
+    <line x1="250" y1="${H - 78}" x2="250" y2="${H - 40}" stroke="#f7f1e3" stroke-opacity=".2" stroke-width="1"/>
+    <line x1="460" y1="${H - 78}" x2="460" y2="${H - 40}" stroke="#f7f1e3" stroke-opacity=".2" stroke-width="1"/>
   </g>
 
-  <rect x="3" y="3" width="${W - 6}" height="${H - 6}" fill="none" stroke="#141414" stroke-width="7"/>
+  <rect x="4" y="4" width="${W - 8}" height="${H - 8}" fill="none" stroke="#141414" stroke-width="8"/>
 </svg>
 `;
 
