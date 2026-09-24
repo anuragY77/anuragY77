@@ -155,31 +155,31 @@
 
 <br/>
 
-<img src="./assets/header-feeds.svg" alt="Next Episode - Latest Feeds" width="100%"/>
+<img src="./assets/header-feeds.svg" alt="Next Episode - Latest Feeds preview title card with film strip" width="100%"/>
 
 <br/>
 
-<img src="./assets/sync-loader.svg" alt="Next episode loading - activity" width="100%"/>
+<img src="./assets/sync-loader.svg" alt="Activity signal reception - radar scanning, awaiting first sync" width="100%"/>
 
 <br/>
 
 <!-- START_SECTION:activity -->
-<sub>Next episode loading — awaiting first sync — GitHub Actions will populate recent activity here.</sub>
+<sub>Signal standby — first activity transmission pending — GitHub Actions will fill this channel.</sub>
 <!-- END_SECTION:activity -->
 
 <br/>
 
-<img src="./assets/sync-loader.svg" alt="Next episode loading - content" width="100%"/>
+<img src="./assets/sync-content.svg" alt="Content reel developing - film strip loading, awaiting first sync" width="100%"/>
 
 <br/>
 
 <!-- START_SECTION:content -->
-<sub>Stay tuned — awaiting first sync — GitHub Actions will populate latest posts here.</sub>
+<sub>Reel in the darkroom — first content drop pending — GitHub Actions will develop this strip.</sub>
 <!-- END_SECTION:content -->
 
 <br/>
 
-<img src="./assets/footer-banner.svg" alt="To be continued" width="100%"/>
+<img src="./assets/footer-banner.svg" alt="To be continued - cinematic series end card with sunburst" width="100%"/>
 
 <br/>
 

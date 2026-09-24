@@ -1,41 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 48" width="800" height="48" role="img" aria-label="Next episode loading">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 78" width="800" height="78" role="img" aria-label="Activity signal reception - awaiting transmission">
   <defs>
-    <pattern id="lTone" width="8" height="8" patternUnits="userSpaceOnUse">
+    <pattern id="sigTone" width="8" height="8" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.1" fill="#141414" opacity=".08"/>
     </pattern>
+    <linearGradient id="sigSweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e60012" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e60012" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#e60012" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="sigPanelClip"><rect width="310" height="36"/></clipPath>
   </defs>
   <style>
     .disp { font-family: Impact, "Arial Black", sans-serif; }
     .sans { font-family: "Segoe UI", Arial, sans-serif; font-style: italic; font-weight: 700; }
-    @keyframes blink { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
-    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.5; } }
-    .cur { animation: blink .8s step-end infinite; }
-    .p { animation: pulse 1.3s ease-in-out infinite; }
+    .mono { font-family: Consolas, "Courier New", monospace; }
+    @keyframes sweep { 0% { transform: translateX(-120px); } 100% { transform: translateX(820px); } }
+    @keyframes ping { 0% { transform: scale(.4); opacity:.9; } 100% { transform: scale(1.6); opacity:0; } }
+    @keyframes blip { 0%,40% { opacity:1; } 50%,100% { opacity:.2; } }
+    .sw { animation: sweep 2.8s linear infinite; }
+    .pg { transform-box: fill-box; transform-origin: center; animation: ping 1.6s ease-out infinite; }
+    .bl { animation: blip 1s step-end infinite; }
   </style>
 
-  <rect width="800" height="48" fill="#f7f1e3"/>
-  <rect width="800" height="48" fill="url(#lTone)"/>
+  <rect width="800" height="78" fill="#f7f1e3"/>
+  <rect width="800" height="78" fill="url(#sigTone)"/>
 
-  <!-- red stamp label -->
-  <g transform="translate(20,10)">
-    <rect width="210" height="28" fill="#e60012" stroke="#141414" stroke-width="3"/>
-    <text class="disp" x="105" y="21" text-anchor="middle" fill="#ffffff" font-size="15" letter-spacing="3">NEXT EPISODE</text>
+  <!-- radar scope -->
+  <g transform="translate(58,40)">
+    <circle r="28" fill="#141414"/>
+    <circle r="28" fill="none" stroke="#141414" stroke-width="3"/>
+    <circle r="20" fill="none" stroke="#0d9488" stroke-width="1.5" opacity=".7"/>
+    <circle r="12" fill="none" stroke="#0d9488" stroke-width="1.5" opacity=".7"/>
+    <circle r="4" fill="none" stroke="#0d9488" stroke-width="1.5" opacity=".7"/>
+    <line x1="-28" y1="0" x2="28" y2="0" stroke="#0d9488" stroke-width="1" opacity=".45"/>
+    <line x1="0" y1="-28" x2="0" y2="28" stroke="#0d9488" stroke-width="1" opacity=".45"/>
+    <path d="M0 0 L0 -27 A27 27 0 0 1 23 -13.5 Z" fill="#e60012" opacity=".75">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2.4s" repeatCount="indefinite"/>
+    </path>
+    <circle r="3.5" fill="#ffd166"/>
+    <circle cx="13" cy="-9" r="3" fill="#e60012" class="pg"/>
+    <circle r="28" fill="none" stroke="#e60012" stroke-width="3" class="pg"/>
   </g>
 
-  <text class="disp" x="250" y="32" fill="#141414" font-size="18" letter-spacing="3">LOADING<span class="cur">...</span></text>
-  <text class="sans p" x="400" y="31" fill="#e60012" font-size="13" letter-spacing="2">STAY TUNED</text>
-
-  <!-- ink progress bar -->
-  <g transform="translate(520,14)">
-    <rect width="240" height="20" fill="#ffffff" stroke="#141414" stroke-width="3"/>
-    <rect x="4" y="4" width="0" height="12" fill="#ff6a00">
-      <animate attributeName="width" values="0;40;150;232;232" dur="3s" repeatCount="indefinite"/>
-    </rect>
-    <!-- brush shine -->
-    <rect x="-30" y="4" width="30" height="12" fill="#ffd166" opacity=".7">
-      <animate attributeName="x" values="-30;240" dur="2s" repeatCount="indefinite"/>
-    </rect>
+  <!-- LIVE badge -->
+  <g transform="translate(104,14)">
+    <rect width="86" height="22" rx="3" fill="#e60012" stroke="#141414" stroke-width="2.5"/>
+    <circle cx="14" cy="11" r="4" fill="#ffffff" class="bl"/>
+    <text class="disp" x="52" y="16" text-anchor="middle" fill="#ffffff" font-size="12" letter-spacing="2">LIVE FEED</text>
   </g>
 
-  <rect x="2" y="2" width="796" height="44" fill="none" stroke="#141414" stroke-width="5"/>
+  <text class="disp" x="104" y="56" fill="#141414" font-size="20" letter-spacing="3">ACTIVITY SIGNAL</text>
+  <text class="sans" x="320" y="55" fill="#e60012" font-size="13" letter-spacing="1.5">receiving… stand by</text>
+
+  <!-- scanning strip -->
+  <g transform="translate(470,22)">
+    <rect width="310" height="36" fill="#ffffff" stroke="#141414" stroke-width="3"/>
+    <!-- grid dots -->
+    <g fill="#141414" opacity=".2">
+      <circle cx="20" cy="18" r="2"/><circle cx="50" cy="18" r="2"/><circle cx="80" cy="18" r="2"/>
+      <circle cx="110" cy="18" r="2"/><circle cx="140" cy="18" r="2"/><circle cx="170" cy="18" r="2"/>
+      <circle cx="200" cy="18" r="2"/><circle cx="230" cy="18" r="2"/><circle cx="260" cy="18" r="2"/>
+      <circle cx="290" cy="18" r="2"/>
+    </g>
+    <g clip-path="url(#sigPanelClip)">
+      <rect width="310" height="36" fill="url(#sigSweep)" class="sw"/>
+    </g>
+    <text class="mono" x="12" y="14" fill="#141414" font-size="9" letter-spacing="1">CH-04 / ACTIONS</text>
+    <text class="disp" x="12" y="30" fill="#e60012" font-size="13" letter-spacing="2">AWAITING FIRST SYNC<span class="bl">_</span></text>
+  </g>
+
+  <rect x="2" y="2" width="796" height="74" fill="none" stroke="#141414" stroke-width="5"/>
 </svg>

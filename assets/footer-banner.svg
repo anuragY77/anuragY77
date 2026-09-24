@@ -1,54 +1,97 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 150" width="800" height="150" role="img" aria-label="To be continued footer">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 170" width="800" height="170" role="img" aria-label="To be continued - series end card">
   <defs>
-    <pattern id="fTone" width="10" height="10" patternUnits="userSpaceOnUse">
+    <pattern id="fbTone" width="10" height="10" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.3" fill="#141414" opacity=".1"/>
     </pattern>
-    <linearGradient id="fSea" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff8c42"/>
-      <stop offset="55%" stop-color="#ffb347"/>
+    <linearGradient id="fbSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9a3c"/>
+      <stop offset="45%" stop-color="#ffb347"/>
       <stop offset="100%" stop-color="#ffd166"/>
     </linearGradient>
+    <radialGradient id="fbSun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff3bf"/>
+      <stop offset="40%" stop-color="#ffd166"/>
+      <stop offset="100%" stop-color="#ff9a3c" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="fbClip"><rect width="800" height="170" rx="0"/></clipPath>
   </defs>
   <style>
     .disp { font-family: Impact, "Arial Black", sans-serif; }
     .sans { font-family: "Segoe UI", Arial, sans-serif; font-style: italic; font-weight: 700; }
-    @keyframes arr { 0%,100% { transform: translateX(0); } 50% { transform: translateX(14px); } }
-    @keyframes fade { 0%,100% { opacity:1; } 50% { opacity:.55; } }
-    .arr { animation: arr 1.2s ease-in-out infinite; }
-    .f { animation: fade 1.8s ease-in-out infinite; }
+    @keyframes arr { 0%,100% { transform: translateX(0); } 50% { transform: translateX(16px); } }
+    @keyframes glow { 0%,100% { opacity:.85; } 50% { opacity:1; } }
+    @keyframes ray { 0%,100% { opacity:.25; } 50% { opacity:.5; } }
+    .arr { animation: arr 1.3s ease-in-out infinite; }
+    .gl { animation: glow 2s ease-in-out infinite; }
+    .ry { animation: ray 2.4s ease-in-out infinite; }
   </style>
 
-  <!-- warm sunset sea (One Piece end-card vibe) -->
-  <rect width="800" height="150" fill="url(#fSea)"/>
-  <rect width="800" height="150" fill="url(#fTone)"/>
+  <g clip-path="url(#fbClip)">
+    <!-- sunset sky -->
+    <rect width="800" height="170" fill="url(#fbSky)"/>
+    <rect width="800" height="170" fill="url(#fbTone)"/>
 
-  <!-- horizon speed lines -->
-  <g stroke="#141414" stroke-width="3" opacity=".2" stroke-linecap="round">
-    <line x1="40" y1="30" x2="240" y2="26"/>
-    <line x1="560" y1="26" x2="760" y2="30"/>
-    <line x1="60" y1="120" x2="280" y2="116"/>
-    <line x1="520" y1="116" x2="740" y2="120"/>
-  </g>
+    <!-- sun rays -->
+    <g class="ry" stroke="#fff3bf" stroke-width="14" stroke-linecap="round" opacity=".35">
+      <line x1="400" y1="70" x2="400" y2="10"/>
+      <line x1="400" y1="70" x2="300" y2="18"/>
+      <line x1="400" y1="70" x2="500" y2="18"/>
+      <line x1="400" y1="70" x2="220" y2="40"/>
+      <line x1="400" y1="70" x2="580" y2="40"/>
+      <line x1="400" y1="70" x2="160" y2="70"/>
+      <line x1="400" y1="70" x2="640" y2="70"/>
+    </g>
+    <circle cx="400" cy="78" r="90" fill="url(#fbSun)" opacity=".7"/>
 
-  <!-- next episode caption -->
-  <text class="sans f" x="400" y="36" text-anchor="middle" fill="#141414" font-size="14" letter-spacing="5">NEXT TIME — EPISODE 2026</text>
+    <!-- horizon speed lines -->
+    <g stroke="#141414" stroke-width="3" opacity=".22" stroke-linecap="round">
+      <line x1="36" y1="28" x2="230" y2="24"/>
+      <line x1="50" y1="48" x2="200" y2="46"/>
+      <line x1="560" y1="24" x2="764" y2="28"/>
+      <line x1="580" y1="48" x2="750" y2="50"/>
+      <line x1="40" y1="140" x2="260" y2="136"/>
+      <line x1="520" y1="136" x2="760" y2="140"/>
+    </g>
 
-  <!-- classic TO BE CONTINUED arrow board -->
-  <g class="arr">
-    <g transform="translate(400,84)">
-      <!-- left arrow -->
-      <polygon points="-268,-30 -220,-30 -172,0 -220,30 -268,30 -220,0" fill="#e60012" stroke="#141414" stroke-width="4"/>
-      <!-- board -->
-      <rect x="-168" y="-32" width="300" height="64" fill="#f7f1e3" stroke="#141414" stroke-width="5"/>
-      <rect x="-160" y="-24" width="284" height="48" fill="none" stroke="#e60012" stroke-width="2"/>
-      <text class="disp" x="-18" y="16" text-anchor="middle" fill="#141414" font-size="36" letter-spacing="2">TO BE CONTINUED</text>
-      <!-- right arrow -->
-      <polygon points="132,-30 180,-30 228,0 180,30 132,30 180,0" fill="#e60012" stroke="#141414" stroke-width="4"/>
+    <!-- top caption bar -->
+    <g transform="translate(0,8)">
+      <rect x="180" y="0" width="440" height="28" fill="#141414"/>
+      <text class="sans" x="400" y="19" text-anchor="middle" fill="#ffd166" font-size="13" letter-spacing="6">NEXT TIME — EPISODE 2026</text>
+    </g>
+
+    <!-- main TO BE CONTINUED board -->
+    <g class="arr">
+      <g transform="translate(400,95)">
+        <!-- outer shadow -->
+        <rect x="-246" y="-33" width="500" height="76" fill="#141414" opacity=".2" transform="translate(4,5)"/>
+        <!-- left chevron stack -->
+        <polygon points="-340,-28 -300,-28 -254,0 -300,28 -340,28 -300,0" fill="#e60012" stroke="#141414" stroke-width="4"/>
+        <polygon points="-308,-20 -280,-20 -240,0 -280,20 -308,20 -280,0" fill="#f0b429" stroke="#141414" stroke-width="3"/>
+        <!-- board -->
+        <rect x="-250" y="-38" width="500" height="76" fill="#f7f1e3" stroke="#141414" stroke-width="6"/>
+        <rect x="-238" y="-26" width="476" height="52" fill="none" stroke="#e60012" stroke-width="3"/>
+        <rect x="-232" y="-20" width="464" height="40" fill="none" stroke="#141414" stroke-width="1.5" opacity=".35"/>
+        <text class="disp" x="0" y="16" text-anchor="middle" fill="#141414" font-size="42" letter-spacing="3">TO BE CONTINUED</text>
+        <!-- right chevron stack -->
+        <polygon points="254,-28 294,-28 340,0 294,28 254,28 294,0" fill="#e60012" stroke="#141414" stroke-width="4"/>
+        <polygon points="258,-20 286,-20 326,0 286,20 258,20 286,0" fill="#f0b429" stroke="#141414" stroke-width="3"/>
+      </g>
+    </g>
+
+    <!-- bottom credits strip -->
+    <g transform="translate(0,140)">
+      <rect x="0" y="0" width="800" height="30" fill="#141414"/>
+      <rect x="0" y="0" width="8" height="30" fill="#e60012"/>
+      <rect x="792" y="0" width="8" height="30" fill="#e60012"/>
+      <text class="sans gl" x="400" y="20" text-anchor="middle" fill="#f7f1e3" font-size="14" letter-spacing="4">THANKS FOR WATCHING — SEE YOU NEXT SEASON</text>
+    </g>
+
+    <!-- corner marks -->
+    <g stroke="#141414" stroke-width="3" fill="none" opacity=".5">
+      <path d="M12 36 V12 H36"/>
+      <path d="M788 134 V158 H764"/>
     </g>
   </g>
 
-  <text class="sans" x="400" y="136" text-anchor="middle" fill="#141414" font-size="14" letter-spacing="4">THANKS FOR WATCHING — SEE YOU NEXT SEASON</text>
-
-  <!-- thick ink frame -->
-  <rect x="2" y="2" width="796" height="146" fill="none" stroke="#141414" stroke-width="6"/>
+  <rect x="2" y="2" width="796" height="166" fill="none" stroke="#141414" stroke-width="6"/>
 </svg>
