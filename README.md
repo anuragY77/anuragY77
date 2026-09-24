@@ -147,19 +147,7 @@
 
 <br/><br/>
 
-<table border="0">
-  <tr>
-    <td>
-      <img src="https://github-stats-extended.vercel.app/api?username=anuragY77&theme=tokyonight&bg_color=0d0d14&title_color=ffd166&icon_color=ff7a1a&text_color=f5e6c8&hide_border=true" alt="GitHub Stats"/>    </td>
-    <td>
-      <img src="https://github-stats-extended.vercel.app/api/top-langs?username=anuragY77&theme=tokyonight&bg_color=0d0d14&title_color=ffd166&icon_color=ff7a1a&hide_border=true&layout=compact" alt="Top Languages"/>
-    </td>
-  </tr>
-</table>
-
-<br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=anuragY77&theme=tokyonight&background=0d0d14&border=0d0d14&ring=ff7a1a&fire=ffd166&currStreakNum=ffd166&sideNums=f5e6c8&sideLabels=ff7a1a&dates=2ec4b6&hide_border=true" alt="GitHub Streak"/>
+<img src="./assets/profile-stats.svg?v=1790232048" alt="Engineering Profile - live GitHub metrics, languages, and contribution streak, auto-updating" width="100%"/>
 
 <br/>
 
