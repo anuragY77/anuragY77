@@ -139,15 +139,15 @@
 
 <br/>
 
-<img src="./assets/activity-graph.svg?v=1790243035" alt="Activity Graph - contributions last 30 days, no dates, quote banner on top, auto-updating" width="100%"/>
+<img src="./assets/activity-graph.svg?v=1790245176" alt="Activity Graph - contributions last 30 days, no dates, quote banner on top, auto-updating" width="100%"/>
 
 <br/><br/>
 
-<img src="./assets/contribution-calendar.svg?v=1790243035" alt="55 contributions in 2026 - contribution calendar with anime Demon Slayer runners" width="100%"/>
+<img src="./assets/contribution-calendar.svg?v=1790245176" alt="55 contributions in 2026 - contribution calendar with anime Demon Slayer runners" width="100%"/>
 
 <br/><br/>
 
-<img src="./assets/profile-stats.svg?v=1790243035" alt="Engineering Profile - live GitHub metrics, languages, and contribution streak, auto-updating" width="100%"/>
+<img src="./assets/profile-stats.svg?v=1790245176" alt="Engineering Profile - live GitHub metrics, languages, and contribution streak, auto-updating" width="100%"/>
 
 <br/>
 
