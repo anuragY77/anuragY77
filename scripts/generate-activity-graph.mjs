@@ -105,24 +105,20 @@ const downQuote = `Dip detected... next jump launches HARDER than the last peak 
 const riseQuote = `Climbing fast — ${last3} in 3 days. Grab the next summit!`;
 const idleQuote = `Steady training. ${total} total — every commit sharpens the blade!`;
 let mood = "idle";
-let quote = idleQuote;
 if (isPeak) {
   mood = "peak";
-  quote = peakQuote;
 } else if (isDown) {
   mood = "down";
-  quote = downQuote;
 } else if (isRising) {
   mood = "rise";
-  quote = riseQuote;
 }
 
-// layout
+// layout — extra top room so quote banner sits BELOW header, ABOVE plot
 const W = 800;
-const H = 340;
+const H = 420;
 const PAD_L = 56;
 const PAD_R = 36;
-const PAD_T = 88;
+const PAD_T = 152;
 const PAD_B = 72;
 const plotW = W - PAD_L - PAD_R;
 const plotH = H - PAD_T - PAD_B;
@@ -147,8 +143,8 @@ const fmtFull = (iso) => {
   return `${DAYS_W[d.getDay()]}, ${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
 };
 
-// range label for header
-const rangeLabel = `${fmtShort(series[0].date)} – ${fmtShort(series[n - 1].date)}`;
+// range label for header — NO dates per user request
+const rangeLabel = `last ${n} days`;
 
 // polyline
 const pts = series.map((d, i) => `${xAt(i).toFixed(1)},${yAt(d.contributionCount).toFixed(1)}`);
@@ -170,16 +166,29 @@ for (let v = 0; v <= yMax; v++) {
   );
 }
 
-// x labels (every ~5 days, always first + last)
-const xLabels = series
-  .map((d, i) => {
-    if (i % 5 !== 0 && i !== n - 1) return "";
-    const isLast = i === n - 1;
-    const label = isLast ? "TODAY" : fmtShort(d.date);
-    const fill = isLast ? "#e60012" : "#141414";
-    return `<text x="${xAt(i).toFixed(1)}" y="${PAD_T + plotH + 22}" text-anchor="middle" fill="${fill}" font-size="${isLast ? 11 : 10}" font-weight="700" ${isLast ? 'letter-spacing="1"' : 'opacity=".75"'}>${label}</text>`;
-  })
-  .join("");
+// x labels — NO dates on graph per user request; only a subtle day-index tick if needed
+// (dates removed entirely; quote banner sits above the plot)
+const xLabels = "";
+
+// dynamic quote that exactly matches the graph shape/mood
+const activeDays = series.filter((d) => d.contributionCount > 0).length;
+const zeroRun = (() => {
+  let run = 0;
+  for (let i = series.length - 1; i >= 0; i--) {
+    if (series[i].contributionCount === 0) run++;
+    else break;
+  }
+  return run;
+})();
+const shapeQuote = (() => {
+  if (mood === "peak") return `PEAK HIT! ${last} commits today — the graph spikes RIGHT HERE. Grand Line closer!`;
+  if (mood === "down") return `Dip at the end... ${zeroRun} quiet days. Next surge will SHATTER the last peak of ${maxV}!`;
+  if (mood === "rise") return `Climbing hard — ${last3} in 3 days vs ${prev3} before. The line points UP!`;
+  if (activeDays <= 5) return `Sparse training — only ${activeDays} active days. Next arc: fill the whole graph!`;
+  if (total === 0) return `Flatline... zero commits. Time to break the silence and spike this graph!`;
+  return `Steady blade — ${activeDays}/${n} days active, ${total} total. Every spike tells a story!`;
+})();
+let quote = shapeQuote;
 
 // static dots + always-visible count labels for non-zero days (GitHub <img> has no hover)
 const dots = series
@@ -197,21 +206,19 @@ const dots = series
   })
   .join("");
 
-// hover tooltips — one group per point (status-graph style)
-// Today's tip is always visible; others show on :hover (direct SVG view)
+// hover tooltips — count only, NO dates per user request
 const tips = series
   .map((d, i) => {
     const x = xAt(i);
     const y = yAt(d.contributionCount);
     const count = d.contributionCount;
-    const full = fmtFull(d.date);
     const isToday = d.date === todayISO;
-    const tipW = 168;
-    const tipH = 52;
+    const tipW = 140;
+    const tipH = 40;
     let tipX = x - tipW / 2;
     tipX = Math.max(PAD_L + 2, Math.min(W - PAD_R - tipW - 2, tipX));
-    let tipY = y - tipH - 16;
-    if (tipY < PAD_T + 4) tipY = y + 14;
+    let tipY = y - tipH - 14;
+    if (tipY < PAD_T + 4) tipY = y + 12;
     const unit = count === 1 ? "contribution" : "contributions";
     const badge = isToday
       ? `<rect x="${tipW - 46}" y="6" width="40" height="14" rx="3" fill="#e60012"/><text class="disp" x="${tipW - 26}" y="16.5" text-anchor="middle" fill="#fff" font-size="8" letter-spacing="1">TODAY</text>`
@@ -224,8 +231,7 @@ const tips = series
     <g transform="translate(${tipX.toFixed(1)},${tipY.toFixed(1)})" class="tip">
       <rect width="${tipW}" height="${tipH}" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       ${badge}
-      <text class="disp" x="10" y="22" fill="#e60012" font-size="14">${count} <tspan fill="#141414" font-size="11">${unit}</tspan></text>
-      <text class="sans" x="10" y="40" fill="#141414" font-size="11" font-weight="700">${escapeXml(full)}</text>
+      <text class="disp" x="10" y="26" fill="#e60012" font-size="14">${count} <tspan fill="#141414" font-size="11">${unit}</tspan></text>
     </g>
     <circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="14" fill="transparent" stroke="none"/>
     <circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
@@ -237,18 +243,16 @@ const tips = series
 const lx = xAt(maxV > 0 ? maxIdx : n - 1);
 const ly = yAt(maxV > 0 ? maxV : last);
 
-// mood-specific bubble position
-const bubbleW = 340;
-const bubbleRight = lx + bubbleW + 20 < W - 10;
-const bubbleX = bubbleRight ? lx + 24 : Math.max(PAD_L, lx - bubbleW - 24);
-const bubbleY = Math.max(PAD_T - 8, ly - 92);
+// quote banner sits between header divider (y=75) and plot top (PAD_T)
+const quoteBannerW = Math.min(plotW - 8, 700);
+const quoteBannerX = PAD_L + (plotW - quoteBannerW) / 2;
+const quoteBannerY = 85;
 
 const hatTilt = mood === "down" ? -6 : mood === "peak" ? 4 : 0;
 const armUp = mood === "peak" || mood === "rise";
 
-const firstDate = series[0].date;
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Contribution graph ${firstDate} to ${todayISO} — ${total} contributions, hover points for details">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Contribution graph — ${total} contributions, no dates shown, quote banner above plot">
   <defs>
     <pattern id="agTone" width="8" height="8" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.1" fill="#141414" opacity=".07"/>
@@ -285,8 +289,17 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     <tspan fill="#e60012">${total}</tspan> contributions · ${escapeXml(rangeLabel)}
   </text>
   <text class="sans" x="${W - 28}" y="42" text-anchor="end" fill="#e60012" font-size="13" font-style="italic" font-weight="700">LIVE · auto-updating</text>
-  <text class="sans" x="${W - 28}" y="62" text-anchor="end" fill="#141414" font-size="10" font-weight="700" opacity=".65">counts on bars · hover a point for full date</text>
+  <text class="sans" x="${W - 28}" y="62" text-anchor="end" fill="#141414" font-size="10" font-weight="700" opacity=".65">counts on bars · no dates shown</text>
   <rect x="24" y="70" width="${W - 48}" height="5" fill="#141414"/>
+
+  <!-- QUOTE BANNER above graph — matches graph shape exactly -->
+  <g filter="url(#agInk)" style="pointer-events:none">
+    <rect x="${quoteBannerX.toFixed(1)}" y="${quoteBannerY.toFixed(1)}" width="${quoteBannerW.toFixed(1)}" height="48" rx="14" fill="#ffffff" stroke="#141414" stroke-width="3.5"/>
+    <polygon points="${(quoteBannerX + quoteBannerW / 2 - 14).toFixed(1)},${(quoteBannerY + 48).toFixed(1)} ${(quoteBannerX + quoteBannerW / 2).toFixed(1)},${(quoteBannerY + 58).toFixed(1)} ${(quoteBannerX + quoteBannerW / 2 + 14).toFixed(1)},${(quoteBannerY + 48).toFixed(1)}" fill="#ffffff" stroke="#141414" stroke-width="3.5"/>
+    <polygon points="${(quoteBannerX + quoteBannerW / 2 - 8).toFixed(1)},${(quoteBannerY + 46).toFixed(1)} ${(quoteBannerX + quoteBannerW / 2).toFixed(1)},${(quoteBannerY + 54).toFixed(1)} ${(quoteBannerX + quoteBannerW / 2 + 8).toFixed(1)},${(quoteBannerY + 46).toFixed(1)}" fill="#ffffff"/>
+    <text class="disp" x="${(quoteBannerX + quoteBannerW / 2).toFixed(1)}" y="${(quoteBannerY + 20).toFixed(1)}" text-anchor="middle" fill="#141414" font-size="13" letter-spacing="0.5">${escapeXml(quote.split(" — ")[0])}</text>
+    ${quote.includes(" — ") ? `<text class="sans" x="${(quoteBannerX + quoteBannerW / 2).toFixed(1)}" y="${(quoteBannerY + 38).toFixed(1)}" text-anchor="middle" fill="#e60012" font-size="12" font-style="italic" font-weight="700">${escapeXml(quote.split(" — ")[1])}</text>` : ""}
+  </g>
 
   <!-- y ticks -->
   ${yTicks.join("\n  ")}
@@ -298,24 +311,10 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   ${dots}
   ${xLabels}
 
-  <text class="sans" x="${W / 2}" y="${H - 18}" text-anchor="middle" fill="#e60012" font-size="12" font-style="italic" font-weight="700">Days</text>
+  <text class="sans" x="${W / 2}" y="${H - 18}" text-anchor="middle" fill="#e60012" font-size="12" font-style="italic" font-weight="700">Days →</text>
   <text class="sans" x="16" y="${PAD_T + plotH / 2}" text-anchor="middle" fill="#e60012" font-size="12" font-style="italic" font-weight="700" transform="rotate(-90 16 ${PAD_T + plotH / 2})">Contributions</text>
 
-  <!-- speech bubble (non-interactive) -->
-  <g filter="url(#agInk)" style="pointer-events:none">
-    <rect x="${bubbleX.toFixed(1)}" y="${bubbleY.toFixed(1)}" width="${bubbleW}" height="64" rx="20" fill="#ffffff" stroke="#141414" stroke-width="3.5"/>
-    ${
-      bubbleRight
-        ? `<polygon points="${(bubbleX + 20).toFixed(1)},${(bubbleY + 56).toFixed(1)} ${(lx + 4).toFixed(1)},${(ly - 8).toFixed(1)} ${(bubbleX + 56).toFixed(1)},${(bubbleY + 60).toFixed(1)}" fill="#ffffff" stroke="#141414" stroke-width="3.5"/>
-           <polygon points="${(bubbleX + 28).toFixed(1)},${(bubbleY + 54).toFixed(1)} ${(lx + 10).toFixed(1)},${(ly - 4).toFixed(1)} ${(bubbleX + 52).toFixed(1)},${(bubbleY + 56).toFixed(1)}" fill="#ffffff"/>`
-        : `<polygon points="${(bubbleX + bubbleW - 20).toFixed(1)},${(bubbleY + 56).toFixed(1)} ${(lx - 4).toFixed(1)},${(ly - 8).toFixed(1)} ${(bubbleX + bubbleW - 56).toFixed(1)},${(bubbleY + 60).toFixed(1)}" fill="#ffffff" stroke="#141414" stroke-width="3.5"/>
-           <polygon points="${(bubbleX + bubbleW - 28).toFixed(1)},${(bubbleY + 54).toFixed(1)} ${(lx - 10).toFixed(1)},${(ly - 4).toFixed(1)} ${(bubbleX + bubbleW - 52).toFixed(1)},${(bubbleY + 56).toFixed(1)}" fill="#ffffff"/>`
-    }
-    <text class="sans" x="${(bubbleX + bubbleW / 2).toFixed(1)}" y="${(bubbleY + 28).toFixed(1)}" text-anchor="middle" fill="#141414" font-size="13" font-weight="700">${escapeXml(quote.split(" ").slice(0, 6).join(" "))}</text>
-    <text class="sans" x="${(bubbleX + bubbleW / 2).toFixed(1)}" y="${(bubbleY + 48).toFixed(1)}" text-anchor="middle" fill="#e60012" font-size="13" font-style="italic" font-weight="700">${escapeXml(quote.split(" ").slice(6).join(" "))}</text>
-  </g>
-
-  <!-- ===== MONKEY D. LUFFY sitting on the peak (non-interactive so tooltips work) ===== -->
+  <!-- Luffy (non-interactive so tooltips work) -->
   <g class="bob" transform="translate(${lx.toFixed(1)},${ly.toFixed(1)})" style="pointer-events:none">
     <path d="M-10,4 Q-18,22 -14,34" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round"/>
     <path d="M10,4 Q18,22 14,34" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round"/>
