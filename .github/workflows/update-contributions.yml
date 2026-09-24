@@ -53,8 +53,8 @@ jobs:
 
       - name: Commit if changed
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "anuragY77"
+          git config user.email "207905918+anuragY77@users.noreply.github.com"
           git add assets/contribution-calendar.svg assets/activity-graph.svg assets/profile-stats.svg README.md || true
           if git diff --cached --quiet; then
             echo "No changes"
