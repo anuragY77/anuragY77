@@ -103,15 +103,15 @@
     
   <g transform="translate(536,136)">
     <text class="sans" x="0" y="0" fill="#141414" font-size="11" font-weight="700">TypeScript</text>
-    <text class="disp" x="232" y="1" text-anchor="end" fill="#e60012" font-size="13">65.8%</text>
+    <text class="disp" x="232" y="1" text-anchor="end" fill="#e60012" font-size="13">65.1%</text>
     <rect x="0" y="6" width="168" height="9" rx="3" fill="#ddd2b8" stroke="#141414" stroke-width="1.5"/>
-    <rect x="0" y="6" width="110.6" height="9" rx="3" fill="#3178c6" stroke="#141414" stroke-width="1.5"/>
+    <rect x="0" y="6" width="109.4" height="9" rx="3" fill="#3178c6" stroke="#141414" stroke-width="1.5"/>
   </g>
   <g transform="translate(536,162)">
     <text class="sans" x="0" y="0" fill="#141414" font-size="11" font-weight="700">JavaScript</text>
-    <text class="disp" x="232" y="1" text-anchor="end" fill="#e60012" font-size="13">33.3%</text>
+    <text class="disp" x="232" y="1" text-anchor="end" fill="#e60012" font-size="13">34.0%</text>
     <rect x="0" y="6" width="168" height="9" rx="3" fill="#ddd2b8" stroke="#141414" stroke-width="1.5"/>
-    <rect x="0" y="6" width="55.9" height="9" rx="3" fill="#f1e05a" stroke="#141414" stroke-width="1.5"/>
+    <rect x="0" y="6" width="57.1" height="9" rx="3" fill="#f1e05a" stroke="#141414" stroke-width="1.5"/>
   </g>
   <g transform="translate(536,188)">
     <text class="sans" x="0" y="0" fill="#141414" font-size="11" font-weight="700">CSS</text>
