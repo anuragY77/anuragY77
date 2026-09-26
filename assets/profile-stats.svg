@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-label="Engineering profile for Anurag Yadav — 97 commits last year, streak 4">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-label="Engineering profile for Anurag Yadav — 98 commits last year, streak 4">
   <defs>
     <pattern id="psTone" width="6" height="6" patternUnits="userSpaceOnUse">
       <circle cx="1.5" cy="1.5" r="0.9" fill="#141414" opacity=".055"/>
@@ -32,7 +32,7 @@
     <rect x="10" y="0" width="3" height="420" fill="#141414"/>
 
     <!-- ghost number -->
-    <text class="disp" x="195" y="310" text-anchor="middle" fill="#141414" fill-opacity=".045" font-size="200" letter-spacing="-6">97</text>
+    <text class="disp" x="195" y="310" text-anchor="middle" fill="#141414" fill-opacity=".045" font-size="200" letter-spacing="-6">98</text>
 
     <!-- corner registration marks -->
     <g stroke="#141414" stroke-width="1.5" opacity=".35">
@@ -64,7 +64,7 @@
     <!-- HERO stat -->
     <g transform="translate(48,140)">
       <text class="mono" x="0" y="14" fill="#e60012" font-size="11" font-weight="700" letter-spacing="3">01 — VELOCITY</text>
-      <text class="disp" x="0" y="92" fill="#141414" font-size="96" letter-spacing="-2">97</text>
+      <text class="disp" x="0" y="92" fill="#141414" font-size="96" letter-spacing="-2">98</text>
       <text class="sans" x="4" y="118" fill="#141414" font-size="14" font-weight="700" letter-spacing="2">COMMITS · LAST 12 MONTHS</text>
       <rect x="4" y="130" width="120" height="4" fill="#e60012"/>
     </g>
@@ -146,7 +146,7 @@
     </g>
 
     <g transform="translate(64,368)">
-      <text class="disp" x="0" y="4" fill="#ffd166" font-size="26">105</text>
+      <text class="disp" x="0" y="4" fill="#ffd166" font-size="26">106</text>
       <text class="sans" x="0" y="22" fill="#f7f1e3" fill-opacity=".8" font-size="9" font-weight="700" letter-spacing="1.4">TOTAL CONTRIBUTIONS</text>
     </g>
 
