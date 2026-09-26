@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-label="Engineering profile for Anurag Yadav — 101 commits last year, streak 4">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-label="Engineering profile for Anurag Yadav — 105 commits last year, streak 4">
   <defs>
     <pattern id="psTone" width="6" height="6" patternUnits="userSpaceOnUse">
       <circle cx="1.5" cy="1.5" r="0.9" fill="#141414" opacity=".055"/>
@@ -32,7 +32,7 @@
     <rect x="10" y="0" width="3" height="420" fill="#141414"/>
 
     <!-- ghost number -->
-    <text class="disp" x="195" y="310" text-anchor="middle" fill="#141414" fill-opacity=".045" font-size="200" letter-spacing="-6">101</text>
+    <text class="disp" x="195" y="310" text-anchor="middle" fill="#141414" fill-opacity=".045" font-size="200" letter-spacing="-6">105</text>
 
     <!-- corner registration marks -->
     <g stroke="#141414" stroke-width="1.5" opacity=".35">
@@ -64,7 +64,7 @@
     <!-- HERO stat -->
     <g transform="translate(48,140)">
       <text class="mono" x="0" y="14" fill="#e60012" font-size="11" font-weight="700" letter-spacing="3">01 — VELOCITY</text>
-      <text class="disp" x="0" y="92" fill="#141414" font-size="96" letter-spacing="-2">101</text>
+      <text class="disp" x="0" y="92" fill="#141414" font-size="96" letter-spacing="-2">105</text>
       <text class="sans" x="4" y="118" fill="#141414" font-size="14" font-weight="700" letter-spacing="2">COMMITS · LAST 12 MONTHS</text>
       <rect x="4" y="130" width="120" height="4" fill="#e60012"/>
     </g>
@@ -107,23 +107,23 @@
     <text class="mono" x="530" y="114" fill="#e60012" font-size="11" font-weight="700" letter-spacing="3">03 — STACK</text>
     <text class="disp" x="530" y="134" fill="#141414" font-size="16" letter-spacing="1.5">TOP LANGUAGES</text>
     <rect x="530" y="148" width="246" height="14" rx="7" fill="#ddd2b8"/>
-    <g clip-path="url(#langClip)"><rect x="530.0" y="148" width="163.1" height="14" fill="#3178c6"/><rect x="693.1" y="148" width="75.2" height="14" fill="#f1e05a"/><rect x="768.3" y="148" width="5.7" height="14" fill="#3572A5"/><rect x="774.0" y="148" width="2.0" height="14" fill="#663399"/><rect x="775.7" y="148" width="2.0" height="14" fill="#e34c26"/></g>
+    <g clip-path="url(#langClip)"><rect x="530.0" y="148" width="165.0" height="14" fill="#3178c6"/><rect x="695.0" y="148" width="71.3" height="14" fill="#f1e05a"/><rect x="766.3" y="148" width="7.7" height="14" fill="#3572A5"/><rect x="774.0" y="148" width="2.0" height="14" fill="#663399"/><rect x="775.7" y="148" width="2.0" height="14" fill="#e34c26"/></g>
     <rect x="530" y="148" width="246" height="14" rx="7" fill="none" stroke="#141414" stroke-width="2"/>
     
   <g transform="translate(530,188)">
     <circle cx="5" cy="-4" r="5" fill="#3178c6" stroke="#141414" stroke-width="1.5"/>
     <text class="sans" x="16" y="0" fill="#141414" font-size="12" font-weight="700">TypeScript</text>
-    <text class="disp" x="16" y="16" fill="#e60012" font-size="13">66.3%</text>
+    <text class="disp" x="16" y="16" fill="#e60012" font-size="13">67.1%</text>
   </g>
   <g transform="translate(654,188)">
     <circle cx="5" cy="-4" r="5" fill="#f1e05a" stroke="#141414" stroke-width="1.5"/>
     <text class="sans" x="16" y="0" fill="#141414" font-size="12" font-weight="700">JavaScript</text>
-    <text class="disp" x="16" y="16" fill="#e60012" font-size="13">30.6%</text>
+    <text class="disp" x="16" y="16" fill="#e60012" font-size="13">29.0%</text>
   </g>
   <g transform="translate(530,222)">
     <circle cx="5" cy="-4" r="5" fill="#3572A5" stroke="#141414" stroke-width="1.5"/>
     <text class="sans" x="16" y="0" fill="#141414" font-size="12" font-weight="700">Python</text>
-    <text class="disp" x="16" y="16" fill="#e60012" font-size="13">2.3%</text>
+    <text class="disp" x="16" y="16" fill="#e60012" font-size="13">3.1%</text>
   </g>
   <g transform="translate(654,222)">
     <circle cx="5" cy="-4" r="5" fill="#663399" stroke="#141414" stroke-width="1.5"/>
@@ -146,7 +146,7 @@
     </g>
 
     <g transform="translate(64,368)">
-      <text class="disp" x="0" y="4" fill="#ffd166" font-size="26">109</text>
+      <text class="disp" x="0" y="4" fill="#ffd166" font-size="26">113</text>
       <text class="sans" x="0" y="22" fill="#f7f1e3" fill-opacity=".8" font-size="9" font-weight="700" letter-spacing="1.4">TOTAL CONTRIBUTIONS</text>
     </g>
 
