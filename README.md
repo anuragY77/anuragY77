@@ -12,6 +12,10 @@
 
 <br/><br/>
 
+<img src="./assets/quote-uchiha.svg" alt="Wake up to reality - Madara Uchiha quote, animated splash panel" width="100%"/>
+
+<br/><br/>
+
 <img src="./assets/header-intro.svg" alt="Episode 01 - About Me" width="100%"/>
 
 <br/>
