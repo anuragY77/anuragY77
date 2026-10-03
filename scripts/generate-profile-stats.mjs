@@ -159,37 +159,55 @@ const secRows = secondary
   })
   .join("");
 
-// languages: single stacked ribbon + legend
+// languages: anime power-gauge rows (per-language colored meter + tier badge)
 const LANG_X = 530;
 const LANG_Y = 148;
 const LANG_W = 246;
-const ribbon = (() => {
-  let x = LANG_X;
-  const h = 14;
-  const parts = langPcts
-    .map((l) => {
-      const w = (l.pct / 100) * LANG_W;
-      const seg = `<rect x="${x.toFixed(1)}" y="${LANG_Y}" width="${Math.max(w, 2).toFixed(1)}" height="${h}" fill="${escapeXml(l.color || "#ff6a00")}"/>`;
-      x += w;
-      return seg;
-    })
-    .join("");
-  return `<rect x="${LANG_X}" y="${LANG_Y}" width="${LANG_W}" height="${h}" rx="7" fill="#ddd2b8"/>
-    <g clip-path="url(#langClip)">${parts}</g>
-    <rect x="${LANG_X}" y="${LANG_Y}" width="${LANG_W}" height="${h}" rx="7" fill="none" stroke="#141414" stroke-width="2"/>`;
-})();
 
-const langLegend = langPcts
+const tierFor = (pct) =>
+  pct >= 50 ? { l: "S", c: "#e60012", t: "#f7f1e3" }
+  : pct >= 20 ? { l: "A", c: "#ff6a00", t: "#f7f1e3" }
+  : pct >= 5 ? { l: "B", c: "#f0b429", t: "#141414" }
+  : pct >= 1 ? { l: "C", c: "#0d9488", t: "#f7f1e3" }
+  : { l: "D", c: "#141414", t: "#f7f1e3" };
+
+const langRows = langPcts
   .map((l, i) => {
-    const col = i % 2;
-    const row = Math.floor(i / 2);
-    const x = LANG_X + col * 124;
-    const y = LANG_Y + 40 + row * 34;
+    const y = LANG_Y + 4 + i * 33;
+    const t = tierFor(l.pct);
+    const fillW = Math.max((l.pct / 100) * 88, 3);
+    const color = escapeXml(l.color || "#ff6a00");
+    const name = l.name.length > 11 ? l.name.slice(0, 10) + "…" : l.name;
+    const del = (0.12 + i * 0.15).toFixed(2);
+    let ticks = "";
+    for (let tx = 4; tx < 90; tx += 8) {
+      ticks += `<line x1="${82 + tx}" y1="4" x2="${82 + tx}" y2="12" stroke="#141414" stroke-opacity=".2" stroke-width="1"/>`;
+    }
+    const star =
+      t.l === "S"
+        ? `<path d="M250 1 l2.4 5.2 5.2 2.4 -5.2 2.4 -2.4 5.2 -2.4 -5.2 -5.2 -2.4 5.2 -2.4 z" fill="#f0b429" stroke="#141414" stroke-width="1.2"/>`
+        : "";
     return `
-  <g transform="translate(${x},${y})">
-    <circle cx="5" cy="-4" r="5" fill="${escapeXml(l.color || "#ff6a00")}" stroke="#141414" stroke-width="1.5"/>
-    <text class="sans" x="16" y="0" fill="#141414" font-size="12" font-weight="700">${escapeXml(l.name)}</text>
-    <text class="disp" x="16" y="16" fill="#e60012" font-size="13">${l.pct.toFixed(1)}%</text>
+  <g transform="translate(${LANG_X},${y})">
+    ${
+      i > 0
+        ? `<line x1="0" y1="-10" x2="246" y2="-10" stroke="#141414" stroke-opacity=".1" stroke-width="1" stroke-dasharray="3 3"/>`
+        : ""
+    }
+    <text class="sans" x="0" y="12" fill="#141414" font-size="12" font-weight="700">${escapeXml(name)}</text>
+    <rect x="82" y="2" width="90" height="12" rx="3" fill="#efe7d2" stroke="#141414" stroke-width="1.6"/>
+    <g class="gauge" style="animation-delay:${del}s">
+      <rect x="84" y="4" width="${fillW.toFixed(1)}" height="8" rx="1.5" fill="${color}"/>
+    </g>
+    ${ticks}
+    <text class="disp gaugeTxt" style="animation-delay:${del}s" x="216" y="14" text-anchor="end" fill="#e60012" font-size="15">${l.pct.toFixed(1)}%</text>
+    <g transform="translate(236,8)">
+      <g class="tierPop" style="animation-delay:${(0.3 + i * 0.15).toFixed(2)}s">
+        <circle r="11" fill="${t.c}" stroke="#141414" stroke-width="2"/>
+        <text class="disp" x="0" y="4.5" text-anchor="middle" fill="${t.t}" font-size="13">${t.l}</text>
+      </g>
+    </g>
+    ${star}
   </g>`;
   })
   .join("");
@@ -203,9 +221,6 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     <pattern id="psHatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
       <line x1="0" y1="0" x2="0" y2="10" stroke="#e60012" stroke-width="1.2" opacity=".12"/>
     </pattern>
-    <clipPath id="langClip">
-      <rect x="${LANG_X}" y="${LANG_Y}" width="${LANG_W}" height="14" rx="7"/>
-    </clipPath>
     <clipPath id="psClip"><rect width="${W}" height="${H}"/></clipPath>
     <filter id="soft" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#141414" flood-opacity=".12"/>
@@ -217,6 +232,12 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     .mono { font-family: "Consolas", "Courier New", monospace; }
     @keyframes psPulse { 0%,100% { opacity:.5; } 50% { opacity:1; } }
     .pulse { animation: psPulse 2.2s ease-in-out infinite; }
+    @keyframes gaugeIn { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    .gauge { transform-box: fill-box; transform-origin: left center; animation: gaugeIn .8s cubic-bezier(.2,.9,.25,1) both; }
+    @keyframes tierPop { 0% { transform: scale(0); } 70% { transform: scale(1.18); } 100% { transform: scale(1); } }
+    .tierPop { transform-box: fill-box; transform-origin: center; animation: tierPop .5s ease-out both; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .gaugeTxt { animation: fadeIn .5s ease both; }
   </style>
 
   <g clip-path="url(#psClip)">
@@ -277,8 +298,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     </g>
     <text class="mono" x="${LANG_X}" y="${LANG_Y - 34}" fill="#e60012" font-size="11" font-weight="700" letter-spacing="3">03 — STACK</text>
     <text class="disp" x="${LANG_X}" y="${LANG_Y - 14}" fill="#141414" font-size="16" letter-spacing="1.5">TOP LANGUAGES</text>
-    ${ribbon}
-    ${langLegend || `<text class="sans" x="${LANG_X}" y="${LANG_Y + 50}" fill="#141414" fill-opacity=".5" font-size="12">No language data yet</text>`}
+    ${langRows || `<text class="sans" x="${LANG_X}" y="${LANG_Y + 50}" fill="#141414" fill-opacity=".5" font-size="12">No language data yet</text>`}
 
     <!-- footer streak band -->
     <g>
