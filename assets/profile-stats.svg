@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-label="Engineering profile for Anurag Yadav — 163 commits last year, streak 12">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 421" width="800" height="421" role="img" aria-label="Engineering profile for Anurag Yadav — 164 commits last year, streak 12">
   <defs>
     <pattern id="psTone" width="6" height="6" patternUnits="userSpaceOnUse">
       <circle cx="1.5" cy="1.5" r="0.9" fill="#141414" opacity=".055"/>
@@ -7,7 +7,7 @@
     <pattern id="psHatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
       <line x1="0" y1="0" x2="0" y2="10" stroke="#e60012" stroke-width="1.2" opacity=".12"/>
     </pattern>
-    <clipPath id="psClip"><rect width="800" height="420"/></clipPath>
+    <clipPath id="psClip"><rect width="800" height="421"/></clipPath>
     <filter id="soft" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#141414" flood-opacity=".12"/>
     </filter>
@@ -27,26 +27,26 @@
   </style>
 
   <g clip-path="url(#psClip)">
-    <rect width="800" height="420" fill="#f7f1e3"/>
-    <rect width="800" height="420" fill="url(#psTone)"/>
+    <rect width="800" height="421" fill="#f7f1e3"/>
+    <rect width="800" height="421" fill="url(#psTone)"/>
 
     <!-- left red rail -->
-    <rect x="0" y="0" width="10" height="420" fill="#e60012"/>
-    <rect x="10" y="0" width="3" height="420" fill="#141414"/>
+    <rect x="0" y="0" width="10" height="421" fill="#e60012"/>
+    <rect x="10" y="0" width="3" height="421" fill="#141414"/>
 
     <!-- ghost number -->
-    <text class="disp" x="195" y="310" text-anchor="middle" fill="#141414" fill-opacity=".045" font-size="200" letter-spacing="-6">163</text>
+    <text class="disp" x="195" y="311" text-anchor="middle" fill="#141414" fill-opacity=".045" font-size="200" letter-spacing="-6">164</text>
 
     <!-- corner registration marks -->
     <g stroke="#141414" stroke-width="1.5" opacity=".35">
       <path d="M28,28 h14 M28,28 v14"/>
       <path d="M772,28 h-14 M772,28 v14"/>
-      <path d="M28,392 h14 M28,392 v-14"/>
-      <path d="M772,392 h-14 M772,392 v-14"/>
+      <path d="M28,393 h14 M28,393 v-14"/>
+      <path d="M772,393 h-14 M772,393 v-14"/>
     </g>
 
     <!-- hatch accent behind languages -->
-    <rect x="518" y="100" width="270" height="210" fill="url(#psHatch)" rx="8"/>
+    <rect x="518" y="100" width="270" height="211" fill="url(#psHatch)" rx="8"/>
 
     <!-- header -->
     <g>
@@ -67,7 +67,7 @@
     <!-- HERO stat -->
     <g transform="translate(48,140)">
       <text class="mono" x="0" y="14" fill="#e60012" font-size="11" font-weight="700" letter-spacing="3">01 — VELOCITY</text>
-      <text class="disp" x="0" y="92" fill="#141414" font-size="96" letter-spacing="-2">163</text>
+      <text class="disp" x="0" y="92" fill="#141414" font-size="96" letter-spacing="-2">164</text>
       <text class="sans" x="4" y="118" fill="#141414" font-size="14" font-weight="700" letter-spacing="2">COMMITS · LAST 12 MONTHS</text>
       <rect x="4" y="130" width="120" height="4" fill="#e60012"/>
     </g>
@@ -105,7 +105,7 @@
 
     <!-- languages -->
     <g filter="url(#soft)">
-      <rect x="514" y="88" width="278" height="230" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
+      <rect x="514" y="88" width="278" height="231" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
     </g>
     <text class="mono" x="530" y="114" fill="#e60012" font-size="11" font-weight="700" letter-spacing="3">03 — STACK</text>
     <text class="disp" x="530" y="134" fill="#141414" font-size="16" letter-spacing="1.5">TOP LANGUAGES</text>
@@ -198,34 +198,34 @@
 
     <!-- footer streak band -->
     <g>
-      <rect x="40" y="324" width="720" height="68" rx="6" fill="#141414"/>
-      <rect x="40" y="324" width="6" height="68" fill="#e60012"/>
+      <rect x="40" y="325" width="720" height="68" rx="6" fill="#141414"/>
+      <rect x="40" y="325" width="6" height="68" fill="#e60012"/>
       <!-- diagonal cut accent -->
-      <polygon points="670,324 760,324 760,392 720,392" fill="#e60012" opacity=".9"/>
-      <polygon points="690,324 710,324 750,392 730,392" fill="#ff6a00" opacity=".85"/>
+      <polygon points="670,325 760,325 760,393 720,393" fill="#e60012" opacity=".9"/>
+      <polygon points="690,325 710,325 750,393 730,393" fill="#ff6a00" opacity=".85"/>
     </g>
 
-    <g transform="translate(64,368)">
-      <text class="disp" x="0" y="4" fill="#ffd166" font-size="26">171</text>
+    <g transform="translate(64,369)">
+      <text class="disp" x="0" y="4" fill="#ffd166" font-size="26">172</text>
       <text class="sans" x="0" y="22" fill="#f7f1e3" fill-opacity=".8" font-size="9" font-weight="700" letter-spacing="1.4">TOTAL CONTRIBUTIONS</text>
     </g>
 
-    <g transform="translate(270,368)">
+    <g transform="translate(270,369)">
       <circle cx="10" cy="-4" r="14" fill="none" stroke="#ff6a00" stroke-width="3" stroke-dasharray="70 70" transform="rotate(-90 10 -4)"/>
       <path class="pulse" d="M10,-14 C13,-9 16,-6 16,-1 C16,5 13,10 10,10 C7,10 4,5 4,-1 C4,-6 7,-9 10,-14 Z" fill="#e60012"/>
       <text class="disp" x="34" y="4" fill="#ffd166" font-size="26">12</text>
       <text class="sans" x="34" y="22" fill="#f7f1e3" fill-opacity=".8" font-size="9" font-weight="700" letter-spacing="1.4">CURRENT STREAK</text>
     </g>
 
-    <g transform="translate(480,368)">
+    <g transform="translate(480,369)">
       <text class="disp" x="0" y="4" fill="#ffd166" font-size="26">12</text>
       <text class="sans" x="0" y="22" fill="#f7f1e3" fill-opacity=".8" font-size="9" font-weight="700" letter-spacing="1.4">LONGEST STREAK</text>
     </g>
 
     <!-- thin dividers in footer -->
-    <line x1="250" y1="342" x2="250" y2="380" stroke="#f7f1e3" stroke-opacity=".2" stroke-width="1"/>
-    <line x1="460" y1="342" x2="460" y2="380" stroke="#f7f1e3" stroke-opacity=".2" stroke-width="1"/>
+    <line x1="250" y1="343" x2="250" y2="381" stroke="#f7f1e3" stroke-opacity=".2" stroke-width="1"/>
+    <line x1="460" y1="343" x2="460" y2="381" stroke="#f7f1e3" stroke-opacity=".2" stroke-width="1"/>
   </g>
 
-  <rect x="4" y="4" width="792" height="412" fill="none" stroke="#141414" stroke-width="8"/>
+  <rect x="4" y="4" width="792" height="413" fill="none" stroke="#141414" stroke-width="8"/>
 </svg>

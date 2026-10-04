@@ -116,12 +116,11 @@ for (const r of u.repositories.nodes) {
     langMap.set(name, prev);
   }
 }
-const langs = [...langMap.entries()]
+const allLangs = [...langMap.entries()]
   .map(([name, v]) => ({ name, ...v }))
-  .sort((a, b) => b.size - a.size)
-  .slice(0, 5);
-const langTotal = langs.reduce((s, l) => s + l.size, 0) || 1;
-const langPcts = langs.map((l) => ({ ...l, pct: (l.size / langTotal) * 100 }));
+  .sort((a, b) => b.size - a.size);
+const langTotal = allLangs.reduce((s, l) => s + l.size, 0) || 1;
+const langPcts = allLangs.slice(0, 10).map((l) => ({ ...l, pct: (l.size / langTotal) * 100 }));
 
 function escapeXml(s) {
   return String(s)
@@ -133,7 +132,12 @@ function escapeXml(s) {
 
 // ---- layout ----
 const W = 800;
-const H = 420;
+const LANG_X = 530;
+const LANG_Y = 148;
+const LANG_W = 246;
+const langPanelTop = LANG_Y - 60;
+const langPanelBottom = LANG_Y + 4 + Math.max(langPcts.length - 1, 0) * 33 + 35;
+const H = Math.max(420, langPanelBottom + 102);
 
 const zero = (v) => (v === 0);
 
@@ -160,10 +164,6 @@ const secRows = secondary
   .join("");
 
 // languages: anime power-gauge rows (per-language colored meter + tier badge)
-const LANG_X = 530;
-const LANG_Y = 148;
-const LANG_W = 246;
-
 const tierFor = (pct) =>
   pct >= 50 ? { l: "S", c: "#e60012", t: "#f7f1e3" }
   : pct >= 20 ? { l: "A", c: "#ff6a00", t: "#f7f1e3" }
@@ -200,7 +200,7 @@ const langRows = langPcts
       <rect x="84" y="4" width="${fillW.toFixed(1)}" height="8" rx="1.5" fill="${color}"/>
     </g>
     ${ticks}
-    <text class="disp gaugeTxt" style="animation-delay:${del}s" x="216" y="14" text-anchor="end" fill="#e60012" font-size="15">${l.pct.toFixed(1)}%</text>
+    <text class="disp gaugeTxt" style="animation-delay:${del}s" x="216" y="14" text-anchor="end" fill="#e60012" font-size="15">${l.pct > 0 && l.pct < 0.05 ? "&lt;0.1" : l.pct.toFixed(1)}%</text>
     <g transform="translate(236,8)">
       <g class="tierPop" style="animation-delay:${(0.3 + i * 0.15).toFixed(2)}s">
         <circle r="11" fill="${t.c}" stroke="#141414" stroke-width="2"/>
@@ -249,7 +249,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     <rect x="10" y="0" width="3" height="${H}" fill="#141414"/>
 
     <!-- ghost number -->
-    <text class="disp" x="195" y="310" text-anchor="middle" fill="#141414" fill-opacity=".045" font-size="200" letter-spacing="-6">${commits12}</text>
+    <text class="disp" x="195" y="${H - 110}" text-anchor="middle" fill="#141414" fill-opacity=".045" font-size="200" letter-spacing="-6">${commits12}</text>
 
     <!-- corner registration marks -->
     <g stroke="#141414" stroke-width="1.5" opacity=".35">
@@ -260,7 +260,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     </g>
 
     <!-- hatch accent behind languages -->
-    <rect x="${LANG_X - 12}" y="${LANG_Y - 48}" width="${LANG_W + 24}" height="210" fill="url(#psHatch)" rx="8"/>
+    <rect x="${LANG_X - 12}" y="${langPanelTop + 12}" width="${LANG_W + 24}" height="${langPanelBottom - langPanelTop - 20}" fill="url(#psHatch)" rx="8"/>
 
     <!-- header -->
     <g>
@@ -294,7 +294,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 
     <!-- languages -->
     <g filter="url(#soft)">
-      <rect x="${LANG_X - 16}" y="${LANG_Y - 60}" width="${LANG_W + 32}" height="230" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
+      <rect x="${LANG_X - 16}" y="${langPanelTop}" width="${LANG_W + 32}" height="${langPanelBottom - langPanelTop}" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
     </g>
     <text class="mono" x="${LANG_X}" y="${LANG_Y - 34}" fill="#e60012" font-size="11" font-weight="700" letter-spacing="3">03 — STACK</text>
     <text class="disp" x="${LANG_X}" y="${LANG_Y - 14}" fill="#141414" font-size="16" letter-spacing="1.5">TOP LANGUAGES</text>
