@@ -12,7 +12,7 @@
 
 <br/><br/>
 
-<img src="./assets/quote-uchiha.svg" alt="Wake up to reality - Madara Uchiha quote, animated splash panel" width="100%"/>
+<img src="./assets/quote-uchiha.svg" alt="Wake up to reality quote - scrolling loop ticker bar" width="100%"/>
 
 <br/><br/>
 

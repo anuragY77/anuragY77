@@ -1,79 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" role="img" aria-label="Wake up to reality — Madara Uchiha quote splash">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 76" width="800" height="76" role="img" aria-label="Wake up to reality quote scrolling in a loop">
   <defs>
     <pattern id="qTone" width="7" height="7" patternUnits="userSpaceOnUse">
       <circle cx="1.5" cy="1.5" r="1" fill="#f7f1e3" opacity=".045"/>
     </pattern>
-    <pattern id="qStripes" width="34" height="340" patternUnits="userSpaceOnUse" patternTransform="rotate(-14)">
-      <line x1="0" y1="0" x2="0" y2="340" stroke="#f7f1e3" stroke-width="1.4" opacity=".06"/>
-      <line x1="17" y1="0" x2="17" y2="340" stroke="#e60012" stroke-width="1.2" opacity=".22"/>
+    <pattern id="qStripes" width="34" height="76" patternUnits="userSpaceOnUse" patternTransform="rotate(-14)">
+      <line x1="0" y1="0" x2="0" y2="76" stroke="#f7f1e3" stroke-width="1.4" opacity=".05"/>
+      <line x1="17" y1="0" x2="17" y2="76" stroke="#e60012" stroke-width="1.2" opacity=".16"/>
     </pattern>
-    <clipPath id="qClip"><rect width="800" height="340"/></clipPath>
+    <linearGradient id="fadeGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000000"/>
+      <stop offset="0.055" stop-color="#ffffff"/>
+      <stop offset="0.945" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+    <mask id="edgeFade" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="800" height="76" fill="url(#fadeGrad)"/>
+    </mask>
   </defs>
   <style>
     .disp { font-family: Impact, "Arial Black", sans-serif; }
     .quote { font-family: "Segoe UI", Arial, sans-serif; font-style: italic; }
-    .mono { font-family: "Consolas", "Courier New", monospace; }
-    @keyframes tickIn { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-    .impactTick { transform-box: fill-box; transform-origin: left center; animation: tickIn .45s ease-out both; }
-    @keyframes hlIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    .headline { animation: hlIn .7s cubic-bezier(.2,.8,.2,1) both; animation-delay: .15s; }
-    @keyframes sweep { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-    .sweep { transform-box: fill-box; transform-origin: left center; animation: sweep .7s cubic-bezier(.6,0,.2,1) both; animation-delay: .6s; }
-    @keyframes lineIn { from { opacity: 0; transform: translateX(-16px); } to { opacity: 1; transform: translateX(0); } }
-    .qline { animation: lineIn .55s ease-out both; }
-    @keyframes signIn { from { opacity: 0; transform: translateX(26px); } to { opacity: 1; transform: translateX(0); } }
-    .sign { animation: signIn .6s ease-out both; animation-delay: 2.75s; }
-    @keyframes sway { 0% { transform: translateX(0); } 50% { transform: translateX(-44px); } 100% { transform: translateX(0); } }
-    .speed { animation: sway 9s ease-in-out infinite; }
   </style>
 
-  <rect width="800" height="340" fill="#141414"/>
-  <g clip-path="url(#qClip)">
-    <g class="speed">
-      <rect x="-80" y="0" width="960" height="340" fill="url(#qStripes)"/>
+  <rect width="800" height="76" fill="#141414"/>
+  <rect width="800" height="76" fill="url(#qStripes)"/>
+  <rect width="800" height="76" fill="url(#qTone)"/>
+
+  <g mask="url(#edgeFade)">
+    <g class="marquee">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-5628 0" dur="60s" repeatCount="indefinite"/>
+      <text class="quote" x="44" y="43" textLength="5518" lengthAdjust="spacingAndGlyphs" fill="#f7f1e3" fill-opacity=".95" font-size="18">Wake up to reality. Nothing ever goes as planned in this accursed world. The longer you live, the more you realize that the only things that truly exist in this reality are merely pain, suffering and futility. Listen, everywhere you look in this world, wherever there is light, there will always be shadows to be found as well. As long as there is a concept of victors, the vanquished will also exist. The selfish intent of wanting to preserve peace, initiates war and hatred is born in order to protect love. There are nexuses causal relationships that cannot be separated. I want to sever the fate of the world. A world of only victors. A world of only peace. A world of only love. I will create such a world. I am the ghost of the Uchiha.</text>
+      <text class="disp" x="5617" y="43" text-anchor="middle" fill="#e60012" font-size="22">//</text>
+      <text class="quote" x="5672" y="43" textLength="5518" lengthAdjust="spacingAndGlyphs" fill="#f7f1e3" fill-opacity=".95" font-size="18">Wake up to reality. Nothing ever goes as planned in this accursed world. The longer you live, the more you realize that the only things that truly exist in this reality are merely pain, suffering and futility. Listen, everywhere you look in this world, wherever there is light, there will always be shadows to be found as well. As long as there is a concept of victors, the vanquished will also exist. The selfish intent of wanting to preserve peace, initiates war and hatred is born in order to protect love. There are nexuses causal relationships that cannot be separated. I want to sever the fate of the world. A world of only victors. A world of only peace. A world of only love. I will create such a world. I am the ghost of the Uchiha.</text>
     </g>
   </g>
-  <rect width="800" height="340" fill="url(#qTone)"/>
 
-  <!-- ghost watermark -->
-  <text class="disp" x="430" y="268" text-anchor="middle" fill="#f7f1e3" fill-opacity=".04" font-size="150" letter-spacing="4">GHOST</text>
-
-  <!-- red rail -->
-  <rect x="0" y="0" width="7" height="340" fill="#e60012"/>
-  <rect x="7" y="0" width="2.5" height="340" fill="#f7f1e3" fill-opacity=".5"/>
-
-  <!-- registration corners -->
-  <g stroke="#f7f1e3" stroke-width="1.5" opacity=".35">
-    <path d="M26,26 h14 M26,26 v14"/>
-    <path d="M774,26 h-14 M774,26 v14"/>
-    <path d="M26,314 h14 M26,314 v-14"/>
-    <path d="M774,314 h-14 M774,314 v-14"/>
-  </g>
-  <rect x="13" y="13" width="774" height="314" fill="none" stroke="#f7f1e3" stroke-opacity=".16" stroke-width="1"/>
-
-  <!-- impact speed marks -->
-  <g stroke="#e60012" stroke-linecap="round">
-    <line class="impactTick" style="animation-delay:0s" x1="396" y1="28" x2="452" y2="42" stroke-width="5"/>
-    <line class="impactTick" style="animation-delay:.1s" x1="396" y1="44" x2="440" y2="55" stroke-width="4"/>
-    <line class="impactTick" style="animation-delay:.2s" x1="396" y1="58" x2="424" y2="66" stroke-width="3"/>
-  </g>
-
-  <!-- headline -->
-  <text class="disp headline" x="44" y="70" fill="#f7f1e3" font-size="36" letter-spacing="2">WAKE UP TO REALITY<tspan fill="#e60012">.</tspan></text>
-  <rect class="sweep" x="44" y="84" width="300" height="5" fill="#e60012"/>
-
-  <!-- quote body -->
-  <text class="quote qline" style="animation-delay:.8s"  x="44" y="120" fill="#f7f1e3" fill-opacity=".92" font-size="14">Wake up to reality. Nothing ever goes as planned in this accursed world.</text>
-  <text class="quote qline" style="animation-delay:.96s" x="44" y="141" fill="#f7f1e3" fill-opacity=".92" font-size="14">The longer you live, the more you realize that the only things that truly exist in this reality</text>
-  <text class="quote qline" style="animation-delay:1.12s" x="44" y="162" fill="#f7f1e3" fill-opacity=".92" font-size="14">are merely pain, suffering and futility. Listen, everywhere you look in this world,</text>
-  <text class="quote qline" style="animation-delay:1.28s" x="44" y="183" fill="#f7f1e3" fill-opacity=".92" font-size="14">wherever there is light, there will always be shadows to be found as well. As long as</text>
-  <text class="quote qline" style="animation-delay:1.44s" x="44" y="204" fill="#f7f1e3" fill-opacity=".92" font-size="14">there is a concept of victors, the vanquished will also exist. The selfish intent of</text>
-  <text class="quote qline" style="animation-delay:1.6s"  x="44" y="225" fill="#f7f1e3" fill-opacity=".92" font-size="14">wanting to preserve peace, initiates war and hatred is born in order to protect love.</text>
-  <text class="quote qline" style="animation-delay:1.76s" x="44" y="246" fill="#f7f1e3" fill-opacity=".92" font-size="14">There are nexuses causal relationships that cannot be separated. I want to sever the</text>
-  <text class="quote qline" style="animation-delay:1.92s" x="44" y="267" fill="#f7f1e3" fill-opacity=".92" font-size="14">fate of the world. A world of only victors. A world of only peace. A world of only love.</text>
-  <text class="quote qline" style="animation-delay:2.08s" x="44" y="288" fill="#f7f1e3" fill-opacity=".92" font-size="14">I will create such a world. I am the ghost of the Uchiha.</text>
-
-  <!-- attribution -->
-  <text class="disp sign" x="756" y="316" text-anchor="end" fill="#e60012" font-size="20" letter-spacing="2">&#8212; MADARA UCHIHA</text>
+  <rect x="0" y="0" width="7" height="76" fill="#e60012"/>
+  <rect x="7" y="0" width="2.5" height="76" fill="#f7f1e3" fill-opacity=".5"/>
+  <rect x="11" y="9" width="778" height="58" fill="none" stroke="#f7f1e3" stroke-opacity=".16" stroke-width="1"/>
 </svg>
