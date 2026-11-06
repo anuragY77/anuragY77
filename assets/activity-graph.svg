@@ -44,99 +44,100 @@
     <rect x="60.0" y="85.0" width="700.0" height="48" rx="14" fill="#ffffff" stroke="#141414" stroke-width="3.5"/>
     <polygon points="396.0,133.0 410.0,143.0 424.0,133.0" fill="#ffffff" stroke="#141414" stroke-width="3.5"/>
     <polygon points="402.0,131.0 410.0,139.0 418.0,131.0" fill="#ffffff"/>
-    <text class="disp" x="410.0" y="105.0" text-anchor="middle" fill="#141414" font-size="13" letter-spacing="0.5">PEAK HIT! 74 commits today</text>
-    <text class="sans" x="410.0" y="123.0" text-anchor="middle" fill="#e60012" font-size="12" font-style="italic" font-weight="700">the graph spikes RIGHT HERE. Grand Line closer!</text>
+    <text class="disp" x="410.0" y="105.0" text-anchor="middle" fill="#141414" font-size="13" letter-spacing="0.5">Climbing hard</text>
+    <text class="sans" x="410.0" y="123.0" text-anchor="middle" fill="#e60012" font-size="12" font-style="italic" font-weight="700">94 in 3 days vs 12 before. The line points UP!</text>
   </g>
 
   <!-- y ticks -->
   <line x1="56" y1="348.0" x2="764" y2="348.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="352.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">0</text>
   <line x1="56" y1="345.4" x2="764" y2="345.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="349.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">1</text>
-  <line x1="56" y1="342.7" x2="764" y2="342.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="346.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">2</text>
-  <line x1="56" y1="340.1" x2="764" y2="340.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="344.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">3</text>
-  <line x1="56" y1="337.4" x2="764" y2="337.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="341.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">4</text>
-  <line x1="56" y1="334.8" x2="764" y2="334.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="338.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">5</text>
-  <line x1="56" y1="332.1" x2="764" y2="332.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="336.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">6</text>
-  <line x1="56" y1="329.5" x2="764" y2="329.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="333.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">7</text>
-  <line x1="56" y1="326.8" x2="764" y2="326.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="330.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">8</text>
-  <line x1="56" y1="324.2" x2="764" y2="324.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="328.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">9</text>
-  <line x1="56" y1="321.5" x2="764" y2="321.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="325.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">10</text>
-  <line x1="56" y1="318.9" x2="764" y2="318.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="322.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">11</text>
-  <line x1="56" y1="316.2" x2="764" y2="316.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="320.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">12</text>
-  <line x1="56" y1="313.6" x2="764" y2="313.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="317.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">13</text>
-  <line x1="56" y1="310.9" x2="764" y2="310.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="314.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">14</text>
-  <line x1="56" y1="308.3" x2="764" y2="308.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="312.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">15</text>
-  <line x1="56" y1="305.6" x2="764" y2="305.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="309.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">16</text>
-  <line x1="56" y1="303.0" x2="764" y2="303.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="307.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">17</text>
-  <line x1="56" y1="300.3" x2="764" y2="300.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="304.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">18</text>
-  <line x1="56" y1="297.7" x2="764" y2="297.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="301.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">19</text>
-  <line x1="56" y1="295.0" x2="764" y2="295.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="299.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">20</text>
-  <line x1="56" y1="292.4" x2="764" y2="292.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="296.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">21</text>
-  <line x1="56" y1="289.7" x2="764" y2="289.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="293.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">22</text>
-  <line x1="56" y1="287.1" x2="764" y2="287.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="291.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">23</text>
-  <line x1="56" y1="284.4" x2="764" y2="284.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="288.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">24</text>
-  <line x1="56" y1="281.8" x2="764" y2="281.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="285.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">25</text>
-  <line x1="56" y1="279.1" x2="764" y2="279.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="283.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">26</text>
-  <line x1="56" y1="276.5" x2="764" y2="276.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="280.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">27</text>
-  <line x1="56" y1="273.8" x2="764" y2="273.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="277.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">28</text>
-  <line x1="56" y1="271.2" x2="764" y2="271.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="275.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">29</text>
-  <line x1="56" y1="268.5" x2="764" y2="268.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="272.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">30</text>
-  <line x1="56" y1="265.9" x2="764" y2="265.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="269.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">31</text>
-  <line x1="56" y1="263.2" x2="764" y2="263.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="267.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">32</text>
-  <line x1="56" y1="260.6" x2="764" y2="260.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="264.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">33</text>
-  <line x1="56" y1="257.9" x2="764" y2="257.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="261.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">34</text>
-  <line x1="56" y1="255.3" x2="764" y2="255.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="259.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">35</text>
-  <line x1="56" y1="252.6" x2="764" y2="252.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="256.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">36</text>
-  <line x1="56" y1="250.0" x2="764" y2="250.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="254.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">37</text>
-  <line x1="56" y1="247.4" x2="764" y2="247.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="251.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">38</text>
-  <line x1="56" y1="244.7" x2="764" y2="244.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="248.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">39</text>
-  <line x1="56" y1="242.1" x2="764" y2="242.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="246.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">40</text>
-  <line x1="56" y1="239.4" x2="764" y2="239.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="243.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">41</text>
-  <line x1="56" y1="236.8" x2="764" y2="236.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="240.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">42</text>
-  <line x1="56" y1="234.1" x2="764" y2="234.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="238.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">43</text>
-  <line x1="56" y1="231.5" x2="764" y2="231.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="235.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">44</text>
-  <line x1="56" y1="228.8" x2="764" y2="228.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="232.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">45</text>
-  <line x1="56" y1="226.2" x2="764" y2="226.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="230.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">46</text>
-  <line x1="56" y1="223.5" x2="764" y2="223.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="227.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">47</text>
-  <line x1="56" y1="220.9" x2="764" y2="220.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="224.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">48</text>
-  <line x1="56" y1="218.2" x2="764" y2="218.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="222.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">49</text>
-  <line x1="56" y1="215.6" x2="764" y2="215.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="219.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">50</text>
-  <line x1="56" y1="212.9" x2="764" y2="212.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="216.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">51</text>
-  <line x1="56" y1="210.3" x2="764" y2="210.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="214.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">52</text>
-  <line x1="56" y1="207.6" x2="764" y2="207.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="211.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">53</text>
-  <line x1="56" y1="205.0" x2="764" y2="205.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="209.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">54</text>
-  <line x1="56" y1="202.3" x2="764" y2="202.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="206.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">55</text>
-  <line x1="56" y1="199.7" x2="764" y2="199.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="203.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">56</text>
-  <line x1="56" y1="197.0" x2="764" y2="197.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="201.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">57</text>
-  <line x1="56" y1="194.4" x2="764" y2="194.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="198.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">58</text>
-  <line x1="56" y1="191.7" x2="764" y2="191.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="195.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">59</text>
-  <line x1="56" y1="189.1" x2="764" y2="189.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="193.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">60</text>
-  <line x1="56" y1="186.4" x2="764" y2="186.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="190.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">61</text>
-  <line x1="56" y1="183.8" x2="764" y2="183.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="187.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">62</text>
-  <line x1="56" y1="181.1" x2="764" y2="181.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="185.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">63</text>
-  <line x1="56" y1="178.5" x2="764" y2="178.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="182.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">64</text>
-  <line x1="56" y1="175.8" x2="764" y2="175.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="179.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">65</text>
-  <line x1="56" y1="173.2" x2="764" y2="173.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="177.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">66</text>
-  <line x1="56" y1="170.5" x2="764" y2="170.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="174.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">67</text>
-  <line x1="56" y1="167.9" x2="764" y2="167.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="171.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">68</text>
-  <line x1="56" y1="165.2" x2="764" y2="165.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="169.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">69</text>
-  <line x1="56" y1="162.6" x2="764" y2="162.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="166.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">70</text>
-  <line x1="56" y1="159.9" x2="764" y2="159.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="163.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">71</text>
-  <line x1="56" y1="157.3" x2="764" y2="157.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="161.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">72</text>
-  <line x1="56" y1="154.6" x2="764" y2="154.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="158.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">73</text>
-  <line x1="56" y1="152.0" x2="764" y2="152.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="156.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">74</text>
+  <line x1="56" y1="342.8" x2="764" y2="342.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="346.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">2</text>
+  <line x1="56" y1="340.2" x2="764" y2="340.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="344.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">3</text>
+  <line x1="56" y1="337.5" x2="764" y2="337.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="341.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">4</text>
+  <line x1="56" y1="334.9" x2="764" y2="334.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="338.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">5</text>
+  <line x1="56" y1="332.3" x2="764" y2="332.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="336.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">6</text>
+  <line x1="56" y1="329.7" x2="764" y2="329.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="333.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">7</text>
+  <line x1="56" y1="327.1" x2="764" y2="327.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="331.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">8</text>
+  <line x1="56" y1="324.5" x2="764" y2="324.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="328.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">9</text>
+  <line x1="56" y1="321.9" x2="764" y2="321.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="325.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">10</text>
+  <line x1="56" y1="319.3" x2="764" y2="319.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="323.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">11</text>
+  <line x1="56" y1="316.6" x2="764" y2="316.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="320.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">12</text>
+  <line x1="56" y1="314.0" x2="764" y2="314.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="318.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">13</text>
+  <line x1="56" y1="311.4" x2="764" y2="311.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="315.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">14</text>
+  <line x1="56" y1="308.8" x2="764" y2="308.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="312.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">15</text>
+  <line x1="56" y1="306.2" x2="764" y2="306.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="310.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">16</text>
+  <line x1="56" y1="303.6" x2="764" y2="303.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="307.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">17</text>
+  <line x1="56" y1="301.0" x2="764" y2="301.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="305.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">18</text>
+  <line x1="56" y1="298.3" x2="764" y2="298.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="302.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">19</text>
+  <line x1="56" y1="295.7" x2="764" y2="295.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="299.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">20</text>
+  <line x1="56" y1="293.1" x2="764" y2="293.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="297.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">21</text>
+  <line x1="56" y1="290.5" x2="764" y2="290.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="294.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">22</text>
+  <line x1="56" y1="287.9" x2="764" y2="287.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="291.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">23</text>
+  <line x1="56" y1="285.3" x2="764" y2="285.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="289.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">24</text>
+  <line x1="56" y1="282.7" x2="764" y2="282.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="286.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">25</text>
+  <line x1="56" y1="280.1" x2="764" y2="280.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="284.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">26</text>
+  <line x1="56" y1="277.4" x2="764" y2="277.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="281.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">27</text>
+  <line x1="56" y1="274.8" x2="764" y2="274.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="278.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">28</text>
+  <line x1="56" y1="272.2" x2="764" y2="272.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="276.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">29</text>
+  <line x1="56" y1="269.6" x2="764" y2="269.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="273.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">30</text>
+  <line x1="56" y1="267.0" x2="764" y2="267.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="271.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">31</text>
+  <line x1="56" y1="264.4" x2="764" y2="264.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="268.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">32</text>
+  <line x1="56" y1="261.8" x2="764" y2="261.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="265.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">33</text>
+  <line x1="56" y1="259.1" x2="764" y2="259.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="263.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">34</text>
+  <line x1="56" y1="256.5" x2="764" y2="256.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="260.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">35</text>
+  <line x1="56" y1="253.9" x2="764" y2="253.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="257.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">36</text>
+  <line x1="56" y1="251.3" x2="764" y2="251.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="255.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">37</text>
+  <line x1="56" y1="248.7" x2="764" y2="248.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="252.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">38</text>
+  <line x1="56" y1="246.1" x2="764" y2="246.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="250.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">39</text>
+  <line x1="56" y1="243.5" x2="764" y2="243.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="247.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">40</text>
+  <line x1="56" y1="240.9" x2="764" y2="240.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="244.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">41</text>
+  <line x1="56" y1="238.2" x2="764" y2="238.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="242.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">42</text>
+  <line x1="56" y1="235.6" x2="764" y2="235.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="239.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">43</text>
+  <line x1="56" y1="233.0" x2="764" y2="233.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="237.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">44</text>
+  <line x1="56" y1="230.4" x2="764" y2="230.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="234.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">45</text>
+  <line x1="56" y1="227.8" x2="764" y2="227.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="231.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">46</text>
+  <line x1="56" y1="225.2" x2="764" y2="225.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="229.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">47</text>
+  <line x1="56" y1="222.6" x2="764" y2="222.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="226.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">48</text>
+  <line x1="56" y1="219.9" x2="764" y2="219.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="223.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">49</text>
+  <line x1="56" y1="217.3" x2="764" y2="217.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="221.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">50</text>
+  <line x1="56" y1="214.7" x2="764" y2="214.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="218.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">51</text>
+  <line x1="56" y1="212.1" x2="764" y2="212.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="216.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">52</text>
+  <line x1="56" y1="209.5" x2="764" y2="209.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="213.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">53</text>
+  <line x1="56" y1="206.9" x2="764" y2="206.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="210.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">54</text>
+  <line x1="56" y1="204.3" x2="764" y2="204.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="208.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">55</text>
+  <line x1="56" y1="201.7" x2="764" y2="201.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="205.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">56</text>
+  <line x1="56" y1="199.0" x2="764" y2="199.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="203.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">57</text>
+  <line x1="56" y1="196.4" x2="764" y2="196.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="200.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">58</text>
+  <line x1="56" y1="193.8" x2="764" y2="193.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="197.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">59</text>
+  <line x1="56" y1="191.2" x2="764" y2="191.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="195.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">60</text>
+  <line x1="56" y1="188.6" x2="764" y2="188.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="192.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">61</text>
+  <line x1="56" y1="186.0" x2="764" y2="186.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="190.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">62</text>
+  <line x1="56" y1="183.4" x2="764" y2="183.4" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="187.4" text-anchor="end" fill="#141414" font-size="11" font-weight="700">63</text>
+  <line x1="56" y1="180.7" x2="764" y2="180.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="184.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">64</text>
+  <line x1="56" y1="178.1" x2="764" y2="178.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="182.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">65</text>
+  <line x1="56" y1="175.5" x2="764" y2="175.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="179.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">66</text>
+  <line x1="56" y1="172.9" x2="764" y2="172.9" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="176.9" text-anchor="end" fill="#141414" font-size="11" font-weight="700">67</text>
+  <line x1="56" y1="170.3" x2="764" y2="170.3" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="174.3" text-anchor="end" fill="#141414" font-size="11" font-weight="700">68</text>
+  <line x1="56" y1="167.7" x2="764" y2="167.7" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="171.7" text-anchor="end" fill="#141414" font-size="11" font-weight="700">69</text>
+  <line x1="56" y1="165.1" x2="764" y2="165.1" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="169.1" text-anchor="end" fill="#141414" font-size="11" font-weight="700">70</text>
+  <line x1="56" y1="162.5" x2="764" y2="162.5" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="166.5" text-anchor="end" fill="#141414" font-size="11" font-weight="700">71</text>
+  <line x1="56" y1="159.8" x2="764" y2="159.8" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="163.8" text-anchor="end" fill="#141414" font-size="11" font-weight="700">72</text>
+  <line x1="56" y1="157.2" x2="764" y2="157.2" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="161.2" text-anchor="end" fill="#141414" font-size="11" font-weight="700">73</text>
+  <line x1="56" y1="154.6" x2="764" y2="154.6" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="158.6" text-anchor="end" fill="#141414" font-size="11" font-weight="700">74</text>
+  <line x1="56" y1="152.0" x2="764" y2="152.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="156.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">75</text>
 
   <!-- area + line -->
-  <path d="M 56.0,348.0 L 56.0,334.8 L 80.4,332.1 L 104.8,332.1 L 129.2,324.2 L 153.7,332.1 L 178.1,337.4 L 202.5,329.5 L 226.9,326.8 L 251.3,329.5 L 275.7,332.1 L 300.1,326.8 L 324.6,313.6 L 349.0,318.9 L 373.4,242.1 L 397.8,332.1 L 422.2,297.7 L 446.6,292.4 L 471.0,318.9 L 495.4,329.5 L 519.9,310.9 L 544.3,295.0 L 568.7,334.8 L 593.1,218.2 L 617.5,329.5 L 641.9,332.1 L 666.3,337.4 L 690.8,337.4 L 715.2,337.4 L 739.6,308.3 L 764.0,152.0 L 764.0,348.0 Z" fill="#ff6a00" opacity=".14"/>
-  <polyline class="draw" points="56.0,334.8 80.4,332.1 104.8,332.1 129.2,324.2 153.7,332.1 178.1,337.4 202.5,329.5 226.9,326.8 251.3,329.5 275.7,332.1 300.1,326.8 324.6,313.6 349.0,318.9 373.4,242.1 397.8,332.1 422.2,297.7 446.6,292.4 471.0,318.9 495.4,329.5 519.9,310.9 544.3,295.0 568.7,334.8 593.1,218.2 617.5,329.5 641.9,332.1 666.3,337.4 690.8,337.4 715.2,337.4 739.6,308.3 764.0,152.0" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M 56.0,348.0 L 56.0,332.3 L 80.4,332.3 L 104.8,324.5 L 129.2,332.3 L 153.7,337.5 L 178.1,329.7 L 202.5,327.1 L 226.9,329.7 L 251.3,332.3 L 275.7,327.1 L 300.1,314.0 L 324.6,319.3 L 349.0,243.5 L 373.4,332.3 L 397.8,298.3 L 422.2,293.1 L 446.6,319.3 L 471.0,329.7 L 495.4,311.4 L 519.9,295.7 L 544.3,334.9 L 568.7,219.9 L 593.1,329.7 L 617.5,332.3 L 641.9,337.5 L 666.3,337.5 L 690.8,337.5 L 715.2,308.8 L 739.6,152.0 L 764.0,337.5 L 764.0,348.0 Z" fill="#ff6a00" opacity=".14"/>
+  <polyline class="draw" points="56.0,332.3 80.4,332.3 104.8,324.5 129.2,332.3 153.7,337.5 178.1,329.7 202.5,327.1 226.9,329.7 251.3,332.3 275.7,327.1 300.1,314.0 324.6,319.3 349.0,243.5 373.4,332.3 397.8,298.3 422.2,293.1 446.6,319.3 471.0,329.7 495.4,311.4 519.9,295.7 544.3,334.9 568.7,219.9 593.1,329.7 617.5,332.3 641.9,337.5 666.3,337.5 690.8,337.5 715.2,308.8 739.6,152.0 764.0,337.5" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
 
-  <circle cx="56.0" cy="334.8" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="56.0" y="324.8" text-anchor="middle" fill="#e60012" font-size="9">5</text><circle cx="80.4" cy="332.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="80.4" y="322.1" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="104.8" cy="332.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="104.8" y="322.1" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="129.2" cy="324.2" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="129.2" y="314.2" text-anchor="middle" fill="#e60012" font-size="9">9</text><circle cx="153.7" cy="332.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="153.7" y="322.1" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="178.1" cy="337.4" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="178.1" y="327.4" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="202.5" cy="329.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="202.5" y="319.5" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="226.9" cy="326.8" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="226.9" y="316.8" text-anchor="middle" fill="#e60012" font-size="9">8</text><circle cx="251.3" cy="329.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="251.3" y="319.5" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="275.7" cy="332.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="275.7" y="322.1" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="300.1" cy="326.8" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="300.1" y="316.8" text-anchor="middle" fill="#e60012" font-size="9">8</text><circle cx="324.6" cy="313.6" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="324.6" y="303.6" text-anchor="middle" fill="#e60012" font-size="9">13</text><circle cx="349.0" cy="318.9" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="349.0" y="308.9" text-anchor="middle" fill="#e60012" font-size="9">11</text><circle cx="373.4" cy="242.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="373.4" y="232.1" text-anchor="middle" fill="#e60012" font-size="9">40</text><circle cx="397.8" cy="332.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="397.8" y="322.1" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="422.2" cy="297.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="422.2" y="287.7" text-anchor="middle" fill="#e60012" font-size="9">19</text><circle cx="446.6" cy="292.4" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="446.6" y="282.4" text-anchor="middle" fill="#e60012" font-size="9">21</text><circle cx="471.0" cy="318.9" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="471.0" y="308.9" text-anchor="middle" fill="#e60012" font-size="9">11</text><circle cx="495.4" cy="329.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="495.4" y="319.5" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="519.9" cy="310.9" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="519.9" y="300.9" text-anchor="middle" fill="#e60012" font-size="9">14</text><circle cx="544.3" cy="295.0" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="544.3" y="285.0" text-anchor="middle" fill="#e60012" font-size="9">20</text><circle cx="568.7" cy="334.8" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="568.7" y="324.8" text-anchor="middle" fill="#e60012" font-size="9">5</text><circle cx="593.1" cy="218.2" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="593.1" y="208.2" text-anchor="middle" fill="#e60012" font-size="9">49</text><circle cx="617.5" cy="329.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="617.5" y="319.5" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="641.9" cy="332.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="641.9" y="322.1" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="666.3" cy="337.4" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="666.3" y="327.4" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="690.8" cy="337.4" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="690.8" y="327.4" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="715.2" cy="337.4" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="715.2" y="327.4" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="739.6" cy="308.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="739.6" y="298.3" text-anchor="middle" fill="#e60012" font-size="9">15</text><circle cx="764.0" cy="152.0" r="5.5" fill="#e60012" stroke="#141414" stroke-width="1.5"/>
+  <circle cx="56.0" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="56.0" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="80.4" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="80.4" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="104.8" cy="324.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="104.8" y="314.5" text-anchor="middle" fill="#e60012" font-size="9">9</text><circle cx="129.2" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="129.2" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="153.7" cy="337.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="153.7" y="327.5" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="178.1" cy="329.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="178.1" y="319.7" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="202.5" cy="327.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="202.5" y="317.1" text-anchor="middle" fill="#e60012" font-size="9">8</text><circle cx="226.9" cy="329.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="226.9" y="319.7" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="251.3" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="251.3" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="275.7" cy="327.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="275.7" y="317.1" text-anchor="middle" fill="#e60012" font-size="9">8</text><circle cx="300.1" cy="314.0" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="300.1" y="304.0" text-anchor="middle" fill="#e60012" font-size="9">13</text><circle cx="324.6" cy="319.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="324.6" y="309.3" text-anchor="middle" fill="#e60012" font-size="9">11</text><circle cx="349.0" cy="243.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="349.0" y="233.5" text-anchor="middle" fill="#e60012" font-size="9">40</text><circle cx="373.4" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="373.4" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="397.8" cy="298.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="397.8" y="288.3" text-anchor="middle" fill="#e60012" font-size="9">19</text><circle cx="422.2" cy="293.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="422.2" y="283.1" text-anchor="middle" fill="#e60012" font-size="9">21</text><circle cx="446.6" cy="319.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="446.6" y="309.3" text-anchor="middle" fill="#e60012" font-size="9">11</text><circle cx="471.0" cy="329.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="471.0" y="319.7" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="495.4" cy="311.4" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="495.4" y="301.4" text-anchor="middle" fill="#e60012" font-size="9">14</text><circle cx="519.9" cy="295.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="519.9" y="285.7" text-anchor="middle" fill="#e60012" font-size="9">20</text><circle cx="544.3" cy="334.9" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="544.3" y="324.9" text-anchor="middle" fill="#e60012" font-size="9">5</text><circle cx="568.7" cy="219.9" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="568.7" y="209.9" text-anchor="middle" fill="#e60012" font-size="9">49</text><circle cx="593.1" cy="329.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="593.1" y="319.7" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="617.5" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="617.5" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="641.9" cy="337.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="641.9" y="327.5" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="666.3" cy="337.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="666.3" y="327.5" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="690.8" cy="337.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="690.8" y="327.5" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="715.2" cy="308.8" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="715.2" y="298.8" text-anchor="middle" fill="#e60012" font-size="9">15</text><circle cx="739.6" cy="152.0" r="5.5" fill="#e60012" stroke="#141414" stroke-width="1.5"/><text class="disp" x="739.6" y="142.0" text-anchor="middle" fill="#e60012" font-size="9">75</text><circle cx="764.0" cy="337.5" r="5.5" fill="#e60012" stroke="#141414" stroke-width="1.5"/>
   
 
   <text class="sans" x="400" y="402" text-anchor="middle" fill="#e60012" font-size="12" font-style="italic" font-weight="700">Days →</text>
   <text class="sans" x="16" y="250" text-anchor="middle" fill="#e60012" font-size="12" font-style="italic" font-weight="700" transform="rotate(-90 16 250)">Contributions</text>
 
   <!-- Luffy (non-interactive so tooltips work) -->
-  <g class="bob" transform="translate(764.0,152.0)" style="pointer-events:none">
+  <g class="bob" transform="translate(739.6,152.0)" style="pointer-events:none">
     <path d="M-10,4 Q-18,22 -14,34" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round"/>
     <path d="M10,4 Q18,22 14,34" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round"/>
     <path d="M-10,4 Q-18,22 -14,34" fill="none" stroke="#f5c89a" stroke-width="4.5" stroke-linecap="round"/>
@@ -160,7 +161,7 @@
     <path d="M-16,-52 Q-10,-62 -4,-54" fill="#141414"/>
     <path d="M-4,-56 Q2,-66 8,-56" fill="#141414"/>
     <path d="M8,-54 Q14,-62 18,-52" fill="#141414"/>
-    <g transform="rotate(4 0 -54)">
+    <g transform="rotate(0 0 -54)">
       <ellipse cx="0" cy="-56" rx="34" ry="9" fill="#f5d76e" stroke="#141414" stroke-width="2.5"/>
       <path d="M-16,-56 Q-16,-76 0,-76 Q16,-76 16,-56" fill="#f5d76e" stroke="#141414" stroke-width="2.5"/>
       <path d="M-16,-60 Q0,-54 16,-60" fill="none" stroke="#e60012" stroke-width="4"/>
@@ -171,281 +172,281 @@
   <!-- hover hit targets ON TOP of everything decorative -->
   <g id="hover-layer">
   <g class="hit">
-    <line x1="128.0" y1="320.8" x2="56.0" y2="334.8" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(58.0,280.8)" class="tip">
-      <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
-      
-      <text class="disp" x="10" y="26" fill="#e60012" font-size="14">5 <tspan fill="#141414" font-size="11">contributions</tspan></text>
-    </g>
-    <circle cx="56.0" cy="334.8" r="14" fill="transparent" stroke="none"/>
-    <circle cx="56.0" cy="334.8" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
-  </g>  <g class="hit">
-    <line x1="128.0" y1="318.1" x2="80.4" y2="332.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(58.0,278.1)" class="tip">
+    <line x1="128.0" y1="318.3" x2="56.0" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(58.0,278.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">6 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="80.4" cy="332.1" r="14" fill="transparent" stroke="none"/>
-    <circle cx="80.4" cy="332.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="56.0" cy="332.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="56.0" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="128.0" y1="318.1" x2="104.8" y2="332.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(58.0,278.1)" class="tip">
+    <line x1="128.0" y1="318.3" x2="80.4" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(58.0,278.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">6 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="104.8" cy="332.1" r="14" fill="transparent" stroke="none"/>
-    <circle cx="104.8" cy="332.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="80.4" cy="332.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="80.4" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="129.2" y1="310.2" x2="129.2" y2="324.2" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(59.2,270.2)" class="tip">
+    <line x1="128.0" y1="310.5" x2="104.8" y2="324.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(58.0,270.5)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">9 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="129.2" cy="324.2" r="14" fill="transparent" stroke="none"/>
-    <circle cx="129.2" cy="324.2" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="104.8" cy="324.5" r="14" fill="transparent" stroke="none"/>
+    <circle cx="104.8" cy="324.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="153.7" y1="318.1" x2="153.7" y2="332.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(83.7,278.1)" class="tip">
+    <line x1="129.2" y1="318.3" x2="129.2" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(59.2,278.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">6 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="153.7" cy="332.1" r="14" fill="transparent" stroke="none"/>
-    <circle cx="153.7" cy="332.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="129.2" cy="332.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="129.2" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="178.1" y1="323.4" x2="178.1" y2="337.4" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(108.1,283.4)" class="tip">
+    <line x1="153.7" y1="323.5" x2="153.7" y2="337.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(83.7,283.5)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">4 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="178.1" cy="337.4" r="14" fill="transparent" stroke="none"/>
-    <circle cx="178.1" cy="337.4" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="153.7" cy="337.5" r="14" fill="transparent" stroke="none"/>
+    <circle cx="153.7" cy="337.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="202.5" y1="315.5" x2="202.5" y2="329.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(132.5,275.5)" class="tip">
+    <line x1="178.1" y1="315.7" x2="178.1" y2="329.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(108.1,275.7)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">7 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="202.5" cy="329.5" r="14" fill="transparent" stroke="none"/>
-    <circle cx="202.5" cy="329.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="178.1" cy="329.7" r="14" fill="transparent" stroke="none"/>
+    <circle cx="178.1" cy="329.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="226.9" y1="312.8" x2="226.9" y2="326.8" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(156.9,272.8)" class="tip">
+    <line x1="202.5" y1="313.1" x2="202.5" y2="327.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(132.5,273.1)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">8 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="226.9" cy="326.8" r="14" fill="transparent" stroke="none"/>
-    <circle cx="226.9" cy="326.8" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="202.5" cy="327.1" r="14" fill="transparent" stroke="none"/>
+    <circle cx="202.5" cy="327.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="251.3" y1="315.5" x2="251.3" y2="329.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(181.3,275.5)" class="tip">
+    <line x1="226.9" y1="315.7" x2="226.9" y2="329.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(156.9,275.7)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">7 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="251.3" cy="329.5" r="14" fill="transparent" stroke="none"/>
-    <circle cx="251.3" cy="329.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="226.9" cy="329.7" r="14" fill="transparent" stroke="none"/>
+    <circle cx="226.9" cy="329.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="275.7" y1="318.1" x2="275.7" y2="332.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(205.7,278.1)" class="tip">
+    <line x1="251.3" y1="318.3" x2="251.3" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(181.3,278.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">6 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="275.7" cy="332.1" r="14" fill="transparent" stroke="none"/>
-    <circle cx="275.7" cy="332.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="251.3" cy="332.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="251.3" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="300.1" y1="312.8" x2="300.1" y2="326.8" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(230.1,272.8)" class="tip">
+    <line x1="275.7" y1="313.1" x2="275.7" y2="327.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(205.7,273.1)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">8 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="300.1" cy="326.8" r="14" fill="transparent" stroke="none"/>
-    <circle cx="300.1" cy="326.8" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="275.7" cy="327.1" r="14" fill="transparent" stroke="none"/>
+    <circle cx="275.7" cy="327.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="324.6" y1="299.6" x2="324.6" y2="313.6" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(254.6,259.6)" class="tip">
+    <line x1="300.1" y1="300.0" x2="300.1" y2="314.0" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(230.1,260.0)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">13 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="324.6" cy="313.6" r="14" fill="transparent" stroke="none"/>
-    <circle cx="324.6" cy="313.6" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="300.1" cy="314.0" r="14" fill="transparent" stroke="none"/>
+    <circle cx="300.1" cy="314.0" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="349.0" y1="304.9" x2="349.0" y2="318.9" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(279.0,264.9)" class="tip">
+    <line x1="324.6" y1="305.3" x2="324.6" y2="319.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(254.6,265.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">11 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="349.0" cy="318.9" r="14" fill="transparent" stroke="none"/>
-    <circle cx="349.0" cy="318.9" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="324.6" cy="319.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="324.6" cy="319.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="373.4" y1="228.1" x2="373.4" y2="242.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(303.4,188.1)" class="tip">
+    <line x1="349.0" y1="229.5" x2="349.0" y2="243.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(279.0,189.5)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">40 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="373.4" cy="242.1" r="14" fill="transparent" stroke="none"/>
-    <circle cx="373.4" cy="242.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="349.0" cy="243.5" r="14" fill="transparent" stroke="none"/>
+    <circle cx="349.0" cy="243.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="397.8" y1="318.1" x2="397.8" y2="332.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(327.8,278.1)" class="tip">
+    <line x1="373.4" y1="318.3" x2="373.4" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(303.4,278.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">6 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="397.8" cy="332.1" r="14" fill="transparent" stroke="none"/>
-    <circle cx="397.8" cy="332.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="373.4" cy="332.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="373.4" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="422.2" y1="283.7" x2="422.2" y2="297.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(352.2,243.7)" class="tip">
+    <line x1="397.8" y1="284.3" x2="397.8" y2="298.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(327.8,244.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">19 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="422.2" cy="297.7" r="14" fill="transparent" stroke="none"/>
-    <circle cx="422.2" cy="297.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="397.8" cy="298.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="397.8" cy="298.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="446.6" y1="278.4" x2="446.6" y2="292.4" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(376.6,238.4)" class="tip">
+    <line x1="422.2" y1="279.1" x2="422.2" y2="293.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(352.2,239.1)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">21 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="446.6" cy="292.4" r="14" fill="transparent" stroke="none"/>
-    <circle cx="446.6" cy="292.4" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="422.2" cy="293.1" r="14" fill="transparent" stroke="none"/>
+    <circle cx="422.2" cy="293.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="471.0" y1="304.9" x2="471.0" y2="318.9" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(401.0,264.9)" class="tip">
+    <line x1="446.6" y1="305.3" x2="446.6" y2="319.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(376.6,265.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">11 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="471.0" cy="318.9" r="14" fill="transparent" stroke="none"/>
-    <circle cx="471.0" cy="318.9" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="446.6" cy="319.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="446.6" cy="319.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="495.4" y1="315.5" x2="495.4" y2="329.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(425.4,275.5)" class="tip">
+    <line x1="471.0" y1="315.7" x2="471.0" y2="329.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(401.0,275.7)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">7 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="495.4" cy="329.5" r="14" fill="transparent" stroke="none"/>
-    <circle cx="495.4" cy="329.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="471.0" cy="329.7" r="14" fill="transparent" stroke="none"/>
+    <circle cx="471.0" cy="329.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="519.9" y1="296.9" x2="519.9" y2="310.9" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(449.9,256.9)" class="tip">
+    <line x1="495.4" y1="297.4" x2="495.4" y2="311.4" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(425.4,257.4)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">14 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="519.9" cy="310.9" r="14" fill="transparent" stroke="none"/>
-    <circle cx="519.9" cy="310.9" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="495.4" cy="311.4" r="14" fill="transparent" stroke="none"/>
+    <circle cx="495.4" cy="311.4" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="544.3" y1="281.0" x2="544.3" y2="295.0" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(474.3,241.0)" class="tip">
+    <line x1="519.9" y1="281.7" x2="519.9" y2="295.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(449.9,241.7)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">20 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="544.3" cy="295.0" r="14" fill="transparent" stroke="none"/>
-    <circle cx="544.3" cy="295.0" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="519.9" cy="295.7" r="14" fill="transparent" stroke="none"/>
+    <circle cx="519.9" cy="295.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="568.7" y1="320.8" x2="568.7" y2="334.8" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(498.7,280.8)" class="tip">
+    <line x1="544.3" y1="320.9" x2="544.3" y2="334.9" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(474.3,280.9)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">5 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="568.7" cy="334.8" r="14" fill="transparent" stroke="none"/>
-    <circle cx="568.7" cy="334.8" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="544.3" cy="334.9" r="14" fill="transparent" stroke="none"/>
+    <circle cx="544.3" cy="334.9" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="593.1" y1="204.2" x2="593.1" y2="218.2" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(523.1,164.2)" class="tip">
+    <line x1="568.7" y1="205.9" x2="568.7" y2="219.9" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(498.7,165.9)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">49 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="593.1" cy="218.2" r="14" fill="transparent" stroke="none"/>
-    <circle cx="593.1" cy="218.2" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="568.7" cy="219.9" r="14" fill="transparent" stroke="none"/>
+    <circle cx="568.7" cy="219.9" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="617.5" y1="315.5" x2="617.5" y2="329.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(547.5,275.5)" class="tip">
+    <line x1="593.1" y1="315.7" x2="593.1" y2="329.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(523.1,275.7)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">7 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="617.5" cy="329.5" r="14" fill="transparent" stroke="none"/>
-    <circle cx="617.5" cy="329.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="593.1" cy="329.7" r="14" fill="transparent" stroke="none"/>
+    <circle cx="593.1" cy="329.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="641.9" y1="318.1" x2="641.9" y2="332.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(571.9,278.1)" class="tip">
+    <line x1="617.5" y1="318.3" x2="617.5" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(547.5,278.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">6 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="641.9" cy="332.1" r="14" fill="transparent" stroke="none"/>
-    <circle cx="641.9" cy="332.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="617.5" cy="332.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="617.5" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="666.3" y1="323.4" x2="666.3" y2="337.4" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(596.3,283.4)" class="tip">
+    <line x1="641.9" y1="323.5" x2="641.9" y2="337.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(571.9,283.5)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">4 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="666.3" cy="337.4" r="14" fill="transparent" stroke="none"/>
-    <circle cx="666.3" cy="337.4" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="641.9" cy="337.5" r="14" fill="transparent" stroke="none"/>
+    <circle cx="641.9" cy="337.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="690.8" y1="323.4" x2="690.8" y2="337.4" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(620.8,283.4)" class="tip">
+    <line x1="666.3" y1="323.5" x2="666.3" y2="337.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(596.3,283.5)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">4 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="690.8" cy="337.4" r="14" fill="transparent" stroke="none"/>
-    <circle cx="690.8" cy="337.4" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="666.3" cy="337.5" r="14" fill="transparent" stroke="none"/>
+    <circle cx="666.3" cy="337.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="692.0" y1="323.4" x2="715.2" y2="337.4" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(622.0,283.4)" class="tip">
+    <line x1="690.8" y1="323.5" x2="690.8" y2="337.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(620.8,283.5)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">4 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="715.2" cy="337.4" r="14" fill="transparent" stroke="none"/>
-    <circle cx="715.2" cy="337.4" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="690.8" cy="337.5" r="14" fill="transparent" stroke="none"/>
+    <circle cx="690.8" cy="337.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="692.0" y1="294.3" x2="739.6" y2="308.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(622.0,254.3)" class="tip">
+    <line x1="692.0" y1="294.8" x2="715.2" y2="308.8" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(622.0,254.8)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">15 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="739.6" cy="308.3" r="14" fill="transparent" stroke="none"/>
-    <circle cx="739.6" cy="308.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
-  </g>  <g class="hit always">
-    <line x1="692.0" y1="164.0" x2="764.0" y2="152.0" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <circle cx="715.2" cy="308.8" r="14" fill="transparent" stroke="none"/>
+    <circle cx="715.2" cy="308.8" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+  </g>  <g class="hit">
+    <line x1="692.0" y1="164.0" x2="739.6" y2="152.0" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
     <g transform="translate(622.0,164.0)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
-      <rect x="94" y="6" width="40" height="14" rx="3" fill="#e60012"/><text class="disp" x="114" y="16.5" text-anchor="middle" fill="#fff" font-size="8" letter-spacing="1">TODAY</text>
-      <text class="disp" x="10" y="26" fill="#e60012" font-size="14">74 <tspan fill="#141414" font-size="11">contributions</tspan></text>
+      
+      <text class="disp" x="10" y="26" fill="#e60012" font-size="14">75 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="764.0" cy="152.0" r="14" fill="transparent" stroke="none"/>
-    <circle cx="764.0" cy="152.0" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="739.6" cy="152.0" r="14" fill="transparent" stroke="none"/>
+    <circle cx="739.6" cy="152.0" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+  </g>  <g class="hit always">
+    <line x1="692.0" y1="323.5" x2="764.0" y2="337.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(622.0,283.5)" class="tip">
+      <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
+      <rect x="94" y="6" width="40" height="14" rx="3" fill="#e60012"/><text class="disp" x="114" y="16.5" text-anchor="middle" fill="#fff" font-size="8" letter-spacing="1">TODAY</text>
+      <text class="disp" x="10" y="26" fill="#e60012" font-size="14">4 <tspan fill="#141414" font-size="11">contributions</tspan></text>
+    </g>
+    <circle cx="764.0" cy="337.5" r="14" fill="transparent" stroke="none"/>
+    <circle cx="764.0" cy="337.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>
   </g>
 
   <!-- mood badge -->
   <g transform="translate(680,380)" style="pointer-events:none">
-    <rect x="-70" y="-16" width="140" height="32" rx="4" fill="#e60012" stroke="#141414" stroke-width="3"/>
-    <text class="disp" x="0" y="6" text-anchor="middle" fill="#ffffff" font-size="14" letter-spacing="2">PEAK JOY</text>
+    <rect x="-70" y="-16" width="140" height="32" rx="4" fill="#141414" stroke="#141414" stroke-width="3"/>
+    <text class="disp" x="0" y="6" text-anchor="middle" fill="#ffffff" font-size="14" letter-spacing="2">CLIMBING</text>
   </g>
 </svg>
