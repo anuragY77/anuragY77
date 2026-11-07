@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-label="Contribution graph — 432 contributions, no dates shown, quote banner above plot">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-label="Contribution graph — 447 contributions, no dates shown, quote banner above plot">
   <defs>
     <pattern id="agTone" width="8" height="8" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.1" fill="#141414" opacity=".07"/>
@@ -33,7 +33,7 @@
   <!-- header -->
   <circle cx="32" cy="36" r="7" fill="#e60012" class="pulse"/>
   <text class="disp" x="50" y="44" fill="#141414" font-size="22" letter-spacing="1">
-    <tspan fill="#e60012">432</tspan> contributions · last 30 days
+    <tspan fill="#e60012">447</tspan> contributions · last 30 days
   </text>
   <text class="sans" x="772" y="42" text-anchor="end" fill="#e60012" font-size="13" font-style="italic" font-weight="700">LIVE · auto-updating</text>
   <text class="sans" x="772" y="62" text-anchor="end" fill="#141414" font-size="10" font-weight="700" opacity=".65">counts on bars · no dates shown</text>
@@ -45,7 +45,7 @@
     <polygon points="396.0,133.0 410.0,143.0 424.0,133.0" fill="#ffffff" stroke="#141414" stroke-width="3.5"/>
     <polygon points="402.0,131.0 410.0,139.0 418.0,131.0" fill="#ffffff"/>
     <text class="disp" x="410.0" y="105.0" text-anchor="middle" fill="#141414" font-size="13" letter-spacing="0.5">Climbing hard</text>
-    <text class="sans" x="410.0" y="123.0" text-anchor="middle" fill="#e60012" font-size="12" font-style="italic" font-weight="700">124 in 3 days vs 12 before. The line points UP!</text>
+    <text class="sans" x="410.0" y="123.0" text-anchor="middle" fill="#e60012" font-size="12" font-style="italic" font-weight="700">130 in 3 days vs 23 before. The line points UP!</text>
   </g>
 
   <!-- y ticks -->
@@ -127,17 +127,17 @@
   <line x1="56" y1="152.0" x2="764" y2="152.0" stroke="#141414" stroke-opacity=".12" stroke-dasharray="4 4"/><text x="46" y="156.0" text-anchor="end" fill="#141414" font-size="11" font-weight="700">75</text>
 
   <!-- area + line -->
-  <path d="M 56.0,348.0 L 56.0,332.3 L 80.4,332.3 L 104.8,324.5 L 129.2,332.3 L 153.7,337.5 L 178.1,329.7 L 202.5,327.1 L 226.9,329.7 L 251.3,332.3 L 275.7,327.1 L 300.1,314.0 L 324.6,319.3 L 349.0,243.5 L 373.4,332.3 L 397.8,298.3 L 422.2,293.1 L 446.6,319.3 L 471.0,329.7 L 495.4,311.4 L 519.9,295.7 L 544.3,334.9 L 568.7,219.9 L 593.1,329.7 L 617.5,332.3 L 641.9,337.5 L 666.3,337.5 L 690.8,337.5 L 715.2,308.8 L 739.6,152.0 L 764.0,259.1 L 764.0,348.0 Z" fill="#ff6a00" opacity=".14"/>
-  <polyline class="draw" points="56.0,332.3 80.4,332.3 104.8,324.5 129.2,332.3 153.7,337.5 178.1,329.7 202.5,327.1 226.9,329.7 251.3,332.3 275.7,327.1 300.1,314.0 324.6,319.3 349.0,243.5 373.4,332.3 397.8,298.3 422.2,293.1 446.6,319.3 471.0,329.7 495.4,311.4 519.9,295.7 544.3,334.9 568.7,219.9 593.1,329.7 617.5,332.3 641.9,337.5 666.3,337.5 690.8,337.5 715.2,308.8 739.6,152.0 764.0,259.1" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M 56.0,348.0 L 56.0,332.3 L 80.4,324.5 L 104.8,332.3 L 129.2,337.5 L 153.7,329.7 L 178.1,327.1 L 202.5,329.7 L 226.9,332.3 L 251.3,327.1 L 275.7,314.0 L 300.1,319.3 L 324.6,243.5 L 349.0,332.3 L 373.4,298.3 L 397.8,293.1 L 422.2,319.3 L 446.6,329.7 L 471.0,311.4 L 495.4,295.7 L 519.9,334.9 L 544.3,219.9 L 568.7,329.7 L 593.1,332.3 L 617.5,337.5 L 641.9,337.5 L 666.3,337.5 L 690.8,308.8 L 715.2,152.0 L 739.6,256.5 L 764.0,295.7 L 764.0,348.0 Z" fill="#ff6a00" opacity=".14"/>
+  <polyline class="draw" points="56.0,332.3 80.4,324.5 104.8,332.3 129.2,337.5 153.7,329.7 178.1,327.1 202.5,329.7 226.9,332.3 251.3,327.1 275.7,314.0 300.1,319.3 324.6,243.5 349.0,332.3 373.4,298.3 397.8,293.1 422.2,319.3 446.6,329.7 471.0,311.4 495.4,295.7 519.9,334.9 544.3,219.9 568.7,329.7 593.1,332.3 617.5,337.5 641.9,337.5 666.3,337.5 690.8,308.8 715.2,152.0 739.6,256.5 764.0,295.7" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
 
-  <circle cx="56.0" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="56.0" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="80.4" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="80.4" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="104.8" cy="324.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="104.8" y="314.5" text-anchor="middle" fill="#e60012" font-size="9">9</text><circle cx="129.2" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="129.2" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="153.7" cy="337.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="153.7" y="327.5" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="178.1" cy="329.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="178.1" y="319.7" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="202.5" cy="327.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="202.5" y="317.1" text-anchor="middle" fill="#e60012" font-size="9">8</text><circle cx="226.9" cy="329.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="226.9" y="319.7" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="251.3" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="251.3" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="275.7" cy="327.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="275.7" y="317.1" text-anchor="middle" fill="#e60012" font-size="9">8</text><circle cx="300.1" cy="314.0" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="300.1" y="304.0" text-anchor="middle" fill="#e60012" font-size="9">13</text><circle cx="324.6" cy="319.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="324.6" y="309.3" text-anchor="middle" fill="#e60012" font-size="9">11</text><circle cx="349.0" cy="243.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="349.0" y="233.5" text-anchor="middle" fill="#e60012" font-size="9">40</text><circle cx="373.4" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="373.4" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="397.8" cy="298.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="397.8" y="288.3" text-anchor="middle" fill="#e60012" font-size="9">19</text><circle cx="422.2" cy="293.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="422.2" y="283.1" text-anchor="middle" fill="#e60012" font-size="9">21</text><circle cx="446.6" cy="319.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="446.6" y="309.3" text-anchor="middle" fill="#e60012" font-size="9">11</text><circle cx="471.0" cy="329.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="471.0" y="319.7" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="495.4" cy="311.4" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="495.4" y="301.4" text-anchor="middle" fill="#e60012" font-size="9">14</text><circle cx="519.9" cy="295.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="519.9" y="285.7" text-anchor="middle" fill="#e60012" font-size="9">20</text><circle cx="544.3" cy="334.9" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="544.3" y="324.9" text-anchor="middle" fill="#e60012" font-size="9">5</text><circle cx="568.7" cy="219.9" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="568.7" y="209.9" text-anchor="middle" fill="#e60012" font-size="9">49</text><circle cx="593.1" cy="329.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="593.1" y="319.7" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="617.5" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="617.5" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="641.9" cy="337.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="641.9" y="327.5" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="666.3" cy="337.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="666.3" y="327.5" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="690.8" cy="337.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="690.8" y="327.5" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="715.2" cy="308.8" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="715.2" y="298.8" text-anchor="middle" fill="#e60012" font-size="9">15</text><circle cx="739.6" cy="152.0" r="5.5" fill="#e60012" stroke="#141414" stroke-width="1.5"/><text class="disp" x="739.6" y="142.0" text-anchor="middle" fill="#e60012" font-size="9">75</text><circle cx="764.0" cy="259.1" r="5.5" fill="#e60012" stroke="#141414" stroke-width="1.5"/>
+  <circle cx="56.0" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="56.0" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="80.4" cy="324.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="80.4" y="314.5" text-anchor="middle" fill="#e60012" font-size="9">9</text><circle cx="104.8" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="104.8" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="129.2" cy="337.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="129.2" y="327.5" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="153.7" cy="329.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="153.7" y="319.7" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="178.1" cy="327.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="178.1" y="317.1" text-anchor="middle" fill="#e60012" font-size="9">8</text><circle cx="202.5" cy="329.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="202.5" y="319.7" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="226.9" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="226.9" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="251.3" cy="327.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="251.3" y="317.1" text-anchor="middle" fill="#e60012" font-size="9">8</text><circle cx="275.7" cy="314.0" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="275.7" y="304.0" text-anchor="middle" fill="#e60012" font-size="9">13</text><circle cx="300.1" cy="319.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="300.1" y="309.3" text-anchor="middle" fill="#e60012" font-size="9">11</text><circle cx="324.6" cy="243.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="324.6" y="233.5" text-anchor="middle" fill="#e60012" font-size="9">40</text><circle cx="349.0" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="349.0" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="373.4" cy="298.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="373.4" y="288.3" text-anchor="middle" fill="#e60012" font-size="9">19</text><circle cx="397.8" cy="293.1" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="397.8" y="283.1" text-anchor="middle" fill="#e60012" font-size="9">21</text><circle cx="422.2" cy="319.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="422.2" y="309.3" text-anchor="middle" fill="#e60012" font-size="9">11</text><circle cx="446.6" cy="329.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="446.6" y="319.7" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="471.0" cy="311.4" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="471.0" y="301.4" text-anchor="middle" fill="#e60012" font-size="9">14</text><circle cx="495.4" cy="295.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="495.4" y="285.7" text-anchor="middle" fill="#e60012" font-size="9">20</text><circle cx="519.9" cy="334.9" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="519.9" y="324.9" text-anchor="middle" fill="#e60012" font-size="9">5</text><circle cx="544.3" cy="219.9" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="544.3" y="209.9" text-anchor="middle" fill="#e60012" font-size="9">49</text><circle cx="568.7" cy="329.7" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="568.7" y="319.7" text-anchor="middle" fill="#e60012" font-size="9">7</text><circle cx="593.1" cy="332.3" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="593.1" y="322.3" text-anchor="middle" fill="#e60012" font-size="9">6</text><circle cx="617.5" cy="337.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="617.5" y="327.5" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="641.9" cy="337.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="641.9" y="327.5" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="666.3" cy="337.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="666.3" y="327.5" text-anchor="middle" fill="#e60012" font-size="9">4</text><circle cx="690.8" cy="308.8" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="690.8" y="298.8" text-anchor="middle" fill="#e60012" font-size="9">15</text><circle cx="715.2" cy="152.0" r="5.5" fill="#e60012" stroke="#141414" stroke-width="1.5"/><text class="disp" x="715.2" y="142.0" text-anchor="middle" fill="#e60012" font-size="9">75</text><circle cx="739.6" cy="256.5" r="3.5" fill="#ff6a00" stroke="#141414" stroke-width="1.5"/><text class="disp" x="739.6" y="246.5" text-anchor="middle" fill="#e60012" font-size="9">35</text><circle cx="764.0" cy="295.7" r="5.5" fill="#e60012" stroke="#141414" stroke-width="1.5"/>
   
 
   <text class="sans" x="400" y="402" text-anchor="middle" fill="#e60012" font-size="12" font-style="italic" font-weight="700">Days →</text>
   <text class="sans" x="16" y="250" text-anchor="middle" fill="#e60012" font-size="12" font-style="italic" font-weight="700" transform="rotate(-90 16 250)">Contributions</text>
 
   <!-- Luffy (non-interactive so tooltips work) -->
-  <g class="bob" transform="translate(739.6,152.0)" style="pointer-events:none">
+  <g class="bob" transform="translate(715.2,152.0)" style="pointer-events:none">
     <path d="M-10,4 Q-18,22 -14,34" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round"/>
     <path d="M10,4 Q18,22 14,34" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round"/>
     <path d="M-10,4 Q-18,22 -14,34" fill="none" stroke="#f5c89a" stroke-width="4.5" stroke-linecap="round"/>
@@ -181,212 +181,212 @@
     <circle cx="56.0" cy="332.3" r="14" fill="transparent" stroke="none"/>
     <circle cx="56.0" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="128.0" y1="318.3" x2="80.4" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(58.0,278.3)" class="tip">
-      <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
-      
-      <text class="disp" x="10" y="26" fill="#e60012" font-size="14">6 <tspan fill="#141414" font-size="11">contributions</tspan></text>
-    </g>
-    <circle cx="80.4" cy="332.3" r="14" fill="transparent" stroke="none"/>
-    <circle cx="80.4" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
-  </g>  <g class="hit">
-    <line x1="128.0" y1="310.5" x2="104.8" y2="324.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <line x1="128.0" y1="310.5" x2="80.4" y2="324.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
     <g transform="translate(58.0,270.5)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">9 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="104.8" cy="324.5" r="14" fill="transparent" stroke="none"/>
-    <circle cx="104.8" cy="324.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="80.4" cy="324.5" r="14" fill="transparent" stroke="none"/>
+    <circle cx="80.4" cy="324.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="129.2" y1="318.3" x2="129.2" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(59.2,278.3)" class="tip">
+    <line x1="128.0" y1="318.3" x2="104.8" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(58.0,278.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">6 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="129.2" cy="332.3" r="14" fill="transparent" stroke="none"/>
-    <circle cx="129.2" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="104.8" cy="332.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="104.8" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="153.7" y1="323.5" x2="153.7" y2="337.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(83.7,283.5)" class="tip">
+    <line x1="129.2" y1="323.5" x2="129.2" y2="337.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(59.2,283.5)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">4 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="153.7" cy="337.5" r="14" fill="transparent" stroke="none"/>
-    <circle cx="153.7" cy="337.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="129.2" cy="337.5" r="14" fill="transparent" stroke="none"/>
+    <circle cx="129.2" cy="337.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="178.1" y1="315.7" x2="178.1" y2="329.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(108.1,275.7)" class="tip">
+    <line x1="153.7" y1="315.7" x2="153.7" y2="329.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(83.7,275.7)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">7 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="178.1" cy="329.7" r="14" fill="transparent" stroke="none"/>
-    <circle cx="178.1" cy="329.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="153.7" cy="329.7" r="14" fill="transparent" stroke="none"/>
+    <circle cx="153.7" cy="329.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="202.5" y1="313.1" x2="202.5" y2="327.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(132.5,273.1)" class="tip">
+    <line x1="178.1" y1="313.1" x2="178.1" y2="327.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(108.1,273.1)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">8 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="202.5" cy="327.1" r="14" fill="transparent" stroke="none"/>
-    <circle cx="202.5" cy="327.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="178.1" cy="327.1" r="14" fill="transparent" stroke="none"/>
+    <circle cx="178.1" cy="327.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="226.9" y1="315.7" x2="226.9" y2="329.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(156.9,275.7)" class="tip">
+    <line x1="202.5" y1="315.7" x2="202.5" y2="329.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(132.5,275.7)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">7 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="226.9" cy="329.7" r="14" fill="transparent" stroke="none"/>
-    <circle cx="226.9" cy="329.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="202.5" cy="329.7" r="14" fill="transparent" stroke="none"/>
+    <circle cx="202.5" cy="329.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="251.3" y1="318.3" x2="251.3" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(181.3,278.3)" class="tip">
+    <line x1="226.9" y1="318.3" x2="226.9" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(156.9,278.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">6 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="251.3" cy="332.3" r="14" fill="transparent" stroke="none"/>
-    <circle cx="251.3" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="226.9" cy="332.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="226.9" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="275.7" y1="313.1" x2="275.7" y2="327.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(205.7,273.1)" class="tip">
+    <line x1="251.3" y1="313.1" x2="251.3" y2="327.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(181.3,273.1)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">8 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="275.7" cy="327.1" r="14" fill="transparent" stroke="none"/>
-    <circle cx="275.7" cy="327.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="251.3" cy="327.1" r="14" fill="transparent" stroke="none"/>
+    <circle cx="251.3" cy="327.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="300.1" y1="300.0" x2="300.1" y2="314.0" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(230.1,260.0)" class="tip">
+    <line x1="275.7" y1="300.0" x2="275.7" y2="314.0" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(205.7,260.0)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">13 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="300.1" cy="314.0" r="14" fill="transparent" stroke="none"/>
-    <circle cx="300.1" cy="314.0" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="275.7" cy="314.0" r="14" fill="transparent" stroke="none"/>
+    <circle cx="275.7" cy="314.0" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="324.6" y1="305.3" x2="324.6" y2="319.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(254.6,265.3)" class="tip">
+    <line x1="300.1" y1="305.3" x2="300.1" y2="319.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(230.1,265.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">11 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="324.6" cy="319.3" r="14" fill="transparent" stroke="none"/>
-    <circle cx="324.6" cy="319.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="300.1" cy="319.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="300.1" cy="319.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="349.0" y1="229.5" x2="349.0" y2="243.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(279.0,189.5)" class="tip">
+    <line x1="324.6" y1="229.5" x2="324.6" y2="243.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(254.6,189.5)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">40 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="349.0" cy="243.5" r="14" fill="transparent" stroke="none"/>
-    <circle cx="349.0" cy="243.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="324.6" cy="243.5" r="14" fill="transparent" stroke="none"/>
+    <circle cx="324.6" cy="243.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="373.4" y1="318.3" x2="373.4" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(303.4,278.3)" class="tip">
+    <line x1="349.0" y1="318.3" x2="349.0" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(279.0,278.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">6 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="373.4" cy="332.3" r="14" fill="transparent" stroke="none"/>
-    <circle cx="373.4" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="349.0" cy="332.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="349.0" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="397.8" y1="284.3" x2="397.8" y2="298.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(327.8,244.3)" class="tip">
+    <line x1="373.4" y1="284.3" x2="373.4" y2="298.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(303.4,244.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">19 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="397.8" cy="298.3" r="14" fill="transparent" stroke="none"/>
-    <circle cx="397.8" cy="298.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="373.4" cy="298.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="373.4" cy="298.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="422.2" y1="279.1" x2="422.2" y2="293.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(352.2,239.1)" class="tip">
+    <line x1="397.8" y1="279.1" x2="397.8" y2="293.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(327.8,239.1)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">21 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="422.2" cy="293.1" r="14" fill="transparent" stroke="none"/>
-    <circle cx="422.2" cy="293.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="397.8" cy="293.1" r="14" fill="transparent" stroke="none"/>
+    <circle cx="397.8" cy="293.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="446.6" y1="305.3" x2="446.6" y2="319.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(376.6,265.3)" class="tip">
+    <line x1="422.2" y1="305.3" x2="422.2" y2="319.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(352.2,265.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">11 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="446.6" cy="319.3" r="14" fill="transparent" stroke="none"/>
-    <circle cx="446.6" cy="319.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="422.2" cy="319.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="422.2" cy="319.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="471.0" y1="315.7" x2="471.0" y2="329.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(401.0,275.7)" class="tip">
+    <line x1="446.6" y1="315.7" x2="446.6" y2="329.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(376.6,275.7)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">7 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="471.0" cy="329.7" r="14" fill="transparent" stroke="none"/>
-    <circle cx="471.0" cy="329.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="446.6" cy="329.7" r="14" fill="transparent" stroke="none"/>
+    <circle cx="446.6" cy="329.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="495.4" y1="297.4" x2="495.4" y2="311.4" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(425.4,257.4)" class="tip">
+    <line x1="471.0" y1="297.4" x2="471.0" y2="311.4" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(401.0,257.4)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">14 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="495.4" cy="311.4" r="14" fill="transparent" stroke="none"/>
-    <circle cx="495.4" cy="311.4" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="471.0" cy="311.4" r="14" fill="transparent" stroke="none"/>
+    <circle cx="471.0" cy="311.4" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="519.9" y1="281.7" x2="519.9" y2="295.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(449.9,241.7)" class="tip">
+    <line x1="495.4" y1="281.7" x2="495.4" y2="295.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(425.4,241.7)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">20 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="519.9" cy="295.7" r="14" fill="transparent" stroke="none"/>
-    <circle cx="519.9" cy="295.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="495.4" cy="295.7" r="14" fill="transparent" stroke="none"/>
+    <circle cx="495.4" cy="295.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="544.3" y1="320.9" x2="544.3" y2="334.9" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(474.3,280.9)" class="tip">
+    <line x1="519.9" y1="320.9" x2="519.9" y2="334.9" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(449.9,280.9)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">5 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="544.3" cy="334.9" r="14" fill="transparent" stroke="none"/>
-    <circle cx="544.3" cy="334.9" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="519.9" cy="334.9" r="14" fill="transparent" stroke="none"/>
+    <circle cx="519.9" cy="334.9" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="568.7" y1="205.9" x2="568.7" y2="219.9" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(498.7,165.9)" class="tip">
+    <line x1="544.3" y1="205.9" x2="544.3" y2="219.9" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(474.3,165.9)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">49 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="568.7" cy="219.9" r="14" fill="transparent" stroke="none"/>
-    <circle cx="568.7" cy="219.9" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="544.3" cy="219.9" r="14" fill="transparent" stroke="none"/>
+    <circle cx="544.3" cy="219.9" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="593.1" y1="315.7" x2="593.1" y2="329.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(523.1,275.7)" class="tip">
+    <line x1="568.7" y1="315.7" x2="568.7" y2="329.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(498.7,275.7)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">7 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="593.1" cy="329.7" r="14" fill="transparent" stroke="none"/>
-    <circle cx="593.1" cy="329.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="568.7" cy="329.7" r="14" fill="transparent" stroke="none"/>
+    <circle cx="568.7" cy="329.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="617.5" y1="318.3" x2="617.5" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(547.5,278.3)" class="tip">
+    <line x1="593.1" y1="318.3" x2="593.1" y2="332.3" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(523.1,278.3)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">6 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="617.5" cy="332.3" r="14" fill="transparent" stroke="none"/>
-    <circle cx="617.5" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="593.1" cy="332.3" r="14" fill="transparent" stroke="none"/>
+    <circle cx="593.1" cy="332.3" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+  </g>  <g class="hit">
+    <line x1="617.5" y1="323.5" x2="617.5" y2="337.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(547.5,283.5)" class="tip">
+      <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
+      
+      <text class="disp" x="10" y="26" fill="#e60012" font-size="14">4 <tspan fill="#141414" font-size="11">contributions</tspan></text>
+    </g>
+    <circle cx="617.5" cy="337.5" r="14" fill="transparent" stroke="none"/>
+    <circle cx="617.5" cy="337.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
     <line x1="641.9" y1="323.5" x2="641.9" y2="337.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
     <g transform="translate(571.9,283.5)" class="tip">
@@ -406,41 +406,41 @@
     <circle cx="666.3" cy="337.5" r="14" fill="transparent" stroke="none"/>
     <circle cx="666.3" cy="337.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="690.8" y1="323.5" x2="690.8" y2="337.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(620.8,283.5)" class="tip">
-      <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
-      
-      <text class="disp" x="10" y="26" fill="#e60012" font-size="14">4 <tspan fill="#141414" font-size="11">contributions</tspan></text>
-    </g>
-    <circle cx="690.8" cy="337.5" r="14" fill="transparent" stroke="none"/>
-    <circle cx="690.8" cy="337.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
-  </g>  <g class="hit">
-    <line x1="692.0" y1="294.8" x2="715.2" y2="308.8" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(622.0,254.8)" class="tip">
+    <line x1="690.8" y1="294.8" x2="690.8" y2="308.8" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(620.8,254.8)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">15 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="715.2" cy="308.8" r="14" fill="transparent" stroke="none"/>
-    <circle cx="715.2" cy="308.8" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="690.8" cy="308.8" r="14" fill="transparent" stroke="none"/>
+    <circle cx="690.8" cy="308.8" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit">
-    <line x1="692.0" y1="164.0" x2="739.6" y2="152.0" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <line x1="692.0" y1="164.0" x2="715.2" y2="152.0" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
     <g transform="translate(622.0,164.0)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       
       <text class="disp" x="10" y="26" fill="#e60012" font-size="14">75 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="739.6" cy="152.0" r="14" fill="transparent" stroke="none"/>
-    <circle cx="739.6" cy="152.0" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="715.2" cy="152.0" r="14" fill="transparent" stroke="none"/>
+    <circle cx="715.2" cy="152.0" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+  </g>  <g class="hit">
+    <line x1="692.0" y1="242.5" x2="739.6" y2="256.5" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(622.0,202.5)" class="tip">
+      <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
+      
+      <text class="disp" x="10" y="26" fill="#e60012" font-size="14">35 <tspan fill="#141414" font-size="11">contributions</tspan></text>
+    </g>
+    <circle cx="739.6" cy="256.5" r="14" fill="transparent" stroke="none"/>
+    <circle cx="739.6" cy="256.5" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>  <g class="hit always">
-    <line x1="692.0" y1="245.1" x2="764.0" y2="259.1" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
-    <g transform="translate(622.0,205.1)" class="tip">
+    <line x1="692.0" y1="281.7" x2="764.0" y2="295.7" stroke="#141414" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+    <g transform="translate(622.0,241.7)" class="tip">
       <rect width="140" height="40" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2.5"/>
       <rect x="94" y="6" width="40" height="14" rx="3" fill="#e60012"/><text class="disp" x="114" y="16.5" text-anchor="middle" fill="#fff" font-size="8" letter-spacing="1">TODAY</text>
-      <text class="disp" x="10" y="26" fill="#e60012" font-size="14">34 <tspan fill="#141414" font-size="11">contributions</tspan></text>
+      <text class="disp" x="10" y="26" fill="#e60012" font-size="14">20 <tspan fill="#141414" font-size="11">contributions</tspan></text>
     </g>
-    <circle cx="764.0" cy="259.1" r="14" fill="transparent" stroke="none"/>
-    <circle cx="764.0" cy="259.1" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
+    <circle cx="764.0" cy="295.7" r="14" fill="transparent" stroke="none"/>
+    <circle cx="764.0" cy="295.7" r="8" fill="none" stroke="transparent" stroke-width="2" class="ring"/>
   </g>
   </g>
 
